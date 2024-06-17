@@ -1,67 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { createClient, EntryCollection } from 'contentful';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-
-const client = createClient({
-  space: '7y2nhmah12fi',
-  accessToken: 'VPNyQgxB1pWAka3k7hdMjZyWTPNuBmdWTmVnF1UydtQ',
-});
-
-interface LocationFields {
-  locationHeadline: string;
-  locationDescription: any; // Using 'any' for now, you can define a more specific type later
-}
+import React from 'react';
 
 const Location: React.FC = () => {
-  const [headline, setHeadline] = useState<string | null>(null);
-  const [description, setDescription] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    const fetchContent = async () => {
-      try {
-        // @ts-ignore
-        const response: EntryCollection<LocationFields> = await client.getEntries<LocationFields>({
-          content_type: 'location',
-          limit: 1,
-        });
-
-        if (response.items.length > 0) {
-          const fields = response.items[0].fields;
-          // @ts-ignore
-          setHeadline(fields.locationHeadline);
-          // @ts-ignore
-          setDescription(fields.locationDescription);
-        } else {
-          setError('No content found.');
-        }
-      } catch (error) {
-        console.error('Error fetching content:', error);
-        setError('Error fetching content.');
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchContent();
-  }, []);
-
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
-
-  const options = {
-    renderNode: {
-      'paragraph': (node: any, children: React.ReactNode) => (
-        <p className="mb-4">{children}</p>
-      ),
-    },
-  };
+  const headline = "Our Location";
+  const description = (
+    <>
+      <p className="mb-4">
+        We are located in the heart of Leicester, a vibrant and historic city in the Midlands. Our office is easily accessible and situated in a bustling area with a rich history and modern amenities.
+      </p>
+      <p className="mb-4">
+        Leicester is known for its beautiful architecture, cultural heritage, and welcoming community. It offers a perfect blend of traditional charm and contemporary living, making it an ideal place for both work and leisure.
+      </p>
+    </>
+  );
 
   return (
     <section className="bg-gray-100 dark:bg-gray-800">
@@ -70,13 +20,13 @@ const Location: React.FC = () => {
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
             {headline}
           </h2>
-          {description && documentToReactComponents(description, options)}
+          {description}
         </div>
         <div className="grid gap-4 mt-8">
           <iframe
-            title="Descriptive title"
+            title="Our Location in Leicester"
             className="mt-4 w-full lg:mt-10 rounded-lg"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77473.6621257311!2d1.203922287514778!3d52.640974602367564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d0aad55133f513%3A0x684ca5e00e12452f!2sNorwich!5e0!3m2!1sen!2suk!4v1716115566626!5m2!1sen!2suk"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47094.52549403851!2d-1.1544990894195147!3d52.635047020743654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487760917fff12e3%3A0x5a9d5f8d9a9a4d29!2sLeicester%2C%20UK!5e0!3m2!1sen!2suk!4v1716115566626!5m2!1sen!2suk"
             loading="lazy"
           ></iframe>
         </div>

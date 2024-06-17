@@ -1,6 +1,13 @@
 // src/pages/Gallery.tsx
 import React from 'react';
-import ImageGallery from '../PageComponents/imagegallery';
+import ImageGallery, { GalleryItem } from '../PageComponents/imagegallery';
+
+export const hardcodedItems: GalleryItem[] = [
+  { type: 'image', imageUrl: 'images/image1.jpg' },
+  { type: 'image', imageUrl: 'images/image2.jpg' },
+  { type: 'slider', firstImage: 'images/before1.jpg', secondImage: 'images/after1.jpg' },
+  // Add more items as needed
+];
 
 export default function Gallery() {
   return (
@@ -15,7 +22,7 @@ export default function Gallery() {
           </p>
         </div>
       </div>
-      <ImageGallery />
+      <ImageGallery items={hardcodedItems} limit={3} />
     </section>
   );
 }

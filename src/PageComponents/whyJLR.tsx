@@ -1,0 +1,52 @@
+const features = [
+  {
+    name: 'Experienced Project Managers',
+    description:
+      'Our seasoned project managers guide you through every step of your renovation, ensuring seamless coordination and exceptional results.',
+  },
+  {
+    name: 'Trusted Suppliers',
+    description:
+      'We collaborate with exclusive and trusted suppliers for all renovation aspects, guaranteeing high-quality materials and reliable service.',
+  },
+  {
+    name: 'Skilled Tradesmen',
+    description:
+      'All our tradesmen are highly experienced, thoroughly vetted, and come highly recommended, ensuring top-notch craftsmanship in every project.',
+  },
+  {
+    name: 'Comprehensive Financial Services',
+    description:
+      'We can introduce you to external financial advisors who provide expert mortgage advice and assistance, helping you navigate the financial aspects of your renovation.',
+  },
+  {
+    name: 'Award-Winning Expertise',
+    description:
+      'As Local Authority Building Control (LABC) award winners, we bring recognized excellence and proven expertise to every renovation project.',
+  },
+  {
+    name: 'Customer-Centric Approach',
+    description:
+      'We take the time to fully understand your vision and needs, offering personalized solutions and additional ideas to enhance your project while ensuring cost-effectiveness without compromising on quality.',
+  },
+];
+
+export default function WhyJLR() {
+  return (
+    <div className="bg-white py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:mx-0">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Why Choose JLR</h2>
+        </div>
+        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-0 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          {features.map((feature) => (
+            <div key={feature.name} className="border border-gray-200 p-6">
+              <dt className="font-semibold text-gray-900">{feature.name}</dt>
+              <dd className="mt-2 text-gray-600">{feature.description}</dd>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}

@@ -1,99 +1,28 @@
-import React, { useState, useEffect } from 'react';
+// src/PageComponents/imagegallery.tsx
+import React, { useState } from 'react';
 import Slider from '../CustomComponents/sliderImages';
 import SingleImage from '../CustomComponents/singleImage';
-import { createClient, Asset, EntrySkeletonType } from 'contentful';
 
-interface ImageItem {
+export interface ImageItem {
   type: 'image';
   imageUrl: string;
 }
 
-interface SliderItem {
+export interface SliderItem {
   type: 'slider';
   firstImage: string;
   secondImage: string;
 }
 
-type GalleryItem = ImageItem | SliderItem;
-
-const spaceId = '7y2nhmah12fi';
-const accessToken = 'VPNyQgxB1pWAka3k7hdMjZyWTPNuBmdWTmVnF1UydtQ';
-
-const client = createClient({
-  space: spaceId,
-  accessToken: accessToken,
-});
-
-interface SingleGalleryImageFields {
-  image: Asset;
-}
-
-interface SliderGalleryImageFields {
-  beforeImage: Asset;
-  afterImage: Asset;
-}
-
-interface SingleGalleryImageEntry extends EntrySkeletonType<SingleGalleryImageFields, 'singleGalleryImage'> {
-  fields: SingleGalleryImageFields;
-}
-
-interface SliderGalleryImageEntry extends EntrySkeletonType<SliderGalleryImageFields, 'sliderGalleryImage'> {
-  fields: SliderGalleryImageFields;
-}
+export type GalleryItem = ImageItem | SliderItem;
 
 interface ImageGalleryProps {
+  items: GalleryItem[];
   limit?: number;
 }
 
-const ImageGallery: React.FC<ImageGalleryProps> = ({ limit }) => {
-  const [items, setItems] = useState<GalleryItem[]>([]);
+const ImageGallery: React.FC<ImageGalleryProps> = ({ items, limit }) => {
   const [currentIndex, setCurrentIndex] = useState<number | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-
-  useEffect(() => {
-    const fetchContentfulData = async () => {
-      try {
-        // @ts-ignore
-        const singleImageEntries = await client.getEntries<SingleGalleryImageEntry>({
-          content_type: 'singleGalleryImage',
-        });
-
-        const singleImages: ImageItem[] = singleImageEntries.items.map((item) => ({
-          type: 'image' as const,
-          // @ts-ignore
-          imageUrl: item.fields.image?.fields.file.url || '',
-        })).filter(item => item.imageUrl);
-
-        // @ts-ignore
-        const sliderImageEntries = await client.getEntries<SliderGalleryImageEntry>({
-          content_type: 'sliderGalleryImage',
-        });
-
-        const sliderImages: SliderItem[] = sliderImageEntries.items.map((item) => ({
-          type: 'slider' as const,
-          // @ts-ignore
-          firstImage: item.fields.beforeImage?.fields.file.url || '',
-          // @ts-ignore
-          secondImage: item.fields.afterImage?.fields.file.url || '',
-        })).filter(item => item.firstImage && item.secondImage);
-
-        let allItems = [...singleImages, ...sliderImages];
-        if (limit) {
-          allItems = allItems.slice(0, limit);
-        }
-
-        setItems(allItems);
-        setIsLoading(false);
-      } catch (error) {
-        console.error('Error fetching content:', error);
-        setError('Error fetching content');
-        setIsLoading(false);
-      }
-    };
-
-    fetchContentfulData();
-  }, [limit]);
 
   const handlePrevious = () => {
     if (currentIndex !== null) {
@@ -107,19 +36,13 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ limit }) => {
     }
   };
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>{error}</div>;
-  }
+  const displayedItems = limit ? items.slice(0, limit) : items;
 
   return (
-    <section className="bg-white dark:bg-gray-900">
+    <section>
       <div className="px-4 py-8 mx-auto max-w-screen-xl lg:px-6 lg:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {items.map((item, index) => (
+          {displayedItems.map((item, index) => (
             <div key={index} className="relative w-full h-60 overflow-hidden border border-black dark:border-white">
               {item.type === 'image' ? (
                 <div className="w-full h-full">

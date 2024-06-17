@@ -1,74 +1,63 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useServices } from '../CustomComponents/ServicesContext';
-
-const Services: React.FC = () => {
-  const { services } = useServices();
-  const navigate = useNavigate();
-  const [showAll, setShowAll] = useState(false);
-
-  const toggleShowAll = () => {
-    setShowAll(!showAll);
-  };
-
-  const servicesToShow = showAll ? services : services.slice(0, 3);
-
+export default function Services() {
   return (
-    <div className="bg-white dark:bg-gray-900 py-16">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-customBlue dark:text-customBlue">Services</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-            Perfect for Homes and Businesses
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-500 dark:text-gray-300">
-            At AD Forster Window Cleaning, we provide top-quality cleaning services to enhance your living and working environments.
-          </p>
+    <div className="relative bg-white">
+      <div className="mx-auto max-w-7xl lg:flex align-middle lg:justify-between lg:px-8 xl:justify-end">
+        <div className="lg:flex lg:w-1/2 lg:shrink lg:grow-0 xl:absolute xl:inset-y-0 xl:right-1/2 xl:w-1/2">
+          <div className="relative h-full lg:-ml-8 lg:h-full lg:w-full lg:grow xl:ml-0">
+            <img
+              className="absolute inset-0 h-full w-full bg-gray-50 object-cover"
+              src="images/service.png"
+              alt="Property"
+            />
+          </div>
         </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-            {servicesToShow.map((service) => {
-              const Icon = service.icon;
-              return (
-                <div 
-                  key={service.id} 
-                  className="flex flex-col p-6 transition-transform duration-300 transform bg-white rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 hover:scale-105"
-                >
-                  <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900 dark:text-white">
-                    <Icon className="h-5 w-5 flex-none text-customBlue" aria-hidden="true" />
-                    {service.title}
-                  </dt>
-                  <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-500 dark:text-gray-300">
-                    <p className="flex-auto">{service.description}</p>
-                    <p className="mt-6">
-                      <a 
-                        href={service.path} 
-                        className="text-sm font-semibold leading-6 text-customBlue dark:text-customBlue"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          navigate(service.path);
-                        }}
-                      >
-                        Learn more <span aria-hidden="true">→</span>
-                      </a>
-                    </p>
-                  </dd>
-                </div>
-              );
-            })}
-          </dl>
-          <div className="mt-16 flex justify-center">
-            <button
-              onClick={toggleShowAll}
-              className="px-4 py-2 text-sm font-semibold text-white bg-customBlue rounded-md hover:bg-customBlue-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-customBlue"
-            >
-              {showAll ? 'Show Less' : 'Show All Services'}
-            </button>
+        <div className="px-6 lg:contents h-full flex items-center">
+          <div className="mx-auto max-w-2xl pb-16 pt-10 lg:ml-8 lg:mr-0 lg:w-full lg:max-w-lg lg:flex-none xl:w-1/2">
+            <h2 className="text-base font-semibold leading-7 text-">Services</h2>
+            <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">WHAT WE OFFER</h1>
+            <p className="mt-4 text-xl leading-8 text-gray-700">
+              We provide comprehensive project management for all your needs, from internal adjustments to full-scale developments and extensions.
+            </p>
+            <div className="mt-6 max-w-xl text-base leading-7 text-gray-700 lg:max-w-none">
+              <ul role="list" className="space-y-6 list-disc pl-5 text-gray-600">
+                <li>
+                  <span>
+                    <strong className="font-semibold text-gray-900">Complete Property Renovations</strong>
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <strong className="font-semibold text-gray-900">Architectural Planning</strong>
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <strong className="font-semibold text-gray-900">Property Extensions</strong>
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <strong className="font-semibold text-gray-900">Bathroom & Kitchen Refurbishments</strong>
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <strong className="font-semibold text-gray-900">Heating Installation & Upgrades</strong>
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <strong className="font-semibold text-gray-900">Landscaping</strong>
+                  </span>
+                </li>
+              </ul>
+              <p className="mt-6">
+                We are dedicated to enhancing your home or business with top-quality services.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
-};
-
-export default Services;
+}

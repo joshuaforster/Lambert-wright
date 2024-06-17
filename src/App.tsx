@@ -11,28 +11,37 @@ import { ThemeProvider } from './CustomComponents/darkmode';
 import ScrollToTop from './CustomComponents/ScrollToTop';
 import PrivacyPolicy from './MainPages/privacypolicy';
 import TermsConditions from './MainPages/TermsConditions';
+import ServicesHome from './MainPages/servicesHome';
+import Projects from './MainPages/Projects';
+import ProjectDetail from './MainPages/ProjectsDetails';
 import './App.css';
 import { ServicesProvider } from './CustomComponents/ServicesContext';
+import { ProjectsProvider } from './CustomComponents/projectsContext';
 
 function App() {
   return (
     <ThemeProvider>
       <ServicesProvider>
-        <BrowserRouter>
-          <ScrollToTop />
-          <Routes>
-            <Route element={<Layout />}>
-              <Route path='/' element={<Home />} />
-              <Route path='/about' element={<About />} />
-              <Route path='/gallery' element={<Gallery />} />
-              <Route path='/faq' element={<FAQ />} />
-              <Route path='/services/:id' element={<ServiceDetail />} />
-              <Route path='/contact' element={<Contact />} />
-              <Route path='/privacy-policy' element={<PrivacyPolicy />} />
-              <Route path='/terms-conditions' element={<TermsConditions />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
+        <ProjectsProvider>
+          <BrowserRouter>
+            <ScrollToTop />
+            <Routes>
+              <Route element={<Layout />}>
+                <Route path='/' element={<Home />} />
+                <Route path='/about' element={<About />} />
+                <Route path='/gallery' element={<Gallery />} />
+                <Route path='/faq' element={<FAQ />} />
+                <Route path='/services/:id' element={<ServiceDetail />} />
+                <Route path='/services' element={<ServicesHome />} />
+                <Route path='/contact' element={<Contact />} />
+                <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+                <Route path='/terms-conditions' element={<TermsConditions />} />
+                <Route path='/projects' element={<Projects />} />
+                <Route path='/projects/:id' element={<ProjectDetail />} />
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </ProjectsProvider>
       </ServicesProvider>
     </ThemeProvider>
   );
