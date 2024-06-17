@@ -14,7 +14,6 @@ const Projects: React.FC<ProjectsProps> = ({ limit }) => {
   const displayedProjects = limit ? projects.slice(0, limit) : projects;
 
   return (
-    <div className="bg-gray-100 py-16">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {displayedProjects.map((project) => (
@@ -31,7 +30,6 @@ const Projects: React.FC<ProjectsProps> = ({ limit }) => {
           ))}
         </div>
       </div>
-    </div>
   );
 };
 

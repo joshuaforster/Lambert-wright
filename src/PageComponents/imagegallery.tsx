@@ -40,7 +40,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ items, limit }) => {
 
   return (
     <section>
-      <div className="px-4 py-8 mx-auto max-w-screen-xl lg:px-6 lg:py-16">
+      <div className="px-4 mx-auto max-w-screen-xl lg:px-6 ">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {displayedItems.map((item, index) => (
             <div key={index} className="relative w-full h-60 overflow-hidden border border-black dark:border-white">

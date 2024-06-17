@@ -54,7 +54,7 @@ export default function Reviews() {
               />
               <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x={86} />
             </svg>
-            <blockquote className="h-60 overflow-y-auto text-gray-900 lg:h-80 flex items-center justify-center">
+            <blockquote className="text-l font-semibold leading-8 text-gray-800  sm:leading-9">
               <p>{reviews[currentReviewIndex].text}</p>
             </blockquote>
           </div>

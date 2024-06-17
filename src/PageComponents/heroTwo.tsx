@@ -1,13 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
-const images = [
-  'images/w9.jpg',
-  'images/w19.jpg',
-  'images/w14.jpg',
-  'images/w4.jpg',
-  'images/w12.jpg',
-  'images/w13.jpg',
+ const images = [
+  'images/project4/97195000951550_MAH190125_IMG_03-Copy-1024x684.jpg',
+  'images/project4/w-6.jpg',
+  'images/project4/w1.jpg',
+  'images/project4/w2.jpg',
+  'images/project4/w3.jpg',
+  'images/project4/w4.jpg',
+  'images/project4/w5.jpg',
+  'images/project4/w7.jpg',
+  'images/project4/w8.jpg',
+  'images/project4/w9.jpg',
+  'images/project4/w10.jpg',
+  'images/project4/w11.jpg',
+  'images/project4/w12.jpg',
+  'images/project4/w13.jpg',
+  'images/project4/w14.jpg',
+  'images/project4/w15.jpg',
+  'images/project4/w16.jpg',
+  'images/project4/w18.jpg',
+  'images/project4/w19.jpg',
+  'images/project4/w20.jpg'
 ];
 
 export default function HeroTwo() {

@@ -5,7 +5,7 @@ import { hardcodedItems } from '../MainPages/gallery';
 
 export default function HomeGallery() {
   return (
-    <div className="py-16  bg-gray-200">
+    <div className="py-16 bg-gray-200">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-900">Some of Our Work</h2>
         <p className="mt-4 text-lg text-gray-600">
@@ -13,7 +13,7 @@ export default function HomeGallery() {
         </p>
       </div>
       <div>
-      <ImageGallery items={hardcodedItems} limit={3} />
+        <ImageGallery items={hardcodedItems} limit={3} />
       </div>
       <div className="flex justify-center mt-8">
         <Link 
