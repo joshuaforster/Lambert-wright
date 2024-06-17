@@ -15,7 +15,7 @@ export default function AboutHead() {
               <img
                 className="w-full h-full lg:h-3/4 object-cover"
                 src="images/aboutImage.png"
-                alt="About Image"
+                alt="About "
               />
             </div>
           </div>

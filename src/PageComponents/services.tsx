@@ -19,7 +19,7 @@ export default function Services() {
               We provide comprehensive project management for all your needs, from internal adjustments to full-scale developments and extensions.
             </p>
             <div className="mt-6 max-w-xl text-base leading-7 text-gray-700 lg:max-w-none">
-              <ul role="list" className="space-y-6 list-disc pl-5 text-gray-600">
+              <ul  className="space-y-6 list-disc pl-5 text-gray-600">
                 <li>
                   <span>
                     <strong className="font-semibold text-gray-900">Complete Property Renovations</strong>

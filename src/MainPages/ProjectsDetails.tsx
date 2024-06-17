@@ -70,7 +70,7 @@ const ProjectDetail: React.FC = () => {
                 <img
                   key={index}
                   src={image}
-                  alt={`${project.title} image ${index + 1}`}
+                  alt={`${project.title}  ${index + 1}`}
                   className="w-full h-32 object-cover rounded-lg cursor-pointer"
                   onClick={() => openGallery(image)}
                 />

@@ -1,7 +1,6 @@
 import React from "react";
 import Steps from "../PageComponents/steps";
 import Services from "../PageComponents/services";
-import Location from "../PageComponents/Location";
 import TestimonialSlider from "../PageComponents/Reviews";
 import Logo from "../PageComponents/logo";
 import HeroTwo from "../PageComponents/heroTwo";
