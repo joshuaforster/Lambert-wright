@@ -38,7 +38,7 @@ const ProjectDetail: React.FC = () => {
     setCurrentImage(project.images[prevIndex]);
   };
 
-  const similarProjects = projects.filter((proj) => proj.id !== id);
+  const similarProjects = projects.filter((proj) => proj.id !== id).slice(0, 4);
 
   return (
     <div className="bg-gray-100 py-16">
