@@ -12,7 +12,7 @@ import ScrollToTop from './CustomComponents/ScrollToTop';
 import PrivacyPolicy from './MainPages/privacypolicy';
 import TermsConditions from './MainPages/TermsConditions';
 import ServicesHome from './MainPages/servicesHome';
-import Projects from './MainPages/Projects';
+import ProjectHolder from './MainPages/prohectHolder';
 import ProjectDetail from './MainPages/ProjectsDetails';
 import './App.css';
 import { ServicesProvider } from './CustomComponents/ServicesContext';
@@ -36,7 +36,7 @@ function App() {
                 <Route path='/contact' element={<Contact />} />
                 <Route path='/privacy-policy' element={<PrivacyPolicy />} />
                 <Route path='/terms-conditions' element={<TermsConditions />} />
-                <Route path='/projects' element={<Projects />} />
+                <Route path='/projects' element={<ProjectHolder />} />
                 <Route path='/projects/:id' element={<ProjectDetail />} />
               </Route>
             </Routes>
