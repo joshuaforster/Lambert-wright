@@ -1,14 +1,43 @@
+import { useEffect, useState } from 'react';
+
+const images = [
+  'images/project4/w1.jpg',
+  'images/project4/w2.jpg',
+  'images/project4/w3.jpg',
+  'images/project4/w4.jpg',
+  // Add more images as needed
+];
+
 export default function Services() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="relative bg-white text-gray-900">
       <div className="mx-auto max-w-7xl lg:flex lg:justify-between lg:px-8 xl:justify-end py-16 lg:py-24">
-        <div className="lg:flex lg:w-1/2 lg:shrink-0 xl:absolute xl:inset-y-0 xl:right-1/2 xl:w-1/2">
-          <div className="relative h-full lg:h-full lg:w-full xl:ml-0">
-            <img
-              className="absolute inset-0 h-full w-full object-cover"
-              src="images/service.png"
-              alt="Property"
-            />
+        <div className="relative h-full lg:h-full lg:w-1/2 xl:absolute xl:inset-y-0 xl:right-1/2 xl:w-1/2 overflow-hidden">
+          <div className="relative w-full h-full">
+            {images.map((image, index) => (
+              <img
+                key={index}
+                className={`absolute inset-0 h-full w-full object-cover transition-transform duration-1000 ${
+                  index === currentImageIndex
+                    ? 'translate-x-0'
+                    : index < currentImageIndex
+                    ? '-translate-x-full'
+                    : 'translate-x-full'
+                }`}
+                src={image}
+                alt="Property"
+              />
+            ))}
           </div>
         </div>
         <div className="px-6 lg:flex lg:items-center lg:w-1/2 lg:pr-8">
