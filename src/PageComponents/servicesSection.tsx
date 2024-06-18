@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 const services = [
   {
@@ -36,8 +36,33 @@ const services = [
 ];
 
 const ServicesSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (sectionRef.current) {
+        const { top } = sectionRef.current.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        if (top < windowHeight * 0.75) {
+          setIsVisible(true);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check visibility on initial render
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <section className="bg-white dark:bg-gray-900 py-16">
+    <section
+      ref={sectionRef}
+      className={`bg-white dark:bg-gray-900 py-16 transition-all duration-1000 transform ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+    >
       <div className="max-w-screen-xl mx-auto px-4 lg:px-6">
         <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-12">OUR REAL ESTATE SERVICE</h2>
         <div className="grid grid-cols-1 gap-8">

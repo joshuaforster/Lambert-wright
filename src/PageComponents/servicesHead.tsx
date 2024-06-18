@@ -1,17 +1,42 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 export default function ServicesHead() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (sectionRef.current) {
+        const { top } = sectionRef.current.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        if (top < windowHeight * 0.75) {
+          setIsVisible(true);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check visibility on initial render
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <section className="bg-white dark:bg-gray-900">
+    <section
+      ref={sectionRef}
+      className={`bg-white dark:bg-gray-900 transition-all duration-1000 transform ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+    >
       <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-      <div className="grid grid-cols-2 gap-4 mt-8">
+        <div className="grid grid-cols-2 gap-4 mt-8">
           <img
-            className="w-full "
+            className="w-full"
             src="/images/services/image 12.png"
             alt="office content 1"
           />
           <img
-            className="mt-4 w-full lg:mt-10 "
+            className="mt-4 w-full lg:mt-10"
             src="/images/services/image 11.png"
             alt="office content 2"
           />

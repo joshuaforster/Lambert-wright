@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 const reviews = [
   {
@@ -9,7 +9,7 @@ const reviews = [
   },
   {
     id: 2,
-    text: "We engaged JLR Bespoke Property Renovations Ltd to undertake the conversion of our garage into a studio/multipurpose room with an adjacent Jack and Jill bathroom, remodelling of a utility room, and total heating and plumbing upgrade.We have been very happy with the quality of work. We had a clear schedule of works and despite the challenges of Covid this was adhered to.  All the tradespeople were of a high quality, a pleasure to work with, and were always responsive to our input.  Jason managed the project closely and is focused on ensuring work is undertaken to a high standard with a clear attention to detail.From start to finish the build went smoothly. We would happily recommend JLR Bespoke Property Renovations Ltd.",
+    text: "We engaged JLR Bespoke Property Renovations Ltd to undertake the conversion of our garage into a studio/multipurpose room with an adjacent Jack and Jill bathroom, remodelling of a utility room, and total heating and plumbing upgrade. We have been very happy with the quality of work. We had a clear schedule of works and despite the challenges of Covid this was adhered to. All the tradespeople were of a high quality, a pleasure to work with, and were always responsive to our input. Jason managed the project closely and is focused on ensuring work is undertaken to a high standard with a clear attention to detail. From start to finish the build went smoothly. We would happily recommend JLR Bespoke Property Renovations Ltd.",
     name: "J.Rollin",
     image: "/images/reviews/review2.png",
   },
@@ -17,6 +17,8 @@ const reviews = [
 
 export default function Reviews() {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   const nextReview = () => {
     setCurrentReviewIndex((prevIndex) => (prevIndex + 1) % reviews.length);
@@ -30,12 +32,33 @@ export default function Reviews() {
 
   useEffect(() => {
     const intervalId = setInterval(nextReview, 5000); // Change every 5 seconds
-
     return () => clearInterval(intervalId);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (sectionRef.current) {
+        const { top, bottom } = sectionRef.current.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        if (top < windowHeight * 0.75 && bottom > 0) {
+          setIsVisible(true);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check visibility on initial render
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <section className="isolate overflow-hidden bg-white">
+    <section
+      ref={sectionRef}
+      className={`isolate overflow-hidden bg-white transition-all duration-1000 transform ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+    >
       <div className="relative mx-auto max-w-screen-xl px-4 lg:px-6 py-24 sm:py-32">
         <div className="absolute left-1/2 top-0 -z-10 h-[50rem] w-[90rem] -translate-x-1/2 bg-[radial-gradient(50%_100%_at_top,theme(colors.indigo.100),white)] opacity-20 lg:left-36" />
         <div className="absolute inset-y-0 right-1/2 -z-10 mr-12 w-[150vw] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-20 md:mr-0 lg:right-full lg:-mr-36 lg:origin-center" />
@@ -54,7 +77,7 @@ export default function Reviews() {
               />
               <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x={86} />
             </svg>
-            <blockquote className="text-l font-semibold leading-8 text-gray-800  sm:leading-9">
+            <blockquote className="text-l font-semibold leading-8 text-gray-800 sm:leading-9">
               <p>{reviews[currentReviewIndex].text}</p>
             </blockquote>
           </div>
@@ -70,7 +93,10 @@ export default function Reviews() {
           </figcaption>
         </figure>
         <div className="flex justify-center items-center mt-8">
-          <button onClick={prevReview} className="mx-2 text-gray-600 hover:text-gray-900 focus:outline-none">
+          <button
+            onClick={prevReview}
+            className="mx-2 text-gray-600 hover:text-gray-900 focus:outline-none"
+          >
             <svg
               className="w-6 h-6"
               fill="none"
@@ -78,16 +104,26 @@ export default function Reviews() {
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
             </svg>
           </button>
           {reviews.map((_, index) => (
             <div
               key={index}
-              className={`h-2 w-2 rounded-full mx-1 ${index === currentReviewIndex ? 'bg-gray-900' : 'bg-gray-300'}`}
+              className={`h-2 w-2 rounded-full mx-1 ${
+                index === currentReviewIndex ? 'bg-gray-900' : 'bg-gray-300'
+              }`}
             />
           ))}
-          <button onClick={nextReview} className="mx-2 text-gray-600 hover:text-gray-900 focus:outline-none">
+          <button
+            onClick={nextReview}
+            className="mx-2 text-gray-600 hover:text-gray-900 focus:outline-none"
+          >
             <svg
               className="w-6 h-6"
               fill="none"
@@ -95,7 +131,12 @@ export default function Reviews() {
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
             </svg>
           </button>
         </div>

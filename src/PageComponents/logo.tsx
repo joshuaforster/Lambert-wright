@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 const logos = [
   { src: "images/logos/logo.png", alt: "Transistor" },
@@ -7,8 +7,33 @@ const logos = [
 ];
 
 export default function Logo() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (sectionRef.current) {
+        const { top } = sectionRef.current.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        if (top < windowHeight * 0.75) {
+          setIsVisible(true);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check visibility on initial render
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <section className="bg-white">
+    <section
+      ref={sectionRef}
+      className={`bg-white transition-opacity duration-1000 transform ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+    >
       <div className="py-12 mx-auto max-w-screen-xl px-6 lg:px-8">
         <h2 className="text-lg font-semibold leading-8 text-gray-900">
           Our Recognitions and Partnerships
