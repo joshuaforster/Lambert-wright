@@ -1,5 +1,4 @@
-import React from 'react';
-import { useInView } from 'react-intersection-observer';
+import React, { useEffect, useState, useRef } from 'react';
 
 interface StepType {
   id: number;
@@ -31,19 +30,44 @@ const steps: StepType[] = [
 ];
 
 const Steps: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (sectionRef.current) {
+        const { top } = sectionRef.current.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        if (top < windowHeight * 0.75) {
+          setIsVisible(true);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check visibility on initial render
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <section className="bg-[#323D41]">
+    <section
+      ref={sectionRef}
+      className={`bg-[#323D41] transition-all duration-1000 transform ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+    >
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
         <div className="lg:flex lg:items-center lg:justify-between">
           <div className="max-w-2xl lg:mx-0 lg:max-w-xl">
-            <h2 className="text-5xl font-bold leading-8 text-white">Your project your way...</h2>
+          <h2 className="text-5xl font-bold leading-[1.5] text-white">Your project your way...</h2>
             <div className="mt-8">
               <p className="text-xl text-gray-300">Building Dreams</p>
             </div>
           </div>
           <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:mt-0 lg:ml-16 lg:max-w-xl lg:grid-cols-2">
             {steps.map((step) => (
-              <Step key={step.id} step={step} />
+              <Step key={step.id} step={step} isVisible={isVisible} />
             ))}
           </div>
         </div>
@@ -54,19 +78,14 @@ const Steps: React.FC = () => {
 
 interface StepProps {
   step: StepType;
+  isVisible: boolean;
 }
 
-const Step: React.FC<StepProps> = ({ step }) => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
+const Step: React.FC<StepProps> = ({ step, isVisible }) => {
   return (
     <div
-      ref={ref}
       className={`flex flex-col gap-y-3 border-l border-white pl-6 text-white transform transition-transform duration-700 ease-in-out ${
-        inView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+        isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
       }`}
     >
       <dt className="text-sm leading-6">{step.description}</dt>

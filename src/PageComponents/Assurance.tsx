@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const images = [
   'images/project4/w1.jpg',
@@ -10,6 +10,8 @@ const images = [
 
 export default function Assurance() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -19,8 +21,30 @@ export default function Assurance() {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (sectionRef.current) {
+        const { top } = sectionRef.current.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        if (top < windowHeight * 0.75) {
+          setIsVisible(true);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check visibility on initial render
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="relative bg-customBlue text-white">
+    <div
+      ref={sectionRef}
+      className={`relative bg-customBlue text-white transition-all duration-1000 transform ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+    >
       <div className="lg:block hidden lg:absolute lg:inset-0 lg:left-1/2 lg:w-1/2 overflow-hidden">
         <div className="relative w-full h-full">
           {images.map((image, index) => (
@@ -55,7 +79,26 @@ export default function Assurance() {
             </p>
           </div>
         </div>
+        <div className="lg:hidden block w-full h-64 sm:h-80 overflow-hidden">
+          <div className="relative w-full h-full">
+            {images.map((image, index) => (
+              <img
+                key={index}
+                className={`absolute inset-0 h-full w-full object-cover transition-transform duration-1000 ${
+                  index === currentImageIndex
+                    ? 'translate-x-0'
+                    : index < currentImageIndex
+                    ? '-translate-x-full'
+                    : 'translate-x-full'
+                }`}
+                src={image}
+                alt="Property"
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
 }
+

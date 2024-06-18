@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 const images = [
   'images/project4/w1.jpg',
@@ -10,6 +10,8 @@ const images = [
 
 export default function Services() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -19,10 +21,50 @@ export default function Services() {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (sectionRef.current) {
+        const { top } = sectionRef.current.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        if (top < windowHeight * 0.75) {
+          setIsVisible(true);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check visibility on initial render
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="relative bg-white text-gray-900">
-      <div className="mx-auto max-w-7xl lg:flex lg:justify-between lg:px-8 xl:justify-end py-16 lg:py-24">
+    <div
+      ref={sectionRef}
+      className={`relative bg-white text-gray-900 transition-all duration-1000 transform ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+    >
+      <div className="mx-auto max-w-7xl lg:flex lg:justify-between lg:px-8 xl:justify-end pb-16 lg:py-24">
         <div className="relative h-full lg:h-full lg:w-1/2 xl:absolute xl:inset-y-0 xl:right-1/2 xl:w-1/2 overflow-hidden">
+          <div className="relative w-full h-full">
+            {images.map((image, index) => (
+              <img
+                key={index}
+                className={`absolute inset-0 h-full w-full object-cover transition-transform duration-1000 ${
+                  index === currentImageIndex
+                    ? 'translate-x-0'
+                    : index < currentImageIndex
+                    ? '-translate-x-full'
+                    : 'translate-x-full'
+                }`}
+                src={image}
+                alt="Property"
+              />
+            ))}
+          </div>
+        </div>
+        <div className="lg:hidden block w-full h-64 sm:h-80 overflow-hidden">
           <div className="relative w-full h-full">
             {images.map((image, index) => (
               <img
