@@ -56,17 +56,18 @@ export default function HeroTwo() {
 
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
-            <h1
-                ref={headerRef}
-                className={`text-4xl font-bold tracking-tight text-white sm:text-6xl transition-transform duration-1500 ${
-                    headerInView ? 'transform translate-x-0 opacity-100' : 'transform translate-x-full opacity-0'
-                }`}
-                style={{
-                    textShadow: '2px 2px 4px rgba(0, 0, 0, 1)', // Adjust the shadow to your preference
-                }}
-                >
-                Masters in Refurbishment
-            </h1>
+          <h1
+  ref={headerRef}
+  className={`text-4xl font-bold tracking-tight text-white sm:text-6xl transition-transform duration-1500 ${
+    headerInView ? 'transform translate-x-0 opacity-100' : 'transform translate-x-full opacity-0'
+  }`}
+  style={{
+    textShadow: '2px 2px 4px rgba(0, 0, 0, 1)', // Adjust the shadow to your preference
+    lineHeight: '1.5', // Set the line height to 2 times the font size
+  }}
+>
+  Award winning bespoke residential developers.
+</h1>
             <p
               ref={paragraphRef}
               className={`mt-6 text-lg leading-8 text-white transition-transform duration-3000 ${

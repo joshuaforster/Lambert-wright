@@ -19,7 +19,7 @@ const people = [
 
 export default function Example() {
     return (
-        <div className="bg-customBlue py-24 md:py-32 lg:py-40">
+        <div className="bg-customBlue py-24 md:py-32 lg:py-20">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl text-center">
                     <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Our team</h2>
@@ -30,7 +30,7 @@ export default function Example() {
                 </div>
                 <ul
                     
-                    className="mt-10 mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8"
+                    className="mt-10 mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none md:gap-x-40"
                 >
                     {people.map((person) => (
                         <li key={person.name}>

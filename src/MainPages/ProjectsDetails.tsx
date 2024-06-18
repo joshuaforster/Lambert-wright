@@ -38,16 +38,21 @@ const ProjectDetail: React.FC = () => {
     setCurrentImage(project.images[prevIndex]);
   };
 
-  const similarProjects = projects.filter((proj) => proj.id !== id).slice(0, 4);
+  const similarProjects = projects.filter((proj) => proj.id !== id).slice(0, 3);
 
   return (
-    <div className="bg-gray-100 py-16">
+    <div className="bg-gray-100 pb-16">
+        <div className="relative w-full h-96 mb-8">
+  <img src={project.images[0]} alt={project.title} className="w-full h-96 object-cover" />
+  <div className="absolute inset-0 bg-black opacity-50"></div>
+  <div className="absolute inset-0 flex items-center justify-center">
+    <h1 className="text-4xl font-bold text-white mb-8 shadow-lg">{project.title}</h1>
+  </div>
+</div>
       <div className="container mx-auto px-6 lg:px-8">
         <Link to="/projects" className="text-blue-600 hover:underline mb-4 inline-block">
           &larr; Back to All Projects
         </Link>
-        <h1 className="text-4xl font-bold mb-8">{project.title}</h1>
-        <img src={project.images[0]} alt={project.title} className="w-full h-96 object-cover rounded-lg mb-8" />
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start">
           <div className="lg:w-2/3">
             <h2 className="text-2xl font-semibold mb-4">Description</h2>
@@ -66,34 +71,44 @@ const ProjectDetail: React.FC = () => {
           <div className="lg:w-1/3 lg:ml-8 mt-8 lg:mt-0">
             <h2 className="text-2xl font-semibold mb-4">Gallery</h2>
             <div className="grid grid-cols-2 gap-4">
-              {project.images.map((image, index) => (
-                <img
-                  key={index}
-                  src={image}
-                  alt={`${project.title}  ${index + 1}`}
-                  className="w-full h-32 object-cover rounded-lg cursor-pointer"
-                  onClick={() => openGallery(image)}
-                />
-              ))}
+            {project.images.map((image, index) => (
+  <div key={index} className="relative w-full h-32 overflow-hidden cursor-pointer" onClick={() => openGallery(image)}>
+    <img
+      src={image}
+      alt={`${project.title} ${index + 1}`}
+      className="w-full h-32 object-cover transform transition-transform duration-200"
+    />
+    <div className="absolute inset-0 bg-gray-700 opacity-0 hover:opacity-50 transition-opacity duration-200"></div>
+  </div>
+))}
             </div>
           </div>
         </div>
         <div className="mt-16">
           <h2 className="text-3xl font-bold mb-8">Similar Projects</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {similarProjects.map((proj) => (
-              <div key={proj.id} className="bg-white shadow-md rounded-lg overflow-hidden">
-                <img src={proj.images[0]} alt={proj.title} className="w-full h-48 object-cover" />
-                <div className="p-6">
-                  <h2 className="text-xl font-semibold mb-2">{proj.title}</h2>
-                  <p className="text-gray-600 mb-4">{proj.description.substring(0, 100)}...</p>
-                  <Link to={`/projects/${proj.id}`} className="text-blue-600 hover:underline">
-                    View Project
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  {similarProjects.map((proj) => (
+    <article
+      key={proj.id}
+      className="relative isolate flex flex-col justify-end overflow-hidden bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
+    >
+      <img src={proj.images[0]} alt={proj.title} className="absolute inset-0 -z-10 h-full w-full object-cover" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40" />
+      <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
+
+      <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
+        <Link to={`/projects/${proj.id}`}>
+          <span className="absolute inset-0" />
+          {proj.title}
+        </Link>
+      </h3>
+      <p className="mt-2 text-sm leading-6 text-gray-300">{proj.description.substring(0, 100)}...</p>
+      <Link to={`/projects/${proj.id}`} className="mt-4 text-blue-600 hover:underline">
+        View Project
+      </Link>
+    </article>
+  ))}
+</div>
         </div>
       </div>
       {isOpen && (

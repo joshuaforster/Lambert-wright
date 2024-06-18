@@ -5,10 +5,10 @@ export default function Header() {
   const navigationLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: "FAQ's", path: '/faq' },
-    { name: 'Gallery', path: '/gallery' },
     { name: 'Services', path: '/services' },
     { name: 'Projects', path: '/projects' },
+    { name: 'Gallery', path: '/gallery' },
+    { name: "FAQ's", path: '/faq' },
     { name: 'Contact', path: '/contact' }
   ];
 

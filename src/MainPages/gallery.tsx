@@ -61,6 +61,31 @@ export const hardcodedItems: GalleryItem[] = [
   { type: 'image', imageUrl: 'images/project6/IMG_4238-768x1024.jpg' },
   { type: 'image', imageUrl: 'images/project6/Lambert-1-1536x1024.jpg' },
   { type: 'image', imageUrl: 'images/project6/Lambert-11-1536x1024.jpg' },
+
+  // Project 1
+  { type: 'image', imageUrl: 'images/project1/Aerial-View.jpg' },
+  { type: 'image', imageUrl: 'images/project1/Cinema-Room-1-1536x1024.jpg' },
+  { type: 'image', imageUrl: 'images/project1/Cinema-Room-2-1536x1081.jpg' },
+  { type: 'image', imageUrl: 'images/project1/Cinema-Room-3-1536x1025.jpg' },
+  { type: 'image', imageUrl: 'images/project1/Courtyard-1536x1021.jpg' },
+  { type: 'image', imageUrl: 'images/project1/Cupboard-Doors-made-from-old-Cheese-Boards-768x1278.jpg' },
+  { type: 'image', imageUrl: 'images/project1/Entrance-Gates-1536x1069.jpg' },
+  { type: 'image', imageUrl: 'images/project1/Garage-and-Gym-1.jpg' },
+  { type: 'image', imageUrl: 'images/project1/Garage-and-Gym-2-1536x884.jpg' },
+  { type: 'image', imageUrl: 'images/project1/Garden-1536x1024.jpg' },
+  { type: 'image', imageUrl: 'images/project1/Gym-1536x1025.jpg' },
+  { type: 'image', imageUrl: 'images/project1/Inglenook-1-1536x1091.jpg' },
+  { type: 'image', imageUrl: 'images/project1/Inglenook-2-1536x1038.jpg' },
+  { type: 'image', imageUrl: 'images/project1/Inglenook-3-1536x1024.jpg' },
+  { type: 'image', imageUrl: 'images/project1/Kitchen-1-1024x682.jpg' },
+  { type: 'image', imageUrl: 'images/project1/Kitchen-2-768x1152.jpg' },
+  { type: 'image', imageUrl: 'images/project1/Kitchen-3.jpg' },
+  { type: 'image', imageUrl: 'images/project1/Kitchen-4-1536x1025.jpg' },
+  { type: 'image', imageUrl: 'images/project1/Mower-Hut-1536x1024.jpg' },
+  { type: 'image', imageUrl: 'images/project1/Rear-and-side-Elevations-1536x1012.jpg' },
+  { type: 'image', imageUrl: 'images/project1/Rear-Elevation-1024x704.jpg' },
+  { type: 'image', imageUrl: 'images/project1/Side-Elevation-1024x683.jpg' },
+  { type: 'image', imageUrl: 'images/project1/Sitting-Room-1536x1025.jpg' },
 ];
 
 export default function Gallery() {

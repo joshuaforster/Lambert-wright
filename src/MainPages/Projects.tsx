@@ -20,7 +20,7 @@ const Projects: React.FC<ProjectsProps> = ({ limit }) => {
           {displayedProjects.map((project) => (
             <article
               key={project.id}
-              className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
+              className="relative isolate flex flex-col justify-end overflow-hidden  bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
             >
               <img src={project.images[0]} alt={project.title} className="absolute inset-0 -z-10 h-full w-full object-cover" />
               <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40" />
