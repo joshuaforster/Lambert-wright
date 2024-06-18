@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
- const images = [
+const images = [
   'images/project4/97195000951550_MAH190125_IMG_03-Copy-1024x684.jpg',
   'images/project4/w-6.jpg',
   'images/project4/w1.jpg',
@@ -56,22 +56,22 @@ export default function HeroTwo() {
 
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
-          <h1
-  ref={headerRef}
-  className={`text-4xl font-bold tracking-tight text-white sm:text-6xl transition-transform duration-1500 ${
-    headerInView ? 'transform translate-x-0 opacity-100' : 'transform translate-x-full opacity-0'
-  }`}
-  style={{
-    textShadow: '2px 2px 4px rgba(0, 0, 0, 1)', // Adjust the shadow to your preference
-    lineHeight: '1.5', // Set the line height to 2 times the font size
-  }}
->
-  Award winning bespoke residential developers.
-</h1>
+            <h1
+              ref={headerRef}
+              className={`text-4xl font-bold tracking-tight text-white sm:text-6xl ${
+                headerInView ? 'animate-slideInRight' : 'opacity-0'
+              }`}
+              style={{
+                textShadow: '2px 2px 4px rgba(0, 0, 0, 1)', // Adjust the shadow to your preference
+                lineHeight: '1.5', // Set the line height to 1.5 times the font size
+              }}
+            >
+              Award winning bespoke residential developers.
+            </h1>
             <p
               ref={paragraphRef}
-              className={`mt-6 text-lg leading-8 text-white transition-transform duration-3000 ${
-                paragraphInView ? 'transform translate-x-0 opacity-100' : 'transform -translate-x-full opacity-0'
+              className={`mt-6 text-lg leading-8 text-white ${
+                paragraphInView ? 'animate-slideInLeft' : 'opacity-0'
               }`}
             >
               - Since 1990 -
@@ -90,6 +90,40 @@ export default function HeroTwo() {
           </div>
         </div>
       </div>
+
+      <style>
+        {`
+          @keyframes slideInRight {
+            0% {
+              transform: translateX(100%);
+              opacity: 0;
+            }
+            100% {
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
+
+          @keyframes slideInLeft {
+            0% {
+              transform: translateX(-100%);
+              opacity: 0;
+            }
+            100% {
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
+
+          .animate-slideInRight {
+            animation: slideInRight 2s ease-in-out forwards;
+          }
+
+          .animate-slideInLeft {
+            animation: slideInLeft 2s ease-in-out forwards;
+          }
+        `}
+      </style>
     </div>
   );
 }
