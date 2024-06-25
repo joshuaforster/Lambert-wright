@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import ImageGallery from '../PageComponents/imagegallery';
-import { Link } from 'react-router-dom';
 import { hardcodedItems } from '../MainPages/gallery';
+import Button from '../CustomComponents/buttons';
 
 export default function HomeGallery() {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,7 +32,7 @@ export default function HomeGallery() {
       }`}
     >
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-900">Some of Our Work</h2>
+        <h2 className="text-3xl font-bold text-gray-900">Some Of Our Work</h2>
         <p className="mt-4 text-lg text-gray-600">
           Take a look at some of the projects we've completed. Click the button below to see our full gallery.
         </p>
@@ -41,12 +41,12 @@ export default function HomeGallery() {
         <ImageGallery items={hardcodedItems} limit={3} />
       </div>
       <div className="flex justify-center mt-8">
-        <Link
+        <Button
           to="/gallery"
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+          variant='primary'
         >
           View more
-        </Link>
+        </Button>
       </div>
     </div>
   );

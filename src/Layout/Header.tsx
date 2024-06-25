@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, NavLink } from 'react-router-dom';
 
 export default function Header() {
   const navigationLinks = [
@@ -38,18 +38,18 @@ export default function Header() {
             <ul className="flex items-center space-x-8">
               {navigationLinks.map((link, index) => (
                 <li key={index}>
-                  <Link
+                  <NavLink
                     to={link.path}
-                    className={`block py-2 pr-4 pl-3 ${
-                      pathname === link.path
-                        ? 'text-customBlue'
-                        : 'text-gray-700'
-                    } hover:bg-gray-200 rounded-lg`}
+                    className={({ isActive }) =>
+                      `block py-2 pr-4 pl-3 ${
+                        isActive ? 'text-white bg-gray-900 rounded-lg' : 'text-gray-700'
+                      } hover:bg-gray-200 rounded-lg text-gray-700`
+                    }
                     aria-current={link.path === pathname ? 'page' : undefined}
                     onClick={handleLinkClick}
                   >
                     {link.name}
-                  </Link>
+                  </NavLink>
                 </li>
               ))}
             </ul>
@@ -81,16 +81,18 @@ export default function Header() {
             <ul className="flex flex-col mt-4 space-y-2">
               {navigationLinks.map((link, index) => (
                 <li key={index}>
-                  <Link
+                  <NavLink
                     to={link.path}
-                    className={`block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 ${
-                      pathname === link.path ? 'text-[#2EA8E0]' : ''
-                    } hover:bg-gray-200 rounded-lg`}
+                    className={({ isActive }) =>
+                      `block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 ${
+                        isActive ? 'text-[#2EA8E0]' : ''
+                      } hover:bg-gray-200 rounded-lg`
+                    }
                     aria-current={link.path === pathname ? 'page' : undefined}
                     onClick={handleLinkClick}
                   >
                     {link.name}
-                  </Link>
+                  </NavLink>
                 </li>
               ))}
             </ul>

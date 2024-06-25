@@ -31,7 +31,9 @@ const HomeProjects: React.FC = () => {
       }`}
     >
       <div className="container mx-auto px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center mb-4">Featured Projects</h2>
+        <h2 className="text-3xl capitalize font-bold text-center mb-4" style={{ color: '#120942' }}>
+          Featured Projects
+        </h2>
         <p className="text-center text-gray-600 mb-12">
           Check out some of our latest and greatest projects. Click the button below to view all our projects.
         </p>

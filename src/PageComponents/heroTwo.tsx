@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
+import Button from '../CustomComponents/buttons';
 
 const images = [
   'images/project4/97195000951550_MAH190125_IMG_03-Copy-1024x684.jpg',
@@ -39,55 +40,52 @@ export default function HeroTwo() {
   const { ref: paragraphRef, inView: paragraphInView } = useInView({ triggerOnce: true });
 
   return (
-    <div>
-      <div className="relative isolate overflow-hidden pt-14">
-        <div className="absolute inset-0 -z-10 h-full w-full">
+    <div className="relative isolate overflow-hidden h-/4 flex items-center justify-center pt-14">
+      <div className="absolute inset-0 -z-10 w-full h-full">
+        {images.map((image, index) => (
           <div
+            key={image}
             style={{
-              backgroundImage: `url(${images[currentImageIndex]})`,
+              backgroundImage: `url(${image})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              transition: 'background-image 2s ease-in-out',
+              opacity: index === currentImageIndex ? 1 : 0,
+              transition: 'opacity 2s ease-in-out',
             }}
-            className="absolute inset-0 h-full w-full"
+            className="absolute inset-0 w-full h-full"
           />
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-        </div>
+        ))}
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+      </div>
 
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="text-center">
-            <h1
-              ref={headerRef}
-              className={`text-4xl font-bold tracking-tight text-white sm:text-6xl ${
-                headerInView ? 'animate-slideInRight' : 'opacity-0'
-              }`}
-              style={{
-                textShadow: '2px 2px 4px rgba(0, 0, 0, 1)', // Adjust the shadow to your preference
-                lineHeight: '1.5', // Set the line height to 1.5 times the font size
-              }}
-            >
-              Award winning bespoke residential developers.
-            </h1>
-            <p
-              ref={paragraphRef}
-              className={`mt-6 text-lg leading-8 text-white ${
-                paragraphInView ? 'animate-slideInLeft' : 'opacity-0'
-              }`}
-            >
-              - Since 1990 -
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="www.google.com"
-                className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
-              >
-                Get started
-              </a>
-              <a href="www.google.com" className="text-sm font-semibold leading-6 text-white">
-                Learn more <span aria-hidden="true">→</span>
-              </a>
-            </div>
-          </div>
+      <div className="mx-auto max-w-2xl py-20 sm:py-24 lg:py-28 text-center">
+        <h1
+          ref={headerRef}
+          className={`text-4xl font-bold tracking-tight text-white sm:text-6xl ${
+            headerInView ? 'animate-slideInRight' : 'opacity-0'
+          }`}
+          style={{
+            textShadow: '2px 2px 4px rgba(0, 0, 0, 1)', // Adjust the shadow to your preference
+            lineHeight: '1.5', // Set the line height to 1.5 times the font size
+          }}
+        >
+          Masters in Refurbishment
+        </h1>
+        <p
+          ref={paragraphRef}
+          className={`mt-6 text-lg leading-8 text-white ${
+            paragraphInView ? 'animate-slideInLeft' : 'opacity-0'
+          }`}
+          style={{
+            textShadow: '2px 2px 4px rgba(0, 0, 0, 1)', // Adjust the shadow to your preference
+            lineHeight: '1.5', // Set the line height to 1.5 times the font size
+          }}
+        >
+          - Since 1990 -
+        </p>
+        <div className="mt-10 flex items-center justify-center gap-x-6">
+          <Button variant='primary' className="mr-4" to="/contact">Contact</Button>
+          <Button variant='secondary' to="/about">Find Out More</Button>
         </div>
       </div>
 

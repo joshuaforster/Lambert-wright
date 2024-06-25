@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import Button from '../CustomComponents/buttons';
 
 const images = [
   'images/project4/w1.jpg',
@@ -67,7 +68,7 @@ export default function Assurance() {
         <div className="px-6 py-16 lg:px-0 lg:py-24 bg-customBlue lg:bg-transparent">
           <div className="max-w-2xl">
             <h2 className="text-base font-semibold leading-7">Assurance</h2>
-            <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">Giving you confidence</h1>
+            <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl capitalize">Giving you confidence</h1>
             <p className="mt-4 leading-7">
               Whether it’s a complete home renovation or a refurbishment we have the skills, the experience, and the team to deliver on your dream project.
             </p>
@@ -77,6 +78,7 @@ export default function Assurance() {
             <p className="mt-4 leading-7">
               Communication is key to the success of any project which is why we maintain open communication channels with our clients every step of the way.
             </p>
+            <Button variant='primary' className="mr-4" to="/contact">Contact</Button>
           </div>
         </div>
         <div className="lg:hidden block w-full h-64 sm:h-80 overflow-hidden">

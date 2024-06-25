@@ -9,12 +9,12 @@ interface StepType {
 const steps: StepType[] = [
   {
     id: 1,
-    name: 'Who are JLR',
+    name: 'Who Are JLR',
     description: 'Experienced and trusted Project Management and Construction team based in Leicestershire with over 30 years of experience.',
   },
   {
     id: 2,
-    name: 'What we do',
+    name: 'What We do',
     description: 'Complete key-turn Property Renovation and Project Management solutions from start to completion.',
   },
   {
@@ -24,7 +24,7 @@ const steps: StepType[] = [
   },
   {
     id: 4,
-    name: 'How it starts',
+    name: 'How It Starts',
     description: 'We provide free quotations for your dream project. Contact us via call or email.',
   },
 ];
@@ -60,7 +60,7 @@ const Steps: React.FC = () => {
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
         <div className="lg:flex lg:items-center lg:justify-between">
           <div className="max-w-2xl lg:mx-0 lg:max-w-xl">
-          <h2 className="text-5xl font-bold leading-[1.5] text-white">Your project your way...</h2>
+          <h2 className="text-5xl font-bold leading-[1.5] capitalize text-white">Your project your way...</h2>
             <div className="mt-8">
               <p className="text-xl text-gray-300">Building Dreams</p>
             </div>

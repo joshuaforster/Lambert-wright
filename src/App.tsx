@@ -17,6 +17,7 @@ import ProjectDetail from './MainPages/ProjectsDetails';
 import './App.css';
 import { ServicesProvider } from './CustomComponents/ServicesContext';
 import { ProjectsProvider } from './CustomComponents/projectsContext';
+import Unfound from './MainPages/unfound';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
                 <Route path='/terms-conditions' element={<TermsConditions />} />
                 <Route path='/projects' element={<ProjectHolder />} />
                 <Route path='/projects/:id' element={<ProjectDetail />} />
+                <Route path="*" element={<Unfound />} />
               </Route>
             </Routes>
           </BrowserRouter>

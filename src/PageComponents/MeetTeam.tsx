@@ -49,7 +49,7 @@ export default function Example() {
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Our team</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Our Team</h2>
           <p className="mt-6 text-lg leading-8 text-white">
             We’re a dynamic group of individuals who are passionate about what we do and dedicated to delivering the
             best results for our clients.

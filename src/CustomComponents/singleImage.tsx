@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaTimes, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 interface SingleImageProps {
@@ -10,6 +10,19 @@ interface SingleImageProps {
 }
 
 export default function SingleImage({ imageUrl, onPrevious, onNext, isFullscreen, setIsFullscreen }: SingleImageProps) {
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    if (isFullscreen) {
+      setScrollPosition(window.scrollY);
+      window.scrollTo(0, 0); // Scroll to the top when entering fullscreen
+      document.body.style.overflow = 'hidden'; // Prevent scrolling
+    } else {
+      document.body.style.overflow = 'auto'; // Restore scrolling
+      window.scrollTo(0, scrollPosition); // Restore the original scroll position
+    }
+  }, [isFullscreen, scrollPosition]);
+
   const openFullscreen = () => {
     setIsFullscreen(true);
   };
@@ -23,37 +36,40 @@ export default function SingleImage({ imageUrl, onPrevious, onNext, isFullscreen
       <img
         src={imageUrl}
         alt="placeholder"
-        className="object-cover w-full h-full cursor-pointer hover:opacity-90"
+        className="cursor-pointer w-full h-full object-cover"
         onClick={openFullscreen}
-        style={{ objectFit: 'cover' }} // Ensuring the image covers the container
       />
-  
       {isFullscreen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50"
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
           onClick={closeFullscreen}
+          style={{ height: '100vh', width: '100vw' }} // Ensure the overlay takes the full height and width of the viewport
         >
-          <div className="absolute top-4 right-4 text-white text-3xl">
-            <FaTimes onClick={closeFullscreen} className="cursor-pointer" />
+          <div className="absolute top-5 right-5 text-white text-4xl leading-none z-50 cursor-pointer">
+            <FaTimes onClick={closeFullscreen} />
           </div>
           <div
-            className="absolute left-4 text-white text-3xl"
+            className="absolute left-5 text-white text-4xl top-1/2 transform -translate-y-1/2 cursor-pointer z-50"
             onClick={(e) => e.stopPropagation()}
           >
-            <FaArrowLeft onClick={onPrevious} className="cursor-pointer" />
+            <FaArrowLeft onClick={onPrevious} />
           </div>
           <div
-            className="absolute right-4 text-white text-3xl"
+            className="absolute right-5 text-white text-4xl top-1/2 transform -translate-y-1/2 cursor-pointer z-50"
             onClick={(e) => e.stopPropagation()}
           >
-            <FaArrowRight onClick={onNext} className="cursor-pointer" />
+            <FaArrowRight onClick={onNext} />
           </div>
-          <img
-            src={imageUrl}
-            alt="placeholder"
-            className="max-h-full object-contain"
-            onClick={(e) => e.stopPropagation()} // Prevents closing when clicking on the image
-          />
+          <div className="w-full h-full flex items-center justify-center">
+            <div className="p-4 bg-opacity-75 flex items-center justify-center">
+              <img
+                src={imageUrl}
+                alt="placeholder"
+                className="max-h-[90vh] max-w-[90vw] object-contain"
+                onClick={(e) => e.stopPropagation()} // Prevents closing when clicking on the image
+              />
+            </div>
+          </div>
         </div>
       )}
     </div>

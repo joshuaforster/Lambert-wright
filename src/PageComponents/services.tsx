@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import Button from '../CustomComponents/buttons';
 
 const images = [
   'images/project4/w1.jpg',
@@ -85,7 +86,7 @@ export default function Services() {
         <div className="px-6 lg:flex lg:items-center lg:w-1/2 lg:pr-8">
           <div className="mx-auto max-w-2xl pb-16 pt-10 lg:w-full lg:max-w-lg xl:w-full">
             <h2 className="text-base font-semibold leading-7 text-customBlue">Assurance</h2>
-            <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Giving you confidence</h1>
+            <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 capitalize sm:text-4xl">Giving you confidence</h1>
             <p className="mt-4 leading-8 text-gray-700">
               Whether it’s a complete home renovation or a refurbishment we have the skills, the experience and the team to deliver on your dream project.
             </p>
@@ -113,6 +114,7 @@ export default function Services() {
               <p className="mt-6">
                 We are dedicated to enhancing your home or business with top-quality services.
               </p>
+              <Button variant='primary' className="mr-4" to="/contact">Contact</Button>
             </div>
           </div>
         </div>
