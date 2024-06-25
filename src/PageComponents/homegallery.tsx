@@ -27,7 +27,7 @@ export default function HomeGallery() {
   return (
     <div
       ref={sectionRef}
-      className={`py-16 bg-gray-200 transition-all duration-1000 transform ${
+      className={`py-16 bg-white transition-all duration-1000 transform ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >

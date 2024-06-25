@@ -30,12 +30,12 @@ export default function Logo() {
   return (
     <section
       ref={sectionRef}
-      className={`bg-white transition-opacity duration-1000 transform ${
+      className={`bg-customGray transition-opacity duration-1000 transform ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
       <div className="py-12 mx-auto max-w-screen-xl px-6 lg:px-8">
-        <h2 className="text-lg font-semibold leading-8 capitalize text-gray-900">
+        <h2 className="text-xl font-semibold leading-8 capitalize text-lightBlue">
           Our Recognitions and Partnerships
         </h2>
         <div className="grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-3 mt-8">

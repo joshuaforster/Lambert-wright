@@ -55,12 +55,14 @@ const Steps: React.FC = () => {
       ref={sectionRef}
       className={`bg-[#323D41] transition-all duration-1000 transform ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-      }`}
+      } font-roboto`}
     >
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
         <div className="lg:flex lg:items-center lg:justify-between">
           <div className="max-w-2xl lg:mx-0 lg:max-w-xl">
-          <h2 className="text-5xl font-bold leading-[1.5] capitalize text-white">Your project your way...</h2>
+          <h2 className="text-5xl font-bold leading-[1.5] capitalize text-white">
+              Your <span className="text-lightBlue">project</span> your way...
+            </h2>
             <div className="mt-8">
               <p className="text-xl text-gray-300">Building Dreams</p>
             </div>
@@ -89,7 +91,7 @@ const Step: React.FC<StepProps> = ({ step, isVisible }) => {
       }`}
     >
       <dt className="text-sm leading-6">{step.description}</dt>
-      <dd className="order-first text-3xl font-semibold tracking-tight">{step.name}</dd>
+      <dd className="order-first text-3xl text-lightBlue font-semibold tracking-tight">{step.name}</dd>
     </div>
   );
 };

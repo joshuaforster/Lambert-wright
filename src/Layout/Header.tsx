@@ -24,8 +24,8 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 bg-white shadow-lg z-50">
-      <nav className="bg-white border-gray-200 px-4 lg:px-6 py-7">
+    <header className="sticky top-0 bg-customGray shadow-lg z-50">
+      <nav className="bg-customGray border-gray-200 px-4 lg:px-6 py-7">
         <div className="flex items-center justify-between mx-auto max-w-screen-xl">
           <Link to="/" className="flex items-center" onClick={handleLinkClick}>
             <img
@@ -42,8 +42,8 @@ export default function Header() {
                     to={link.path}
                     className={({ isActive }) =>
                       `block py-2 pr-4 pl-3 ${
-                        isActive ? 'text-white bg-gray-900 rounded-lg' : 'text-gray-700'
-                      } hover:bg-gray-200 rounded-lg text-gray-700`
+                        isActive ? 'text-white bg-customBlue rounded-lg' : 'text-gray-700'
+                      } hover:bg-lightBlue rounded-lg text-gray-700`
                     }
                     aria-current={link.path === pathname ? 'page' : undefined}
                     onClick={handleLinkClick}
