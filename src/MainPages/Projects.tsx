@@ -56,7 +56,7 @@ const Projects: React.FC<ProjectsProps> = ({ limit }) => {
                 </Link>
               </h3>
               <p className="mt-2 text-sm leading-6 text-gray-300">{project.description.substring(0, 100)}...</p>
-              <Link to={`/projects/${project.id}`} className="mt-4 text-blue-600 hover:underline">
+              <Link to={`/projects/${project.id}`} className="mt-4 text-white hover:underline">
                 View Project
               </Link>
             </article>
