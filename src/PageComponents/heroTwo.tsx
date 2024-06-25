@@ -84,8 +84,8 @@ export default function HeroTwo() {
           - Since 1990 -
         </p>
         <div className="mt-10 flex items-center justify-center gap-x-6">
-          <Button variant='primary' className="mr-4" to="/contact">Contact</Button>
-          <Button variant='secondary' to="/about">Find Out More</Button>
+          <Button variant='primary' className="mr-4" to="/contact" aria-label="Contact us">Contact</Button>
+          <Button variant='secondary' to="/about" aria-label="Find Out More">Find Out More</Button>
         </div>
       </div>
 

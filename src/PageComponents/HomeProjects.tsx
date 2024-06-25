@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import Button from '../CustomComponents/buttons';
 import Projects from '../MainPages/Projects';
 
 const HomeProjects: React.FC = () => {
@@ -39,9 +39,9 @@ const HomeProjects: React.FC = () => {
         </p>
         <Projects limit={3} />
         <div className="text-center mt-12">
-          <Link to="/projects" className="bg-blue-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-700">
+          <Button variant='primary' to="/projects" className="px-6 py-3" aria-label="Projects Page">
             View All Projects
-          </Link>
+          </Button>
         </div>
       </div>
     </div>

@@ -111,10 +111,10 @@ export default function Services() {
                   <strong className="font-semibold text-gray-900">Landscaping</strong>
                 </li>
               </ul>
-              <p className="mt-6">
+              <p className="my-6">
                 We are dedicated to enhancing your home or business with top-quality services.
               </p>
-              <Button variant='primary' className="mr-4" to="/contact">Contact</Button>
+              <Button variant='primary' className="px-6 py-3 mt-4" to="/contact" aria-label="Contact us">Contact</Button>
             </div>
           </div>
         </div>

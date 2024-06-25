@@ -44,6 +44,7 @@ export default function HomeGallery() {
         <Button
           to="/gallery"
           variant='primary'
+          aria-label="Gallery Button"
         >
           View more
         </Button>

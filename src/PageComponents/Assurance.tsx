@@ -75,10 +75,10 @@ export default function Assurance() {
             <p className="mt-4 leading-7">
               We take complete control of the project and ensure an enjoyable experience for you as our valued client.
             </p>
-            <p className="mt-4 leading-7">
+            <p className="my-4 leading-7">
               Communication is key to the success of any project which is why we maintain open communication channels with our clients every step of the way.
             </p>
-            <Button variant='primary' className="mr-4" to="/contact">Contact</Button>
+            <Button variant='primary' className="px-6 py-3" to="/contact" aria-label="Contact us">Contact</Button>
           </div>
         </div>
         <div className="lg:hidden block w-full h-64 sm:h-80 overflow-hidden">
