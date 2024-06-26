@@ -9,12 +9,12 @@ export default function Header() {
     { name: 'Projects', path: '/projects' },
     { name: 'Gallery', path: '/gallery' },
     { name: "FAQ's", path: '/faq' },
-    { name: 'Brochure', path: 'Brochure/Brochure_JLR2021-2.pdf', isExternal: true }, // Add this line
+    { name: 'Brochure', path: 'Brochure/Brochure_JLR2021-2.pdf', isExternal: true },
     { name: 'Contact', path: '/contact' }
   ];
 
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { pathname } = useLocation(); // Get the current path
+  const { pathname } = useLocation();
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
@@ -31,7 +31,7 @@ export default function Header() {
           <Link to="/" className="flex items-center" onClick={handleLinkClick}>
             <img
               src={'images/logo.png'}
-              className="h-10 sm:h-10"
+              className="h-14 sm:h-14"
               alt="Company Logo"
             />
           </Link>
@@ -42,7 +42,7 @@ export default function Header() {
                   {link.isExternal ? (
                     <a
                       href={link.path}
-                      className="block font-light uppercase py-2 pr-4 pl-3 text-gray-700 hover:bg-lightBlue rounded-lg"
+                      className="block text-sm font-light uppercase py-2 px-1 text-gray-900"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -52,9 +52,9 @@ export default function Header() {
                     <NavLink
                       to={link.path}
                       className={({ isActive }) =>
-                        `block font-light uppercase py-2 pr-4 pl-3 ${
-                          isActive ? 'text-white bg-customBlue rounded-lg' : 'text-gray-700'
-                        } hover:bg-lightBlue rounded-lg text-gray-700`
+                        `block text-sm font-light uppercase py-2 px-1 ${
+                          isActive ? 'underline text-gray-900' : 'text-gray-900'
+                        } `
                       }
                       aria-current={link.path === pathname ? 'page' : undefined}
                       onClick={handleLinkClick}
@@ -96,7 +96,7 @@ export default function Header() {
                   {link.isExternal ? (
                     <a
                       href={link.path}
-                      className="block py-2 pr-4 pl-3 text-fontColour font-light uppercase border-b border-gray-100 hover:bg-gray-200 rounded-lg"
+                      className="block text-sm py-2 pr-4 pl-3 text-fontColour font-light uppercase border-b border-gray-100 hover:bg-gray-200 rounded-lg"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -106,8 +106,8 @@ export default function Header() {
                     <NavLink
                       to={link.path}
                       className={({ isActive }) =>
-                        `block py-2 pr-4 pl-3 text-fontColour font-light uppercase border-b border-gray-100 ${
-                          isActive ? 'text-[#2EA8E0]' : ''
+                        `block text-sm py-2 pr-4 pl-3 text-fontColour font-light uppercase border-b border-gray-100 ${
+                          isActive ? 'underline' : ''
                         } hover:bg-gray-200 rounded-lg`
                       }
                       aria-current={link.path === pathname ? 'page' : undefined}

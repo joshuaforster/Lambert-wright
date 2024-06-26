@@ -32,8 +32,8 @@ export default function HomeGallery() {
       }`}
     >
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-900">Some Of Our Work</h2>
-        <p className="mt-4 text-lg text-gray-600">
+        <h2 className="text-3xl font-bold text-fontColour">Some Of Our Work</h2>
+        <p className="mt-4 text-lg text-fontColour">
           Take a look at some of the projects we've completed. Click the button below to see our full gallery.
         </p>
       </div>
