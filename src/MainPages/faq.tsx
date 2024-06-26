@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { FaPlus, FaMinus } from 'react-icons/fa';
+import HeaderSection from '../CustomComponents/headerSection';
 
 const faqs = [
   {
@@ -79,12 +80,13 @@ const FAQ: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className={`bg-white dark:bg-gray-900 transition-all duration-1000 transform ${
+      className={`bg-customGray dark:bg-gray-900 transition-all duration-1000 transform ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
+      <HeaderSection image='images/project4/w3.jpg' title="FAQ's"/>
       <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-        <h2 className="mb-8 text-4xl tracking-tight font-extrabold text-gray-900 capitalize dark:text-white">Frequently asked questions</h2>
+        <h2 className="mb-8 text-4xl tracking-tight font-extrabold text-gray-800 capitalize dark:text-white">Frequently asked questions</h2>
         <div className="grid pt-8 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
           {faqs.map((faq, index) => (
             <div key={index} className="mb-10">
@@ -93,13 +95,13 @@ const FAQ: React.FC = () => {
                 onClick={() => toggleFAQ(index)}
               >
                 {activeIndices.includes(index) ? (
-                  <FaMinus className="mr-2 w-5 h-5 text-gray-500 dark:text-white" />
+                  <FaMinus className="mr-2 w-5 h-5 text-fontColour dark:text-white" />
                 ) : (
-                  <FaPlus className="mr-2 w-5 h-5 text-gray-500 dark:text-white" />
+                  <FaPlus className="mr-2 w-5 h-5 text-fontColour dark:text-white" />
                 )}
                 {faq.title}
               </h3>
-              {activeIndices.includes(index) && <div className="text-gray-500 dark:text-white">{faq.answer}</div>}
+              {activeIndices.includes(index) && <div className="text-fontColour dark:text-white">{faq.answer}</div>}
             </div>
           ))}
         </div>

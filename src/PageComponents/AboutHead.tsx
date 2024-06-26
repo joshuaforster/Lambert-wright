@@ -40,7 +40,7 @@ export default function AboutHead() {
           <div className="lg:pr-4 lg:sticky lg:top-24 lg:flex lg:items-stretch">
             <div className="relative overflow-hidden flex-grow">
               <img
-                className="w-full h-full lg:h-3/4 object-cover"
+                className="w-full h-full object-cover hidden lg:block lg:h-3/4"
                 src="images/aboutImage.png"
                 alt="About "
               />

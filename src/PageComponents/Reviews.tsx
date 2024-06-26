@@ -62,7 +62,7 @@ export default function Reviews() {
       <div className="relative mx-auto max-w-screen-xl px-4 lg:px-6 py-24 sm:py-32">
         <div className="absolute left-1/2 top-0 -z-10 h-[50rem] w-[90rem] -translate-x-1/2 bg-[radial-gradient(50%_100%_at_top,theme(colors.indigo.100),white)] opacity-20 lg:left-36" />
         <div className="absolute inset-y-0 right-1/2 -z-10 mr-12 w-[150vw] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-20 md:mr-0 lg:right-full lg:-mr-36 lg:origin-center" />
-        <h2 className="text-4xl font-bold text-center mb-12">WHAT OUR CUSTOMERS SAY</h2>
+        <h2 className="text-4xl text-fontColour font-bold text-center mb-12">WHAT OUR CUSTOMERS SAY</h2>
         <figure className="grid grid-cols-1 items-center gap-x-6 gap-y-8 lg:gap-x-10">
           <div className="relative col-span-2 lg:col-start-1 lg:row-start-2 flex flex-col justify-center h-full">
             <svg
@@ -77,7 +77,7 @@ export default function Reviews() {
               />
               <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x={86} />
             </svg>
-            <blockquote className="text-l font-semibold leading-8 text-gray-800 sm:leading-9">
+            <blockquote className="text-l font-semibold leading-8 text-fontColour sm:leading-9">
               <p>{reviews[currentReviewIndex].text}</p>
             </blockquote>
           </div>
@@ -89,13 +89,13 @@ export default function Reviews() {
             />
           </div>
           <figcaption className="text-base lg:col-start-1 lg:row-start-3">
-            <div className="font-semibold text-gray-900">{reviews[currentReviewIndex].name}</div>
+            <div className="font-semibold text-fontColour">{reviews[currentReviewIndex].name}</div>
           </figcaption>
         </figure>
         <div className="flex justify-center items-center mt-8">
           <button
             onClick={prevReview}
-            className="mx-2 text-gray-600 hover:text-gray-900 focus:outline-none"
+            className="mx-2 text-fontColour hover:text-gray-900 focus:outline-none"
           >
             <svg
               className="w-6 h-6"
@@ -141,7 +141,7 @@ export default function Reviews() {
           </button>
         </div>
         <div className="flex justify-center items-center mt-4">
-          <span className="text-sm text-gray-500">
+          <span className="text-sm text-fontColour">
             {currentReviewIndex + 1} of {reviews.length}
           </span>
         </div>
