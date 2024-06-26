@@ -73,15 +73,15 @@ export default function Services() {
         <div className="px-6 lg:flex lg:items-center lg:w-1/2 lg:pr-8">
           <div className="mx-auto max-w-2xl pb-16 pt-10 lg:w-full lg:max-w-lg xl:w-full">
             <h2 className="text-base font-semibold leading-7 text-customBlue">Assurance</h2>
-            <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 capitalize sm:text-4xl">Giving <span className='text-lightBlue'>you</span> Confidence</h1>
+            <h1 className="mt-2 text-3xl font-bold  text-fontColour capitalize sm:text-4xl">Giving <span className='text-lightBlue'>you</span> Confidence</h1>
             <p className="mt-4 leading-8 text-gray-700">
               Whether it’s a complete home renovation or a refurbishment we have the skills, the experience and the team to deliver on your dream project.
             </p>
-            <div className="mt-6 max-w-xl text-base leading-7 text-gray-700 lg:max-w-none">
-              <ul className="space-y-6 list-disc pl-5 text-customBlue">
+            <div className="mt-6 max-w-xl  text-fontColour text-base leading-7 lg:max-w-none">
+              <ul className="space-y-4 list-disc pl-5">
                 {services.map((service, index) => (
                   <li key={index}>
-                    <strong className="font-semibold text-customBlue">{service}</strong>
+                    <strong className="font-normal">{service}</strong>
                   </li>
                 ))}
               </ul>

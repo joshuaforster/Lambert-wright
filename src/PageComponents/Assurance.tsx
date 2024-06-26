@@ -67,7 +67,7 @@ export default function Assurance() {
       <div className="relative mx-auto max-w-7xl lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 xl:px-0">
         <div className="px-6 py-16 lg:px-0 lg:py-24 bg-customBlue lg:bg-transparent">
           <div className="max-w-2xl">
-            <h2 className="text-base font-semibold leading-7">Assurance</h2>
+            <h2 className="text-base  font-semibold leading-7">Assurance</h2>
             <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl capitalize">Giving you confidence</h1>
             <p className="mt-4 leading-7">
               Whether it’s a complete home renovation or a refurbishment we have the skills, the experience, and the team to deliver on your dream project.

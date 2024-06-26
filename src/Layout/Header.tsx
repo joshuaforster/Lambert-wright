@@ -9,6 +9,7 @@ export default function Header() {
     { name: 'Projects', path: '/projects' },
     { name: 'Gallery', path: '/gallery' },
     { name: "FAQ's", path: '/faq' },
+    { name: 'Brochure', path: 'Brochure/Brochure_JLR2021-2.pdf', isExternal: true }, // Add this line
     { name: 'Contact', path: '/contact' }
   ];
 
@@ -38,18 +39,29 @@ export default function Header() {
             <ul className="flex items-center space-x-8">
               {navigationLinks.map((link, index) => (
                 <li key={index}>
-                  <NavLink
-                    to={link.path}
-                    className={({ isActive }) =>
-                      `block py-2 pr-4 pl-3 ${
-                        isActive ? 'text-white bg-customBlue rounded-lg' : 'text-gray-700'
-                      } hover:bg-lightBlue rounded-lg text-gray-700`
-                    }
-                    aria-current={link.path === pathname ? 'page' : undefined}
-                    onClick={handleLinkClick}
-                  >
-                    {link.name}
-                  </NavLink>
+                  {link.isExternal ? (
+                    <a
+                      href={link.path}
+                      className="block font-light uppercase py-2 pr-4 pl-3 text-gray-700 hover:bg-lightBlue rounded-lg"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {link.name}
+                    </a>
+                  ) : (
+                    <NavLink
+                      to={link.path}
+                      className={({ isActive }) =>
+                        `block font-light uppercase py-2 pr-4 pl-3 ${
+                          isActive ? 'text-white bg-customBlue rounded-lg' : 'text-gray-700'
+                        } hover:bg-lightBlue rounded-lg text-gray-700`
+                      }
+                      aria-current={link.path === pathname ? 'page' : undefined}
+                      onClick={handleLinkClick}
+                    >
+                      {link.name}
+                    </NavLink>
+                  )}
                 </li>
               ))}
             </ul>
@@ -81,18 +93,29 @@ export default function Header() {
             <ul className="flex flex-col mt-4 space-y-2">
               {navigationLinks.map((link, index) => (
                 <li key={index}>
-                  <NavLink
-                    to={link.path}
-                    className={({ isActive }) =>
-                      `block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 ${
-                        isActive ? 'text-[#2EA8E0]' : ''
-                      } hover:bg-gray-200 rounded-lg`
-                    }
-                    aria-current={link.path === pathname ? 'page' : undefined}
-                    onClick={handleLinkClick}
-                  >
-                    {link.name}
-                  </NavLink>
+                  {link.isExternal ? (
+                    <a
+                      href={link.path}
+                      className="block py-2 pr-4 pl-3 text-fontColour font-light uppercase border-b border-gray-100 hover:bg-gray-200 rounded-lg"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {link.name}
+                    </a>
+                  ) : (
+                    <NavLink
+                      to={link.path}
+                      className={({ isActive }) =>
+                        `block py-2 pr-4 pl-3 text-fontColour font-light uppercase border-b border-gray-100 ${
+                          isActive ? 'text-[#2EA8E0]' : ''
+                        } hover:bg-gray-200 rounded-lg`
+                      }
+                      aria-current={link.path === pathname ? 'page' : undefined}
+                      onClick={handleLinkClick}
+                    >
+                      {link.name}
+                    </NavLink>
+                  )}
                 </li>
               ))}
             </ul>
