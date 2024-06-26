@@ -37,10 +37,10 @@ export default function HeroTwo() {
   }, []);
 
   const { ref: headerRef, inView: headerInView } = useInView({ triggerOnce: true });
-  const { ref: paragraphRef, inView: paragraphInView } = useInView({ triggerOnce: true });
+  // const { ref: paragraphRef, inView: paragraphInView } = useInView({ triggerOnce: true });
 
   return (
-    <div className="relative isolate overflow-hidden h-/4 flex items-center justify-center pt-14">
+    <div className="relative isolate overflow-hidden h-[80vh] flex pt-14">
       <div className="absolute inset-0 -z-10 w-full h-full">
         {images.map((image, index) => (
           <div
@@ -55,37 +55,43 @@ export default function HeroTwo() {
             className="absolute inset-0 w-full h-full"
           />
         ))}
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 bg-black opacity-30"></div>
       </div>
 
-      <div className="mx-auto max-w-2xl py-20 sm:py-24 lg:py-28 text-center">
-        <h1
-          ref={headerRef}
-          className={`text-4xl font-bold tracking-tight text-white sm:text-6xl ${
-            headerInView ? 'animate-slideInRight' : 'opacity-0'
-          }`}
-          style={{
-            textShadow: '2px 2px 4px rgba(0, 0, 0, 1)', // Adjust the shadow to your preference
-            lineHeight: '1.5', // Set the line height to 1.5 times the font size
-          }}
-        >
-          Masters in Refurbishment
-        </h1>
-        <p
-          ref={paragraphRef}
-          className={`mt-6 text-lg leading-8 text-white ${
-            paragraphInView ? 'animate-slideInLeft' : 'opacity-0'
-          }`}
-          style={{
-            textShadow: '2px 2px 4px rgba(0, 0, 0, 1)', // Adjust the shadow to your preference
-            lineHeight: '1.5', // Set the line height to 1.5 times the font size
-          }}
-        >
-          - Since 1990 -
-        </p>
-        <div className="mt-10 flex items-center justify-center gap-x-6">
-          <Button variant='primary' className="mr-4" to="/contact" aria-label="Contact us">Contact</Button>
-          <Button variant='secondary' to="/about" aria-label="Find Out More">Find Out More</Button>
+      <div className="w-full px-4 lg:px-6 max-w-screen-xl mx-auto flex items-center">
+        <div className="max-w-2xl lg:max-w-xl lg:pt-8 text-left">
+          <h1
+            ref={headerRef}
+            className={`text-5xl font-bold text-white ${
+              headerInView ? 'animate-slideInRight' : 'opacity-0'
+            }`}
+            style={{
+              textShadow: '2px 2px 4px rgba(0, 0, 0, 1)', // Adjust the shadow to your preference
+              lineHeight: '1.5', // Set the line height to 1.5 times the font size
+            }}
+          >
+            Masters in Refurbishment Since 1990
+          </h1>
+          {/* <p
+            ref={paragraphRef}
+            className={`mt-6 text-lg leading-8 text-white ${
+              paragraphInView ? 'animate-slideInLeft' : 'opacity-0'
+            }`}
+            style={{
+              textShadow: '2px 2px 4px rgba(0, 0, 0, 1)', // Adjust the shadow to your preference
+              lineHeight: '1.5', // Set the line height to 1.5 times the font size
+            }}
+          >
+            - Since 1990 -
+          </p> */}
+          <div className="mt-10 flex items-center gap-x-6">
+            <Button variant='tertiary' className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400" to="/contact" aria-label="Contact us">
+              Get A Free Quote
+            </Button>
+            <Button variant='tertiary' className="text-sm font-semibold leading-6 text-white" to="/about" aria-label="Find Out More">
+              Find Out More <span aria-hidden="true">→</span>
+            </Button>
+          </div>
         </div>
       </div>
 
