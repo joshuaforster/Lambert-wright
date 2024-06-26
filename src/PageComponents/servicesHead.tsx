@@ -24,7 +24,7 @@ export default function ServicesHead() {
   return (
     <section
       ref={sectionRef}
-      className={`bg-white dark:bg-gray-900 transition-all duration-1000 transform ${
+      className={`bg-customGray dark:bg-gray-900 transition-all duration-1000 transform ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >

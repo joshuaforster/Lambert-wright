@@ -59,7 +59,7 @@ const ServicesSection = () => {
   return (
     <section
       ref={sectionRef}
-      className={`bg-white dark:bg-gray-900 py-16 transition-all duration-1000 transform ${
+      className={`bg-customGray dark:bg-gray-900 py-16 transition-all duration-1000 transform ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
@@ -69,7 +69,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div key={index} className="border-b border-gray-300 pb-8">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{service.title}</h3>
-              <p className="text-lg text-gray-600 dark:text-gray-400 mt-2">{service.description}</p>
+              <p className="text-fontColour  mt-2">{service.description}</p>
             </div>
           ))}
         </div>
