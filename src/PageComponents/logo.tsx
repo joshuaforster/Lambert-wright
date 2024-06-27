@@ -15,7 +15,7 @@ export default function Logo() {
       if (sectionRef.current) {
         const { top } = sectionRef.current.getBoundingClientRect();
         const windowHeight = window.innerHeight;
-        if (top < windowHeight * 0.75) {
+        if (top < windowHeight * 0.9) {
           setIsVisible(true);
         }
       }
@@ -28,13 +28,13 @@ export default function Logo() {
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className={`bg-customGray transition-opacity duration-1000 transform ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-      }`}
-    >
-      <div className="py-12 mx-auto max-w-screen-xl px-6 lg:px-8">
+    <section className="bg-customGray">
+      <div
+        ref={sectionRef}
+        className={`py-12 mx-auto max-w-screen-xl px-6 lg:px-8 transition-opacity duration-1000 transform ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <h2 className="text-xl font-semibold leading-8 capitalize text-lightBlue">
           Our Recognitions and Partnerships
         </h2>

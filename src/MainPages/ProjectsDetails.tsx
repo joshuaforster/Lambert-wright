@@ -73,7 +73,7 @@ const ProjectDetail: React.FC = () => {
         </div>
       </div>
       <div className="container mx-auto px-6 lg:px-8">
-        <Link to="/projects" className="text-blue-600 hover:underline mb-4 inline-block">
+        <Link to="/projects" className="text-lightBlue hover:underline mb-4 inline-block">
           &larr; Back to All Projects
         </Link>
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start">

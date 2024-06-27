@@ -9,6 +9,15 @@ const images = [
   // Add more images as needed
 ];
 
+const services = [
+  "Complete Property Renovations",
+  "Architectural Planning",
+  "Property Extensions",
+  "Bathroom & Kitchen Refurbishments",
+  "Heating Installation & Upgrades",
+  "Landscaping"
+];
+
 export default function Assurance() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -40,61 +49,74 @@ export default function Assurance() {
   }, []);
 
   return (
-    <div
-      ref={sectionRef}
-      className={`relative bg-customBlue text-white transition-all duration-1000 transform ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-      }`}
-    >
+    <div ref={sectionRef} className="relative bg-customBlue text-white">
       <div className="lg:block hidden lg:absolute lg:inset-0 lg:left-1/2 lg:w-1/2 overflow-hidden">
         <div className="relative w-full h-full">
           {images.map((image, index) => (
-            <img
+            <div
               key={index}
-              className={`absolute inset-0 h-full w-full object-cover transition-transform duration-1000 ${
+              className={`absolute inset-0 h-full w-full transition-transform duration-1000 transform ${
                 index === currentImageIndex
                   ? 'translate-x-0'
                   : index < currentImageIndex
                   ? '-translate-x-full'
                   : 'translate-x-full'
               }`}
-              src={image}
-              alt="Property"
+              style={{
+                backgroundImage: `url(${image})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
             />
           ))}
         </div>
       </div>
       <div className="relative mx-auto max-w-7xl lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 xl:px-0">
-        <div className="px-6 py-16 lg:px-0 lg:py-24 bg-customBlue lg:bg-transparent">
+        <div
+          className={`px-6 py-16 lg:px-0 lg:py-24 bg-customBlue lg:bg-transparent transition-opacity duration-1000 transform ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <div className="max-w-2xl">
-            <h2 className="text-base  font-semibold leading-7">Assurance</h2>
-            <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl capitalize">Giving you confidence</h1>
-            <p className="mt-4 leading-7">
+            <h2 className="text-base font-semibold leading-7">Assurance</h2>
+            <h1 className="mt-2 text-3xl font-bold capitalize sm:text-4xl">
+              Giving <span className='text-lightBlue'>you</span> Confidence
+            </h1>
+            <p className="mt-4 leading-8">
               Whether it’s a complete home renovation or a refurbishment we have the skills, the experience, and the team to deliver on your dream project.
             </p>
-            <p className="mt-4 leading-7">
-              We take complete control of the project and ensure an enjoyable experience for you as our valued client.
-            </p>
-            <p className="my-4 leading-7">
-              Communication is key to the success of any project which is why we maintain open communication channels with our clients every step of the way.
-            </p>
-            <Button variant='primary' className="px-6 py-3" to="/contact" aria-label="Contact us">Contact</Button>
+            <div className="mt-6 max-w-xl text-base leading-7 lg:max-w-none">
+              <ul className="space-y-4 list-disc pl-5">
+                {services.map((service, index) => (
+                  <li key={index}>
+                    <strong className="font-normal">{service}</strong>
+                  </li>
+                ))}
+              </ul>
+              <p className="my-6">
+                We are dedicated to enhancing your home or business with top-quality services.
+              </p>
+              <Button variant='primary' className="px-6 py-3 mt-4" to="/contact" aria-label="Contact us">Contact</Button>
+            </div>
           </div>
         </div>
         <div className="lg:hidden block w-full h-64 sm:h-80 overflow-hidden">
           <div className="relative w-full h-full">
             {images.map((image, index) => (
-              <img
+              <div
                 key={index}
-                className={`absolute inset-0 h-full w-full object-cover transition-transform duration-1000 ${
+                className={`absolute inset-0 h-full w-full transition-transform duration-1000 transform ${
                   index === currentImageIndex
                     ? 'translate-x-0'
                     : index < currentImageIndex
                     ? '-translate-x-full'
                     : 'translate-x-full'
                 }`}
-                src={image}
-                alt="Property"
+                style={{
+                  backgroundImage: `url(${image})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
               />
             ))}
           </div>
@@ -103,4 +125,3 @@ export default function Assurance() {
     </div>
   );
 }
-

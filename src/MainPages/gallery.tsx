@@ -109,13 +109,13 @@ export default function Gallery() {
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className={`bg-customGray py-8 flex flex-col items-center justify-center transition-all duration-1000 transform ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-      }`}
-    >
-      <div className="max-w-screen-xl lg:pt-16 lg:px-6">
+    <section className="bg-customGray py-8 flex flex-col items-center justify-center">
+      <div
+        ref={sectionRef}
+        className={`max-w-screen-xl lg:pt-16 lg:px-6 transition-all duration-1000 transform ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         {/* <div className="max-w-screen-lg text-center text-gray-800 sm:text-lg dark:text-white">
           <h2 className="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">
             Gallery
@@ -124,8 +124,8 @@ export default function Gallery() {
             Take a look at some of our finest work. Our gallery showcases the high-quality property renovation services we offer. From residential refurbishments to commercial projects, our team ensures every detail is perfected. Witness the transformation for yourself!
           </p>
         </div> */}
+        <ImageGallery items={hardcodedItems} />
       </div>
-      <ImageGallery items={hardcodedItems} />
     </section>
   );
 }

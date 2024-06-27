@@ -55,13 +55,13 @@ export default function WhyJLR() {
   }, []);
 
   return (
-    <div
-      ref={sectionRef}
-      className={`bg-customGray py-24 sm:py-32 transition-all duration-1000 transform ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-      }`}
-    >
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="bg-customGray py-24 sm:py-32">
+      <div
+        ref={sectionRef}
+        className={`mx-auto max-w-7xl px-6 lg:px-8 transition-all duration-1000 transform ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Why Choose JLR</h2>
         </div>

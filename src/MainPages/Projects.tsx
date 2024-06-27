@@ -43,7 +43,7 @@ const Projects: React.FC<ProjectsProps> = ({ limit }) => {
         <div className="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-12 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {displayedProjects.map((project) => (
             <div key={project.id} className="flex flex-col items-center">
-              <article className="relative isolate flex justify-end overflow-hidden bg-gray-900 w-full h-80 sm:h-96 lg:h-[600px] mb-4">
+              <article className="relative isolate flex justify-end overflow-hidden bg-gray-900 w-full h-80 sm:h-96 lg:h-[400px] mb-4">
                 <img src={project.images[0]} alt={project.title} className="absolute inset-0 -z-10 h-full w-full object-cover" />
                 <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40" />
                 <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10" />

@@ -29,20 +29,20 @@ export default function AboutHead() {
   }, []);
 
   return (
-    <div
-      ref={sectionRef}
-      className={`bg-customBlue py-12 transition-all duration-1000 transform ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-      }`}
-    >
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="bg-customBlue py-12">
+      <div
+        ref={sectionRef}
+        className={`mx-auto max-w-7xl px-6 lg:px-8 transition-all duration-1000 transform ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:pr-4 lg:sticky lg:top-24 lg:flex lg:items-stretch">
             <div className="relative overflow-hidden flex-grow">
               <img
                 className="w-full h-full object-cover hidden lg:block lg:h-3/4"
                 src="images/aboutImage.png"
-                alt="About "
+                alt="About"
               />
             </div>
           </div>
@@ -57,7 +57,7 @@ export default function AboutHead() {
                 </p>
                 <h2 className="mt-8 text-2xl font-bold tracking-tight text-white sm:text-3xl">Our Story</h2>
                 <p className="mt-4">
-                Lambert & Wright was founded by Larry Lambert and Jason Wright who between them, have a wealth of knowledge and experience in property builds and renovation spanning over 70 years! As Local Authority Building Control (LABC) winners, they are the perfect project managers for large-scale renovations.
+                  Lambert & Wright was founded by Larry Lambert and Jason Wright who between them, have a wealth of knowledge and experience in property builds and renovation spanning over 70 years! As Local Authority Building Control (LABC) winners, they are the perfect project managers for large-scale renovations.
                 </p>
                 <p className="mt-4">
                   Both started Lambert & Wright Renovations so that they could continue to help more homeowners to create the dream home that they have always wanted, rather than having to leave the house that is in an area they love in search of the perfect property.

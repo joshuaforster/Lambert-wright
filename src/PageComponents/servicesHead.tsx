@@ -22,13 +22,13 @@ export default function ServicesHead() {
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className={`bg-customGray dark:bg-gray-900 transition-all duration-1000 transform ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-      }`}
-    >
-      <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+    <section className="bg-customGray py-16 lg:py-24">
+      <div
+        ref={sectionRef}
+        className={`gap-16 items-center px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:px-6 transition-all duration-1000 transform ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <div className="grid grid-cols-2 gap-4 mt-8">
           <img
             className="w-full"
@@ -42,16 +42,16 @@ export default function ServicesHead() {
           />
         </div>
         <div className="font-light mt-4 lg:mt-0 text-gray-500 sm:text-lg dark:text-gray-400">
-          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+          <h2 className="mb-4 font-semibold text-4xl text-gray-900 dark:text-white">
             Services
           </h2>
-          <p className="mb-4">
-            We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and
+          <p className="mb-4 text-base text-fontColour">
+            We are strategists, designers, and developers. Innovators and problem solvers. Small enough to be simple and
             quick, but big enough to deliver the scope you want at the pace you need. Small enough to be simple and quick,
             but big enough to deliver the scope you want at the pace you need.
           </p>
-          <p>
-            We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick.
+          <p className='text-fontColour text-base'>
+            We are strategists, designers, and developers. Innovators and problem solvers. Small enough to be simple and quick.
           </p>
         </div>
       </div>

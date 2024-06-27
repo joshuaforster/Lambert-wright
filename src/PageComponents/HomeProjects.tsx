@@ -24,13 +24,13 @@ const HomeProjects: React.FC = () => {
   }, []);
 
   return (
-    <div
-      ref={sectionRef}
-      className={`bg-gray-100 py-16 transition-all duration-1000 transform ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-      }`}
-    >
-      <div className="container mx-auto px-6 lg:px-8">
+    <div className="bg-gray-100 py-16">
+      <div
+        ref={sectionRef}
+        className={`container mx-auto px-6 lg:px-8 transition-opacity duration-1000 transform ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <h2 className="text-3xl capitalize font-bold text-center text-fontColour mb-4">
           Featured Projects
         </h2>
