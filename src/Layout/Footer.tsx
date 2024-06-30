@@ -171,7 +171,7 @@ export default function Example() {
           </div>
         </div>
         <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
-          <p className="text-xs leading-5 text-gray-400">&copy; {currentYear} Lambert & Wright</p>
+          <p className="text-xs leading-5 text-gray-400">&copy; {currentYear} Lambert & Wright - Lambert & Wright is a trading name of JLR Bespoke Property Renovations LTD’</p>
         </div>
       </div>
     </footer>

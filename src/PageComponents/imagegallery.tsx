@@ -41,11 +41,11 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ items, limit }) => {
   return (
     <section>
       <div className="px-4 mx-auto max-w-screen-xl lg:px-6 ">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {displayedItems.map((item, index) => (
-            <div key={index} className="relative w-full h-60 overflow-hidden border border-black dark:border-white">
+            <div key={index} className="relative w-full overflow-hidden border border-black dark:border-white">
               {item.type === 'image' ? (
-                <div className="w-full h-full">
+                <div className="w-full" style={{ height: '80vh' }}>
                   <SingleImage
                     imageUrl={item.imageUrl}
                     onPrevious={handlePrevious}

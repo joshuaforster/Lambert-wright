@@ -36,6 +36,8 @@ export default function Contact() {
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
             <div className="flex flex-col mt-8">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900">Contact Us</h2>
+              <h3>How can I contact you?</h3>
+              <p>You can contact us via phone, WhatsApp messaging or email </p>
             </div>
             <div
               ref={sectionRef}

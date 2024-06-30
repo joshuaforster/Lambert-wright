@@ -93,9 +93,9 @@ export default function Assurance() {
                   </li>
                 ))}
               </ul>
-              <p className="my-6 text-gray-700">
+              {/* <p className="my-6 text-gray-700">
                 We are dedicated to enhancing your home or business with top-quality services.
-              </p>
+              </p> */}
               <Button variant='primary' className="px-6 py-3 mt-4" to="/contact" aria-label="Contact us">Contact</Button>
             </div>
           </div>

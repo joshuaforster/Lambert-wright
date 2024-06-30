@@ -9,23 +9,23 @@ interface StepType {
 const steps: StepType[] = [
   {
     id: 1,
-    name: 'Who Are JLR',
-    description: 'Experienced and trusted Project Management and Construction team based in Leicestershire with over 30 years of experience.',
+    name: 'Lambert & Wright',
+    description: 'Lambert and Wright are award winning bespoke developer with a reputation for creating exception properties.',
   },
   {
     id: 2,
     name: 'What We do',
-    description: 'Complete key-turn Property Renovation and Project Management solutions from start to completion.',
+    description: 'We manage the entire process for you from start to finish',
   },
   {
     id: 3,
     name: 'Our Expertise',
-    description: 'We specialize in House Renovations, Property Refurbishment, and Property Extensions.',
+    description: 'We specialise in New Builds, house renovations and refurbishment.',
   },
   {
     id: 4,
-    name: 'How It Starts',
-    description: 'We provide free quotations for your dream project. Contact us via call or email.',
+    name: 'Contact Us',
+    description: 'Initially we will meet you for an informal chat.',
   },
 ];
 
@@ -62,9 +62,9 @@ const Steps: React.FC = () => {
             <h2 className="text-5xl font-bold leading-[1.5] capitalize text-white">
               Your <span className="text-lightBlue">project</span> your way...
             </h2>
-            <div className="mt-8">
+            {/* <div className="mt-8">
               <p className="text-xl text-gray-300">Building Dreams</p>
-            </div>
+            </div> */}
           </div>
           <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:mt-0 lg:ml-16 lg:max-w-xl lg:grid-cols-2">
             {steps.map((step) => (

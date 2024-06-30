@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 
 const logos = [
-  { src: "images/logos/logo.png", alt: "Transistor" },
-  { src: "images/logos/llpm-logo.png", alt: "Reform" },
+  // { src: "images/logos/logo.png", alt: "Transistor" },
+  // { src: "images/logos/llpm-logo.png", alt: "Reform" },
   { src: "images/logos/labcaward.png", alt: "Tuple" }
 ];
 
@@ -36,7 +36,7 @@ export default function Logo() {
         }`}
       >
         <h2 className="text-xl font-semibold leading-8 capitalize text-lightBlue">
-          Our Recognitions and Partnerships
+        Regional Winner of the LABC Award for Building Excellence and design 
         </h2>
         <div className="grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-3 mt-8">
           {logos.map((logo, index) => (

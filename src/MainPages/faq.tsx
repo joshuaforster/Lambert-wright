@@ -3,16 +3,16 @@ import { FaPlus, FaMinus } from 'react-icons/fa';
 
 const faqs = [
   {
-    title: 'What is JLR Bespoke Property Renovations?',
-    answer: 'JLR Bespoke Property Renovations are an experienced and trusted Project Management and Construction team based in Leicestershire. JLR Bespoke Property Renovations has over 30 years’ experience in the area of property renovations and project management.',
+    title: 'What is Lambert and Wright?',
+    answer: 'Lambert and Wright are an experienced and trusted Project Management and Construction team based in Leicestershire. Lambert and Wright haVE over 70 years’ experience in the area of property renovations and project management.',
   },
   {
     title: 'What services do you offer?',
-    answer: 'JLR provide a complete, key-turn Property Renovation and Project Management solution from start to completion.',
+    answer: 'Whether it’s a new build, a complete home renovation or a refurbishment we have the skills, the experience, and the team to deliver on your dream project.',
   },
   {
     title: 'What are your areas of expertise?',
-    answer: 'Our areas of expertise include Complete House Renovations, Property Refurbishment, and Property Extensions.',
+    answer: 'We specialise in House Renovations, Property Refurbishment, and Property Extensions.',
   },
   {
     title: 'How does the process start?',
@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     title: 'Are you insured?',
-    answer: 'Yes, JLR Bespoke Property Renovations is fully insured, providing peace of mind for all our clients.',
+    answer: 'Yes, Lambert & Wright are fully insured, providing peace of mind for all our clients.',
   },
   {
     title: 'Can you work with my budget?',
@@ -40,7 +40,7 @@ const faqs = [
   },
   {
     title: 'How can I contact you?',
-    answer: 'You can contact us via phone or email. Our contact details are provided on our website. We look forward to discussing your project with you.',
+    answer: 'You can contact us via phone, WhatsApp messaging or email. Our contact details are provided on our website. We look forward to discussing your project with you.',
   },
 ];
 

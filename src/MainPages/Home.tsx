@@ -1,6 +1,6 @@
 import React from "react";
 import Steps from "../PageComponents/steps";
-import Services from "../PageComponents/services";
+// import Services from "../PageComponents/services";
 import TestimonialSlider from "../PageComponents/Reviews";
 import Logo from "../PageComponents/logo";
 import HeroTwo from "../PageComponents/heroTwo";
@@ -14,7 +14,7 @@ export default function Home() {
       <HeroTwo />
       <Logo />
       <Steps />
-      <Services />
+      {/* <Services /> */}
       <HomeGallery />
       <Assurance />
       <HomeProjects />

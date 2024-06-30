@@ -10,12 +10,10 @@ const images = [
 ];
 
 const services = [
-  "Complete Property Renovations",
-  "Architectural Planning",
-  "Property Extensions",
-  "Bathroom & Kitchen Refurbishments",
-  "Heating Installation & Upgrades",
-  "Landscaping"
+  "Architectural and Planning services.",
+  "Design consultation and advice.",
+  "Full Project Management",
+  "Detailed quotations - From bathroom and kitchen refurbishment, stunning garden landscaping to a complete new build",
 ];
 
 export default function Assurance() {
@@ -78,24 +76,24 @@ export default function Assurance() {
           }`}
         >
           <div className="max-w-2xl">
-            <h2 className="text-base font-semibold leading-7">Assurance</h2>
+            {/* <h2 className="text-base font-semibold leading-7">Assurance</h2> */}
             <h1 className="mt-2 text-3xl font-bold capitalize sm:text-4xl">
               Giving <span className='text-lightBlue'>you</span> Confidence
             </h1>
             <p className="mt-4 leading-8">
-              Whether it’s a complete home renovation or a refurbishment we have the skills, the experience, and the team to deliver on your dream project.
+            Whether it is a new build, or a home renovation or refurbishment we have the skill, the experience and the team to deliver on your dream project
             </p>
             <div className="mt-6 max-w-xl text-base leading-7 lg:max-w-none">
-              <ul className="space-y-4 list-disc pl-5">
+              <ul className="space-y-4 list-disc pl-5 mb-4">
                 {services.map((service, index) => (
                   <li key={index}>
                     <strong className="font-normal">{service}</strong>
                   </li>
                 ))}
               </ul>
-              <p className="my-6">
+              {/* <p className="my-6">
                 We are dedicated to enhancing your home or business with top-quality services.
-              </p>
+              </p> */}
               <Button variant='primary' className="px-6 py-3 mt-4" to="/contact" aria-label="Contact us">Contact</Button>
             </div>
           </div>
