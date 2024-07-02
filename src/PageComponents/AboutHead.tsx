@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useRef } from 'react';
 
-const stats = [
-  { label: 'Founded', value: '2017' },
-  { label: 'Employees', value: '37' },
-  { label: 'Countries', value: '12' },
-  { label: 'Raised', value: '$25M' },
-];
+// const stats = [
+//   { label: 'Founded', value: '2017' },
+//   { label: 'Employees', value: '37' },
+//   { label: 'Countries', value: '12' },
+//   { label: 'Raised', value: '$25M' },
+// ];
 
 export default function AboutHead() {
   const [isVisible, setIsVisible] = useState(false);
@@ -64,14 +64,14 @@ export default function AboutHead() {
                 </p>
               </div>
             </div>
-            <dl className="mt-10 grid grid-cols-2 gap-8 border-t border-gray-900/10 pt-10 sm:grid-cols-4">
+            {/* <dl className="mt-10 grid grid-cols-2 gap-8 border-t border-gray-900/10 pt-10 sm:grid-cols-4">
               {stats.map((stat, statIdx) => (
                 <div key={statIdx}>
                   <dt className="text-sm font-semibold leading-6 text-white">{stat.label}</dt>
                   <dd className="mt-2 text-3xl font-bold leading-10 tracking-tight text-white">{stat.value}</dd>
                 </div>
               ))}
-            </dl>
+            </dl> */}
           </div>
         </div>
       </div>

@@ -84,6 +84,7 @@ export default function Assurance() {
             Whether it is a new build, or a home renovation or refurbishment we have the skill, the experience and the team to deliver on your dream project
             </p>
             <div className="mt-6 max-w-xl text-base leading-7 lg:max-w-none">
+              <h2>We offer:</h2>
               <ul className="space-y-4 list-disc pl-5 mb-4">
                 {services.map((service, index) => (
                   <li key={index}>

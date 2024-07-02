@@ -6,7 +6,7 @@ import Gallery from './MainPages/gallery';
 import FAQ from './MainPages/faq';
 import Contact from './MainPages/contact';
 import Layout from './Layout/layout';
-import ServiceDetail from './MainPages/services';
+import ServiceDetail from './PageComponents/serviceDetail';
 import { ThemeProvider } from './CustomComponents/darkmode';
 import ScrollToTop from './CustomComponents/ScrollToTop';
 import PrivacyPolicy from './MainPages/privacypolicy';

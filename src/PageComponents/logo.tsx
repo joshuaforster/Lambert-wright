@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from 'react';
 const logos = [
   // { src: "images/logos/logo.png", alt: "Transistor" },
   // { src: "images/logos/llpm-logo.png", alt: "Reform" },
-  { src: "images/logos/labcaward.png", alt: "Tuple" }
+  { src: "images/logos/labc-logo.jpg", alt: "Tuple" }
 ];
 
 export default function Logo() {
@@ -28,7 +28,7 @@ export default function Logo() {
   }, []);
 
   return (
-    <section className="bg-customGray">
+    <section className="bg-white">
       <div
         ref={sectionRef}
         className={`py-12 mx-auto max-w-screen-xl px-6 lg:px-8 transition-opacity duration-1000 transform ${
@@ -42,7 +42,7 @@ export default function Logo() {
           {logos.map((logo, index) => (
             <div key={index} className="flex justify-center items-center">
               <img
-                className="max-h-16 w-full max-w-xs object-contain"
+                className="h-24 w-full max-w-xs object-contain"
                 src={logo.src}
                 alt={logo.alt}
               />
