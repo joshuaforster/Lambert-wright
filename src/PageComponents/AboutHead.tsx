@@ -49,7 +49,7 @@ export default function AboutHead() {
           <div>
             <div className="text-base leading-7 text-white lg:max-w-lg">
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                Your Trusted Real Estate Partner
+                Lambert & Wright
               </h1>
               <div className="max-w-xl">
                 <p className="mt-6">

@@ -63,7 +63,7 @@ export default function WhyJLR() {
         }`}
       >
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Why Choose JLR</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Why Choose Lambert & Wright</h2>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-0 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {features.map((feature) => (
