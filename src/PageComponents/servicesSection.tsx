@@ -32,7 +32,7 @@ const ServicesSection = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
-        <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-12">OUR REAL ESTATE SERVICE</h2>
+   
         <div className="grid grid-cols-1 gap-8">
           {services.map((service, index) => (
             <div key={service.id}>
