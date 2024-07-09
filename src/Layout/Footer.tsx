@@ -22,8 +22,8 @@ const navigation = {
     href: `/services/${service.id}`
   })),
   legal: [
-    { name: 'Privacy Policy', href: '#' },
-    { name: 'Terms & Conditions', href: '#' },
+    { name: 'Privacy Policy', href: '/privacypolicy' },
+    { name: 'Terms & Conditions', href: '/termsandconditions' },
   ],
 
 };

@@ -9,7 +9,6 @@ import Layout from './Layout/layout';
 import ServiceDetail from './PageComponents/serviceDetail';
 import { ThemeProvider } from './CustomComponents/darkmode';
 import ScrollToTop from './CustomComponents/ScrollToTop';
-import PrivacyPolicy from './MainPages/privacypolicy';
 import TermsConditions from './MainPages/TermsConditions';
 import ServicesHome from './MainPages/servicesHome';
 import ProjectHolder from './MainPages/prohectHolder';
@@ -17,6 +16,8 @@ import ProjectDetail from './MainPages/ProjectsDetails';
 import './App.css';
 import { ServicesProvider } from './CustomComponents/ServicesContext';
 import { ProjectsProvider } from './CustomComponents/projectsContext';
+import TermsAndConditions from './MainPages/T&C';
+import PrivacyPolicy from './MainPages/privacypolicy';
 import Unfound from './MainPages/unfound';
 
 function App() {
@@ -39,6 +40,8 @@ function App() {
                 <Route path='/terms-conditions' element={<TermsConditions />} />
                 <Route path='/projects' element={<ProjectHolder />} />
                 <Route path='/projects/:id' element={<ProjectDetail />} />
+                <Route path='/termsandconditions' element={<TermsAndConditions />} />
+                <Route path='/privacypolicy' element={<PrivacyPolicy />} />
                 <Route path="*" element={<Unfound />} />
               </Route>
             </Routes>
