@@ -1,130 +1,140 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import ImageGallery, { GalleryItem } from '../PageComponents/imagegallery';
 
 export const hardcodedItems: GalleryItem[] = [
-  // project 4
-  { type: 'image', imageUrl: 'images/project4/97195000951550_MAH190125_IMG_03-Copy-1024x684.jpg' },
-  { type: 'image', imageUrl: 'images/project4/w-6.jpg' },
-  { type: 'image', imageUrl: 'images/project4/w1.jpg' },
-  { type: 'image', imageUrl: 'images/project4/w2.jpg' },
-  { type: 'image', imageUrl: 'images/project4/w3.jpg' },
-  { type: 'image', imageUrl: 'images/project4/w4.jpg' },
-  { type: 'image', imageUrl: 'images/project4/w5.jpg' },
-  { type: 'image', imageUrl: 'images/project4/w7.jpg' },
-  { type: 'image', imageUrl: 'images/project4/w8.jpg' },
-  { type: 'image', imageUrl: 'images/project4/w9.jpg' },
-  { type: 'image', imageUrl: 'images/project4/w10.jpg' },
-  { type: 'image', imageUrl: 'images/project4/w11.jpg' },
-  { type: 'image', imageUrl: 'images/project4/w12.jpg' },
-  { type: 'image', imageUrl: 'images/project4/w13.jpg' },
-  { type: 'image', imageUrl: 'images/project4/w14.jpg' },
-  { type: 'image', imageUrl: 'images/project4/w15.jpg' },
-  { type: 'image', imageUrl: 'images/project4/w16.jpg' },
-  { type: 'image', imageUrl: 'images/project4/w18.jpg' },
-  { type: 'image', imageUrl: 'images/project4/w19.jpg' },
-  { type: 'image', imageUrl: 'images/project4/w20.jpg' },
+  // Project 4
+  { type: 'image', imageUrl: 'images/project4/97195000951550_MAH190125_IMG_03-Copy-1024x684.jpg', category: 'Project 4' },
+  { type: 'image', imageUrl: 'images/project4/w-6.jpg', category: 'Project 4' },
+  { type: 'image', imageUrl: 'images/project4/w1.jpg', category: 'Project 4' },
+  { type: 'image', imageUrl: 'images/project4/w2.jpg', category: 'Project 4' },
+  { type: 'image', imageUrl: 'images/project4/w3.jpg', category: 'Project 4' },
+  { type: 'image', imageUrl: 'images/project4/w4.jpg', category: 'Project 4' },
+  { type: 'image', imageUrl: 'images/project4/w5.jpg', category: 'Project 4' },
+  { type: 'image', imageUrl: 'images/project4/w7.jpg', category: 'Project 4' },
+  { type: 'image', imageUrl: 'images/project4/w8.jpg', category: 'Project 4' },
+  { type: 'image', imageUrl: 'images/project4/w9.jpg', category: 'Project 4' },
+  { type: 'image', imageUrl: 'images/project4/w10.jpg', category: 'Project 4' },
+  { type: 'image', imageUrl: 'images/project4/w11.jpg', category: 'Project 4' },
+  { type: 'image', imageUrl: 'images/project4/w12.jpg', category: 'Project 4' },
+  { type: 'image', imageUrl: 'images/project4/w13.jpg', category: 'Project 4' },
+  { type: 'image', imageUrl: 'images/project4/w14.jpg', category: 'Project 4' },
+  { type: 'image', imageUrl: 'images/project4/w15.jpg', category: 'Project 4' },
+  { type: 'image', imageUrl: 'images/project4/w16.jpg', category: 'Project 4' },
+  { type: 'image', imageUrl: 'images/project4/w18.jpg', category: 'Project 4' },
+  { type: 'image', imageUrl: 'images/project4/w19.jpg', category: 'Project 4' },
+  { type: 'image', imageUrl: 'images/project4/w20.jpg', category: 'Project 4' },
 
-  // project 6
-  { type: 'image', imageUrl: 'images/project6/galleryimg32.jpg' },
-  { type: 'image', imageUrl: 'images/project6/galleryimg33.jpg' },
-  { type: 'image', imageUrl: 'images/project6/galleryimg35.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_0964-768x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_0999-768x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_1038-768x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_1084-768x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_1099-768x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_1184-768x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_1200-768x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_1211-768x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_1352-768x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_1451-1024x768.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_1460-768x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_1549-768x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_1556-768x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_1558-768x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_1768-768x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_1956-768x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_1996-768x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_2037-1024x768.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_2082-1024x768.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_2095-768x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_2213-768x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_2228-768x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_2230-768x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_2235-768x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_2237-768x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_2251-768x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_2278-768x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_2281-768x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_3408-768x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project6/IMG_4238-768x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project6/Lambert-1-1536x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project6/Lambert-11-1536x1024.jpg' },
+  // Project 6
+  { type: 'image', imageUrl: 'images/project6/galleryimg32.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/galleryimg33.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/galleryimg35.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_0964-768x1024.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_0999-768x1024.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_1038-768x1024.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_1084-768x1024.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_1099-768x1024.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_1184-768x1024.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_1200-768x1024.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_1211-768x1024.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_1352-768x1024.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_1451-1024x768.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_1460-768x1024.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_1549-768x1024.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_1556-768x1024.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_1558-768x1024.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_1768-768x1024.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_1956-768x1024.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_1996-768x1024.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_2037-1024x768.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_2082-1024x768.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_2095-768x1024.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_2213-768x1024.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_2228-768x1024.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_2230-768x1024.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_2235-768x1024.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_2237-768x1024.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_2251-768x1024.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_2278-768x1024.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_2281-768x1024.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_3408-768x1024.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/IMG_4238-768x1024.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/Lambert-1-1536x1024.jpg', category: 'Project 6' },
+  { type: 'image', imageUrl: 'images/project6/Lambert-11-1536x1024.jpg', category: 'Project 6' },
 
   // Project 1
-  { type: 'image', imageUrl: 'images/project1/Aerial-View.jpg' },
-  { type: 'image', imageUrl: 'images/project1/Cinema-Room-1-1536x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project1/Cinema-Room-2-1536x1081.jpg' },
-  { type: 'image', imageUrl: 'images/project1/Cinema-Room-3-1536x1025.jpg' },
-  { type: 'image', imageUrl: 'images/project1/Courtyard-1536x1021.jpg' },
-  { type: 'image', imageUrl: 'images/project1/Cupboard-Doors-made-from-old-Cheese-Boards-768x1278.jpg' },
-  { type: 'image', imageUrl: 'images/project1/Entrance-Gates-1536x1069.jpg' },
-  { type: 'image', imageUrl: 'images/project1/Garage-and-Gym-1.jpg' },
-  { type: 'image', imageUrl: 'images/project1/Garage-and-Gym-2-1536x884.jpg' },
-  { type: 'image', imageUrl: 'images/project1/Garden-1536x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project1/Gym-1536x1025.jpg' },
-  { type: 'image', imageUrl: 'images/project1/Inglenook-1-1536x1091.jpg' },
-  { type: 'image', imageUrl: 'images/project1/Inglenook-2-1536x1038.jpg' },
-  { type: 'image', imageUrl: 'images/project1/Inglenook-3-1536x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project1/Kitchen-1-1024x682.jpg' },
-  { type: 'image', imageUrl: 'images/project1/Kitchen-2-768x1152.jpg' },
-  { type: 'image', imageUrl: 'images/project1/Kitchen-3.jpg' },
-  { type: 'image', imageUrl: 'images/project1/Kitchen-4-1536x1025.jpg' },
-  { type: 'image', imageUrl: 'images/project1/Mower-Hut-1536x1024.jpg' },
-  { type: 'image', imageUrl: 'images/project1/Rear-and-side-Elevations-1536x1012.jpg' },
-  { type: 'image', imageUrl: 'images/project1/Rear-Elevation-1024x704.jpg' },
-  { type: 'image', imageUrl: 'images/project1/Side-Elevation-1024x683.jpg' },
-  { type: 'image', imageUrl: 'images/project1/Sitting-Room-1536x1025.jpg' },
+  { type: 'image', imageUrl: 'images/project1/Aerial-View.jpg', category: 'Project 1' },
+  { type: 'image', imageUrl: 'images/project1/Cinema-Room-1-1536x1024.jpg', category: 'Project 1' },
+  { type: 'image', imageUrl: 'images/project1/Cinema-Room-2-1536x1081.jpg', category: 'Project 1' },
+  { type: 'image', imageUrl: 'images/project1/Cinema-Room-3-1536x1025.jpg', category: 'Project 1' },
+  { type: 'image', imageUrl: 'images/project1/Courtyard-1536x1021.jpg', category: 'Project 1' },
+  { type: 'image', imageUrl: 'images/project1/Cupboard-Doors-made-from-old-Cheese-Boards-768x1278.jpg', category: 'Project 1' },
+  { type: 'image', imageUrl: 'images/project1/Entrance-Gates-1536x1069.jpg', category: 'Project 1' },
+  { type: 'image', imageUrl: 'images/project1/Garage-and-Gym-1.jpg', category: 'Project 1' },
+  { type: 'image', imageUrl: 'images/project1/Garage-and-Gym-2-1536x884.jpg', category: 'Project 1' },
+  { type: 'image', imageUrl: 'images/project1/Garden-1536x1024.jpg', category: 'Project 1' },
+  { type: 'image', imageUrl: 'images/project1/Gym-1536x1025.jpg', category: 'Project 1' },
+  { type: 'image', imageUrl: 'images/project1/Inglenook-1-1536x1091.jpg', category: 'Project 1' },
+  { type: 'image', imageUrl: 'images/project1/Inglenook-2-1536x1038.jpg', category: 'Project 1' },
+  { type: 'image', imageUrl: 'images/project1/Inglenook-3-1536x1024.jpg', category: 'Project 1' },
+  { type: 'image', imageUrl: 'images/project1/Kitchen-1-1024x682.jpg', category: 'Project 1' },
+  { type: 'image', imageUrl: 'images/project1/Kitchen-2-768x1152.jpg', category: 'Project 1' },
+  { type: 'image', imageUrl: 'images/project1/Kitchen-3.jpg', category: 'Project 1' },
+  { type: 'image', imageUrl: 'images/project1/Kitchen-4-1536x1025.jpg', category: 'Project 1' },
+  { type: 'image', imageUrl: 'images/project1/Mower-Hut-1536x1024.jpg', category: 'Project 1' },
+  { type: 'image', imageUrl: 'images/project1/Rear-and-side-Elevations-1536x1012.jpg', category: 'Project 1' },
+  { type: 'image', imageUrl: 'images/project1/Rear-Elevation-1024x704.jpg', category: 'Project 1' },
+  { type: 'image', imageUrl: 'images/project1/Side-Elevation-1024x683.jpg', category: 'Project 1' },
+  { type: 'image', imageUrl: 'images/project1/Sitting-Room-1536x1025.jpg', category: 'Project 1' },
 ];
 
+
+const categories = ['Project 1', 'Project 4', 'Project 6', 'Clear'];
+
 export default function Gallery() {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (sectionRef.current) {
-        const { top } = sectionRef.current.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        if (top < windowHeight * 0.75) {
-          setIsVisible(true);
-        }
-      }
-    };
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category === 'Clear' ? null : category);
+  };
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Check visibility on initial render
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const filteredItems = selectedCategory
+    ? hardcodedItems.filter(item => item.category === selectedCategory)
+    : hardcodedItems;
 
   return (
-    <section className="bg-customGray py-8 flex flex-col items-center justify-center">
-      <div
-        ref={sectionRef}
-        className={`max-w-screen-xl lg:pt-16 lg:px-6 transition-all duration-1000 transform ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-        }`}
-      >
-        {/* <div className="max-w-screen-lg text-center text-gray-800 sm:text-lg dark:text-white">
-          <h2 className="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">
-            Gallery
-          </h2>
-          <p className='mb-4'>
-            Take a look at some of our finest work. Our gallery showcases the high-quality property renovation services we offer. From residential refurbishments to commercial projects, our team ensures every detail is perfected. Witness the transformation for yourself!
-          </p>
-        </div> */}
-        <ImageGallery items={hardcodedItems} />
+    <section className="bg-white dark:bg-dark-gray py-8">
+      <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+        <div className="max-w-screen-lg text-gray-800 sm:text-lg dark:text-white">
+          <h2 className="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">Gallery</h2>
+        </div>
+        
+        <div className="flex justify-center space-x-4 mb-8 flex-wrap">
+          {categories.map(category => (
+            <button
+              key={category}
+              className={`mx-2 px-4 py-2 rounded transition-colors duration-200 ${
+                selectedCategory === category ? 'bg-blue-500 text-white' : 'bg-gray-200'
+              } ${category === 'Clear' ? 'hover:bg-red-500' : 'hover:bg-blue-300'}`}
+              onClick={() => handleCategoryChange(category)}
+            >
+              {category === 'Clear' ? 'Clear Filters ✕' : category}
+            </button>
+          ))}
+        </div>
+
+        {selectedCategory === null ? (
+          categories.filter(category => category !== 'Clear').map(category => (
+            <div key={category} className="mb-12">
+              <h3 className="text-3xl font-semibold my-4 text-center">{category}</h3>
+              <ImageGallery items={hardcodedItems.filter(item => item.category === category)} />
+            </div>
+          ))
+        ) : (
+          <div>
+            <h3 className="text-3xl font-semibold my-4 text-center">{selectedCategory}</h3>
+            <ImageGallery items={filteredItems} />
+          </div>
+        )}
       </div>
     </section>
   );

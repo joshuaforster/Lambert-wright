@@ -31,7 +31,7 @@ const navigation = {
 export default function Example() {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="bg-gray-900" aria-labelledby="footer-heading">
+    <footer className="bg-customBlue" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
@@ -39,8 +39,8 @@ export default function Example() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
             <img
-              className="h-7"
-              src="images/logowhite.png"
+              className="h-16"
+              src="images/logo.png"
               alt="Company name"
             />
             <p className="text-sm leading-6 text-gray-300">

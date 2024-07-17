@@ -39,7 +39,7 @@ export const services = [
       description: 'Our plumbing and electrical services include electrical design and installation, kitchen and bathroom installations, hot/cold pipework alterations, above ground drainage systems, hot water system upgrades, heating system upgrades, and boiler installations.', 
       content: `Our plumbing and electrical services include electrical design and installation, kitchen and bathroom installations, hot/cold pipework alterations, above ground drainage systems, hot water system upgrades, heating system upgrades, and boiler installations.
   
-  We specialize in:
+  We specialise in:
   - Electrical Design & Installation
   - Kitchen & Bathroom Installations
   - Hot/Cold Pipework Alterations/Upgrades
