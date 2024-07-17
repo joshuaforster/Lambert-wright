@@ -101,41 +101,51 @@ export default function Gallery() {
     ? hardcodedItems.filter(item => item.category === selectedCategory)
     : hardcodedItems;
 
-  return (
-    <section className="bg-white dark:bg-dark-gray py-8">
-      <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-        <div className="max-w-screen-lg text-gray-800 sm:text-lg dark:text-white">
-          <h2 className="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">Gallery</h2>
-        </div>
-        
-        <div className="flex justify-center space-x-4 mb-8 flex-wrap">
-          {categories.map(category => (
-            <button
-              key={category}
-              className={`mx-2 px-4 py-2 rounded transition-colors duration-200 ${
-                selectedCategory === category ? 'bg-blue-500 text-white' : 'bg-gray-200'
-              } ${category === 'Clear' ? 'hover:bg-red-500' : 'hover:bg-blue-300'}`}
-              onClick={() => handleCategoryChange(category)}
-            >
-              {category === 'Clear' ? 'Clear Filters ✕' : category}
-            </button>
-          ))}
-        </div>
-
-        {selectedCategory === null ? (
-          categories.filter(category => category !== 'Clear').map(category => (
-            <div key={category} className="mb-12">
-              <h3 className="text-3xl font-semibold my-4 text-center">{category}</h3>
-              <ImageGallery items={hardcodedItems.filter(item => item.category === category)} />
-            </div>
-          ))
-        ) : (
-          <div>
-            <h3 className="text-3xl font-semibold my-4 text-center">{selectedCategory}</h3>
-            <ImageGallery items={filteredItems} />
+    return (
+      <section className="bg-white dark:bg-dark-gray py-8">
+        <div className="py-8 px-4 mx-auto max-w-screen-xl lg:px-6">
+          <div className="max-w-screen-lg mx-auto text-gray-800 sm:text-lg dark:text-white text-center">
+            <h2 className="mb-2 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">Gallery</h2>
+            {/* <p className="mb-16 text-lg text-gray-600 dark:text-gray-300">
+              Explore some of the amazing projects we've worked on.
+            </p> */}
           </div>
-        )}
-      </div>
-    </section>
-  );
+          
+          <div className="max-w-screen-lg mx-auto text-gray-800 sm:text-lg dark:text-white text-center mb-8">
+            {/* <h3 className="mb-2 text-2xl tracking-tight font-semibold text-gray-900 dark:text-white">Filter Projects</h3> */}
+            <p className="mb-4 text-md text-gray-600 dark:text-gray-300">
+              Use the buttons below to filter the projects by category. Click "Clear Filters" to view all projects.
+            </p>
+          </div>
+          
+          <div className="flex justify-center space-x-4 mb-16 flex-wrap">
+            {categories.map(category => (
+              <button
+                key={category}
+                className={`mx-2 mb-2 px-4 py-2 rounded transition-colors duration-200 ${
+                  selectedCategory === category ? 'bg-blue-500 text-white' : 'bg-gray-200'
+                } ${category === 'Clear' ? 'hover:bg-red-500' : 'hover:bg-blue-300'}`}
+                onClick={() => handleCategoryChange(category)}
+              >
+                {category === 'Clear' ? 'Clear Filters ✕' : category}
+              </button>
+            ))}
+          </div>
+  
+          {selectedCategory === null ? (
+            categories.filter(category => category !== 'Clear').map(category => (
+              <div key={category} className="mb-12">
+                <h3 className="text-3xl font-semibold my-4 text-center">{category}</h3>
+                <ImageGallery items={hardcodedItems.filter(item => item.category === category)} />
+              </div>
+            ))
+          ) : (
+            <div>
+              <h3 className="text-3xl font-semibold my-4 text-center">{selectedCategory}</h3>
+              <ImageGallery items={filteredItems} />
+            </div>
+          )}
+        </div>
+      </section>
+    );
 }

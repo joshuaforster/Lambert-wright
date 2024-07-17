@@ -40,8 +40,11 @@ const Projects: React.FC<ProjectsProps> = ({ limit }) => {
       }`}
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-      <h1>Projects</h1>
-        <div className="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-12 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-2">Our Projects</h1>
+          <p className="text-lg text-gray-600">Explore some of the amazing projects we've worked on.</p>
+        </div>
+        <div className="mx-auto mt-8 grid max-w-2xl auto-rows-fr grid-cols-1 gap-12 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {displayedProjects.map((project) => (
             <div key={project.id} className="flex flex-col items-center">
               <article className="relative isolate flex justify-end overflow-hidden bg-gray-900 w-full h-80 sm:h-96 lg:h-[400px] mb-4">
