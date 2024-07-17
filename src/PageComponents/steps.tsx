@@ -15,7 +15,7 @@ const steps: StepType[] = [
   {
     id: 2,
     name: 'What We do',
-    description: 'We manage the entire process for you from start to finish',
+    description: 'We manage the entire process for you from start to finish.',
   },
   {
     id: 3,
