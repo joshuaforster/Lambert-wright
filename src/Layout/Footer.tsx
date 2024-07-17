@@ -2,7 +2,7 @@ import React from 'react';
 import { services } from '../Data/serviceData';
 
 const navigation = {
-  nav:[
+  nav: [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
@@ -25,13 +25,12 @@ const navigation = {
     { name: 'Privacy Policy', href: '/privacypolicy' },
     { name: 'Terms & Conditions', href: '/termsandconditions' },
   ],
-
 };
 
 export default function Example() {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="bg-customBlue" aria-labelledby="footer-heading">
+    <footer className="bg-customBlue border-t-2 border-white" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
@@ -54,7 +53,7 @@ export default function Example() {
                 <ul className="mt-6 space-y-4">
                   {navigation.nav.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
+                      <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300">
                         {item.name}
                       </a>
                     </li>
@@ -66,7 +65,7 @@ export default function Example() {
                 <ul className="mt-6 space-y-4">
                   {navigation.services.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
+                      <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300">
                         {item.name}
                       </a>
                     </li>
@@ -80,7 +79,7 @@ export default function Example() {
                 <ul className="mt-6 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
+                      <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300">
                         {item.name}
                       </a>
                     </li>
@@ -92,7 +91,7 @@ export default function Example() {
                 <ul className="mt-6 space-y-4">
                   {navigation.contact.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-white">
+                      <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300">
                         {item.name}
                       </a>
                     </li>

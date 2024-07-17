@@ -42,7 +42,7 @@ export default function Header() {
                   {link.isExternal ? (
                     <a
                       href={link.path}
-                      className="block text-sm font-light uppercase py-2 px-1 text-white"
+                      className="block text-sm font-light uppercase py-2 px-1 text-white transition duration-300 hover:text-customGold"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -53,8 +53,8 @@ export default function Header() {
                       to={link.path}
                       className={({ isActive }) =>
                         `block text-sm font-light uppercase py-2 px-1 ${
-                          isActive ? 'underline text-white' : 'text-white'
-                        } `
+                          isActive ? 'text-customGold underline' : 'text-white'
+                        } transition duration-300 hover:text-customGold`
                       }
                       aria-current={link.path === pathname ? 'page' : undefined}
                       onClick={handleLinkClick}
@@ -96,7 +96,7 @@ export default function Header() {
                   {link.isExternal ? (
                     <a
                       href={link.path}
-                      className="block text-sm py-2 pr-4 pl-3 text-fontColour font-light uppercase border-b border-gray-100 hover:bg-gray-200 rounded-lg"
+                      className="block text-sm py-2 pr-4 pl-3 text-fontColour font-light uppercase border-b border-gray-100 hover:text-customGold transition duration-300 rounded-lg"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -107,8 +107,8 @@ export default function Header() {
                       to={link.path}
                       className={({ isActive }) =>
                         `block text-sm py-2 pr-4 pl-3 text-fontColour font-light uppercase border-b border-gray-100 ${
-                          isActive ? 'underline' : ''
-                        } hover:bg-gray-200 rounded-lg`
+                          isActive ? 'text-customGold underline' : ''
+                        } hover:text-customGold transition duration-300 rounded-lg`
                       }
                       aria-current={link.path === pathname ? 'page' : undefined}
                       onClick={handleLinkClick}
