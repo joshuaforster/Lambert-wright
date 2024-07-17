@@ -3,11 +3,11 @@ export const services = [
     { id: 1, 
       title: 'PROJECT PLANNING', 
       description: 'We offer comprehensive project planning services, including property sourcing, local surveys, architectural design and building, planning application assistance, and financial planning for builds.', 
-      content: `As house prices across the majority of the UK continue to rise, many homeowners are finding that it’s more practical to renovate their existing property in order to create their dream home, rather than selling up and looking for it. JLR Bespoke Property Renovations specialize in property renovations in the East Midlands and have a host of experience making many homeowners' dreams a reality.
+      content: `As house prices across the majority of the UK continue to rise, many homeowners are finding that it’s more practical to renovate their existing property in order to create their dream home, rather than selling up and looking for it. Lambert & Wright specialise in property renovations in the East Midlands and have a host of experience making many homeowners' dreams a reality.
   
   It often comes as a surprise to homeowners when they find out what it costs to renovate a property, as it may be a lot less than you think.
   
-  If you are looking for a leader in providing home renovations to the East Midlands, then you have come to the right place. With over 30 years’ experience, a team of trusted and experienced East Midlands tradesmen, and a long list of thrilled customers, there really is no better company to work with on your property renovations in the East Midlands than with JLR Bespoke Property Renovations.
+  If you are looking for a leader in providing home renovations to the East Midlands, then you have come to the right place. With over 30 years’ experience, a team of trusted and experienced East Midlands tradesmen, and a long list of thrilled customers, there really is no better company to work with on your property renovations in the East Midlands than with Lambert & Wright.
   
   Trust in the knowledge that:
   
@@ -36,8 +36,8 @@ export const services = [
     },
     { id: 3, 
       title: 'PLUMBING & ELECTRICAL', 
-      description: 'Our plumbing and electrical services include electrical design and installation, kitchen and bathroom installations, hot/cold pipework alterations, above ground drainage systems, hot water system upgrades, heating system upgrades, and boiler installations.', 
-      content: `Our plumbing and electrical services include electrical design and installation, kitchen and bathroom installations, hot/cold pipework alterations, above ground drainage systems, hot water system upgrades, heating system upgrades, and boiler installations.
+      description: 'Our plumbing and electrical services include electrical design and installation, kitchen and bathroom installations, hot and coldpipework alterations, above ground drainage systems, hot water system upgrades, heating system upgrades, and boiler installations.', 
+      content: `Our plumbing and electrical services include electrical design and installation, kitchen and bathroom installations, hot and cold pipework alterations, above ground drainage systems, hot water system upgrades, heating system upgrades, and boiler installations.
   
   We specialise in:
   - Electrical Design & Installation
@@ -53,7 +53,7 @@ export const services = [
     },
     { id: 4, 
       title: 'DESIGN', 
-      description: 'Our design services cover interior flooring, painting and decorating, kitchen and bathroom designs, tiling, wooden floors, carpet fitting, door upgrades, and window upgrades.', 
+      description: 'We offer a complete design service if needed. After extensive and ongoing discussions with you, we take all the stress away ! New kitchens and bathrooms to wooden flooring and carpets, decoration, window and door upgrades and exterior landscaping. We take care of it all so you dont have to!', 
       content: `Our design services cover interior flooring, painting and decorating, kitchen and bathroom designs, tiling, wooden floors, carpet fitting, door upgrades, and window upgrades.
   
   We provide:
@@ -74,7 +74,7 @@ export const services = [
   
   Whether it’s a new kitchen that you are after, an extra bedroom, or an additional living area, an extension is a great way to provide that added space to your property to support your changing needs or your growing family.
   
-  There are various rules and regulations to be aware of when considering an extension as these can determine what is needed in order to start your project. JLR Bespoke Property Renovations have a team of experts who will assist you during this stage in the process to ensure that you get exactly what you want whilst adhering to all rules and regulations.`,
+  There are various rules and regulations to be aware of when considering an extension as these can determine what is needed in order to start your project. Lambert & Wright have a team of experts who will assist you during this stage in the process to ensure that you get exactly what you want whilst adhering to all rules and regulations.`,
       image: '/images/services/Extension.jpg',
     },
     { id: 6, 
@@ -96,20 +96,20 @@ export const services = [
     },
     { id: 7, 
       title: 'BATHROOM & KITCHEN UPGRADES', 
-      description: 'Transform your property into a space you can enjoy. With over 30 years of experience in home renovations, refurbishments, and kitchen and bathroom fittings, we are Leicestershire’s top choice for kitchen and bathroom renovations. We create bespoke designs tailored to your needs, making your kitchen or bathroom a space you’ll love.', 
+      description: 'Transform your property into a space you can enjoy. With over 45 years of experience in home renovations, refurbishments, and kitchen and bathroom fittings, we are Leicestershire’s top choice for kitchen and bathroom renovations. We create bespoke designs tailored to your needs, making your kitchen or bathroom a space you’ll love.', 
       content: `Transform your property into a space that you can enjoy. The kitchen is often called the ‘heart’ of the home, which is why we give so much care and attention towards your projects. With over 30 years of experience in home renovations, refurbishments, and kitchen and bathroom fittings, we are the perfect choice in Leicestershire for your kitchen and bathroom renovation needs.
   
   No matter the size of your kitchen or bathroom, you should be able to relax and enjoy them. If this isn’t how you feel in these areas, then allow us to take the stress away by creating a bespoke kitchen or bathroom design for you that gives you everything that you need.
   
-  You might have some ideas of what you want but aren’t sure how to piece it all together or what direction to go in – that is where JLR Bespoke Property Renovations come in. With our extensive knowledge and experience in the industry, we are the first choice for many homeowners across Leicestershire when it comes to kitchen and bathroom design and renovations.`,
+  You might have some ideas of what you want but aren’t sure how to piece it all together or what direction to go in – that is where L&W  Bespoke Property Renovations come in. With our extensive knowledge and experience in the industry, we are the first choice for many homeowners across Leicestershire when it comes to kitchen and bathroom design and renovations.`,
       image: '/images/services/kitchenbathroom.jpg',
     },
     { id: 8, 
       title: 'HEATING INSTALL & UPGRADES', 
-      description: 'Efficient heating systems not only provide comfort but also enhance energy efficiency. Whether you’re looking for underfloor heating, a new boiler system, or improvements to your existing system, JLR will help you achieve the best results for your home.', 
+      description: 'Efficient heating systems not only provide comfort but also enhance energy efficiency. Whether you’re looking for underfloor heating, a new boiler system, or improvements to your existing system, L&W  will help you achieve the best results for your home.', 
       content: `Efficient heating systems in your home not only provide the comfort that you desire but, when selected correctly, can create a more energy-efficient home.
   
-  Whether you are looking for underfloor heating, a new boiler system, or just making improvements to your existing system, you can work with JLR to get the best result for your home.
+  Whether you are looking for underfloor heating, a new boiler system, or just making improvements to your existing system, you can work with L&W  to get the best result for your home.
   
   Our heating services include:
   - Underfloor Heating Installation

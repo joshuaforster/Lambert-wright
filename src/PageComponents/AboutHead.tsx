@@ -60,7 +60,7 @@ export default function AboutHead() {
                   Lambert & Wright was founded by Larry Lambert and Jason Wright who between them, have a wealth of knowledge and experience in property builds and renovation spanning over 70 years! As Local Authority Building Control (LABC) winners, they are the perfect project managers for large-scale renovations.
                 </p>
                 <p className="mt-4">
-                  Both started Lambert & Wright Renovations so that they could continue to help more homeowners to create the dream home that they have always wanted, rather than having to leave the house that is in an area they love in search of the perfect property.
+                Lambert & Wright renovations help homeowners create the dream home they have always wanted without having to move from an area that they love.
                 </p>
               </div>
             </div>

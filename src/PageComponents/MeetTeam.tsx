@@ -5,7 +5,7 @@ const people = [
     name: 'Larry Lambert',
     role: 'Co-Founder & Project Manager',
     imageUrl: 'images/about/larry.png',
-    bio: `Larry’s career began in exhibition construction and management before transitioning to property design and construction in the 70s. He has managed an independent family property company since 1927, gaining extensive experience in complex construction and historical restoration over 45 years.`,
+    bio: `Larry’s career began in exhibition construction and management before transitioning to property design and construction in the 70s. He managed an independent property company started by his Grandfather in 1927, gaining extensive experience in complex construction and historical restoration over 45 years.`,
   },
   {
     name: 'Jason Wright',

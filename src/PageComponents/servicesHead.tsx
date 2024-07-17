@@ -50,9 +50,9 @@ export default function ServicesHead() {
             quick, but big enough to deliver the scope you want at the pace you need. Small enough to be simple and quick,
             but big enough to deliver the scope you want at the pace you need.
           </p>
-          <p className='text-fontColour text-base'>
+          {/* <p className='text-fontColour text-base'>
             We are strategists, designers, and developers. Innovators and problem solvers. Small enough to be simple and quick.
-          </p>
+          </p> */}
         </div>
       </div>
     </section>

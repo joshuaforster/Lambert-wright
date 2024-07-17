@@ -10,7 +10,7 @@ const steps: StepType[] = [
   {
     id: 1,
     name: 'Lambert & Wright',
-    description: 'Lambert and Wright are award winning bespoke developer with a reputation for creating exception properties.',
+    description: 'Lambert and Wright are award winning bespoke developers with a reputation for creating exception properties.',
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const steps: StepType[] = [
   {
     id: 3,
     name: 'Our Expertise',
-    description: 'We specialise in New Builds, house renovations and refurbishment.',
+    description: 'We specialise in new builds, house renovations and refurbishment.',
   },
   {
     id: 4,
