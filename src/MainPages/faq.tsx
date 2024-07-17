@@ -3,7 +3,7 @@ import { FaPlus, FaMinus } from 'react-icons/fa';
 
 const faqs = [
   {
-    title: 'What is Lambert and Wright?',
+    title: 'Who are Lambert and Wright?',
     answer: 'Lambert and Wright are an experienced and trusted Project Management and Construction team based in Leicestershire. Lambert and Wright haVE over 70 years’ experience in the area of property renovations and project management.',
   },
   {

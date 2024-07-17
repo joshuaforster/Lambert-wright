@@ -31,12 +31,12 @@ const HomeProjects: React.FC = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
-        <h2 className="text-3xl capitalize font-bold text-center text-fontColour mb-4">
+        {/* <h2 className="text-3xl capitalize font-bold text-center text-fontColour mb-4">
           Featured Projects
         </h2>
         <p className="text-center text-fontColour">
           Check out some of our latest and greatest projects. Click the button below to view all our projects.
-        </p>
+        </p> */}
         <Projects limit={3} />
         <div className="text-center mt-12">
           <Button variant='primary' to="/projects" className="px-6 py-3" aria-label="Projects Page">
