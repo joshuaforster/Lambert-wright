@@ -13,22 +13,20 @@ export type GalleryItem = ImageItem;
 
 interface ImageGalleryProps {
   items: GalleryItem[];
-  limit?: number;
 }
 
-const ImageGallery: React.FC<ImageGalleryProps> = ({ items, limit }) => {
+const ImageGallery: React.FC<ImageGalleryProps> = ({ items }) => {
   const [currentIndex, setCurrentIndex] = useState<number | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
   const handlePrevious = () => {
     if (currentIndex !== null) {
-      setCurrentIndex((currentIndex - 1 + filteredItems.length) % filteredItems.length);
+      setCurrentIndex((currentIndex - 1 + items.length) % items.length);
     }
   };
 
   const handleNext = () => {
     if (currentIndex !== null) {
-      setCurrentIndex((currentIndex + 1) % filteredItems.length);
+      setCurrentIndex((currentIndex + 1) % items.length);
     }
   };
 
@@ -36,14 +34,11 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ items, limit }) => {
     setCurrentIndex(null);
   };
 
-  const categories = Array.from(new Set(items.map(item => item.category)));
-  const filteredItems = selectedCategory === 'All' ? items : items.filter(item => item.category === selectedCategory);
-
   return (
     <section className="bg-white dark:bg-dark-gray">
       <div className="px-4 py-8 mx-auto max-w-screen-xl lg:px-6 lg:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {filteredItems.map((item, index) => (
+          {items.map((item, index) => (
             <div
               key={index}
               className="relative w-full h-100 overflow-hidden border border-black dark:border-white cursor-pointer"
@@ -64,7 +59,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ items, limit }) => {
       </div>
       {currentIndex !== null && (
         <SingleImage
-          imageUrl={filteredItems[currentIndex].imageUrl}
+          imageUrl={items[currentIndex].imageUrl}
           onPrevious={handlePrevious}
           onNext={handleNext}
           onClose={closeFullscreen}

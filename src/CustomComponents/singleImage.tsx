@@ -20,7 +20,7 @@ const SingleImage: React.FC<SingleImageProps> = ({ imageUrl, onPrevious, onNext,
       <img
         src={imageUrl}
         alt=""
-        className="max-h-[80vh] w-auto object-contain cursor-pointer"
+        className="max-h-[90vh] w-auto object-contain cursor-pointer"
         onClick={(e) => e.stopPropagation()}
       />
       <button

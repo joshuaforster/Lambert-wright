@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import ImageGallery from '../PageComponents/imagegallery';
+import ImageGallery, { GalleryItem } from '../PageComponents/imagegallery';
 import { hardcodedItems } from '../MainPages/gallery';
 import Button from '../CustomComponents/buttons';
 
@@ -38,12 +38,12 @@ export default function HomeGallery() {
         </p>
       </div>
       <div>
-        <ImageGallery items={hardcodedItems} limit={3} />
+        <ImageGallery items={hardcodedItems.slice(0, 3)} />
       </div>
       <div className="flex justify-center mt-8">
         <Button
           to="/gallery"
-          variant='primary'
+          variant="primary"
           aria-label="Gallery Button"
         >
           View more
