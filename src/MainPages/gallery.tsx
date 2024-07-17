@@ -123,8 +123,8 @@ export default function Gallery() {
               <button
                 key={category}
                 className={`mx-2 mb-2 px-4 py-2 rounded transition-colors duration-200 ${
-                  selectedCategory === category ? 'bg-blue-500 text-white' : 'bg-gray-200'
-                } ${category === 'Clear' ? 'hover:bg-red-500' : 'hover:bg-blue-300'}`}
+                  selectedCategory === category ? 'bg-customBlue text-white' : 'bg-gray-200'
+                } ${category === 'Clear' ? 'hover:bg-customGold' : 'hover:bg-customBlue hover:text-white'}`}
                 onClick={() => handleCategoryChange(category)}
               >
                 {category === 'Clear' ? 'Clear Filters ✕' : category}
