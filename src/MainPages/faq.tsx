@@ -79,7 +79,7 @@ const FAQ: React.FC = () => {
   return (
     <section className="relative bg-customGray dark:bg-gray-900">
       <div className="relative w-full h-96 mb-8">
-        <img src='images/project4/w3.jpg' alt="FAQ's" className="absolute inset-0 w-full h-96 object-cover" />
+        <img src='images/project4/w2.jpg' alt="FAQ's" className="absolute inset-0 w-full h-96 object-cover" />
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-4xl font-bold text-white shadow-lg">FAQ's</h1>

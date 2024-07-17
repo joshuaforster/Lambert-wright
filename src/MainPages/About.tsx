@@ -8,7 +8,7 @@ const About = () => {
   return (
     <div>
       <HeaderSection
-          image='images/project4/w3.jpg'
+          image='images/project4/w1.jpg'
           title="About"
       />
       <AboutHead />

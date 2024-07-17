@@ -76,38 +76,42 @@ const ProjectDetail: React.FC = () => {
         <Link to="/projects" className="text-lightBlue hover:underline mb-4 inline-block">
           &larr; Back to All Projects
         </Link>
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start">
-          <div className="lg:w-2/3">
-            <h2 className="text-2xl font-semibold mb-4">Description</h2>
-            <p className="text-gray-700 mb-8">{project.description}</p>
-            <h2 className="text-2xl font-semibold mb-4">Location</h2>
-            <p className="text-gray-700 mb-8">{project.location}</p>
-            <h2 className="text-2xl font-semibold mb-4">Customer</h2>
-            <p className="text-gray-700 mb-8">{project.customerName}</p>
-            <h2 className="text-2xl font-semibold mb-4">Key Features</h2>
-            <ul className="list-disc pl-6 text-gray-700">
-              {project.keyFeatures.map((feature, index) => (
-                <li key={index}>{feature}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="lg:w-1/3 lg:ml-8 mt-8 lg:mt-0">
-            <h2 className="text-2xl font-semibold mb-4">Gallery</h2>
-            <div className="grid grid-cols-2 gap-4">
-              {project.images.map((image, index) => (
-                <div key={index} className="relative w-full h-32 overflow-hidden cursor-pointer" onClick={() => openGallery(image)}>
-                  <img
-                    src={image}
-                    alt={`${project.title} ${index + 1}`}
-                    className="w-full h-32 object-cover transform transition-transform duration-200"
-                  />
-                  <div className="absolute inset-0 bg-gray-700 opacity-0 hover:opacity-50 transition-opacity duration-200"></div>
-                </div>
-              ))}
-            </div>
+        <div className="w-full mb-16">
+          <h2 className="text-2xl font-semibold mb-4">Description</h2>
+          <p className="text-gray-700 mb-8">{project.description}</p>
+          <h2 className="text-2xl font-semibold mb-4">Location</h2>
+          <p className="text-gray-700 mb-8">{project.location}</p>
+          <h2 className="text-2xl font-semibold mb-4">Customer</h2>
+          <p className="text-gray-700 mb-8">{project.customerName}</p>
+          <h2 className="text-2xl font-semibold mb-4">Key Features</h2>
+          <ul className="list-disc pl-6 text-gray-700 mb-8">
+            {project.keyFeatures.map((feature, index) => (
+              <li key={index}>{feature}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="w-full">
+          <h2 className="text-2xl font-semibold mb-4">Gallery</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {project.images.map((image, index) => (
+              <div
+                key={index}
+                className={`relative w-full overflow-hidden cursor-pointer ${
+                  index % 3 === 0 ? 'lg:col-span-2' : ''
+                }`}
+                onClick={() => openGallery(image)}
+              >
+                <img
+                  src={image}
+                  alt={`${project.title} ${index + 1}`}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gray-700 opacity-0 hover:opacity-50 transition-opacity duration-200"></div>
+              </div>
+            ))}
           </div>
         </div>
-        <div className="mt-16">
+        <div className="w-full mt-16">
           <h2 className="text-3xl font-bold mb-8">Similar Projects</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {similarProjects.map((proj) => (
@@ -166,3 +170,5 @@ const ProjectDetail: React.FC = () => {
 };
 
 export default ProjectDetail;
+
+

@@ -45,8 +45,8 @@ export const hardcodedItems: GalleryItem[] = [
   { type: 'image', imageUrl: 'images/project6/IMG_1768-768x1024.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/project6/IMG_1956-768x1024.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/project6/IMG_1996-768x1024.jpg', category: 'Project 6' },
-  { type: 'image', imageUrl: 'images/project6/IMG_2037-1024x768.jpg', category: 'Project 6' },
-  { type: 'image', imageUrl: 'images/project6/IMG_2082-1024x768.jpg', category: 'Project 6' },
+  // { type: 'image', imageUrl: 'images/project6/IMG_2037-1024x768.jpg', category: 'Project 6' },
+  // { type: 'image', imageUrl: 'images/project6/IMG_2082-1024x768.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/project6/IMG_2095-768x1024.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/project6/IMG_2213-768x1024.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/project6/IMG_2228-768x1024.jpg', category: 'Project 6' },
@@ -56,16 +56,16 @@ export const hardcodedItems: GalleryItem[] = [
   { type: 'image', imageUrl: 'images/project6/IMG_2251-768x1024.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/project6/IMG_2278-768x1024.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/project6/IMG_2281-768x1024.jpg', category: 'Project 6' },
-  { type: 'image', imageUrl: 'images/project6/IMG_3408-768x1024.jpg', category: 'Project 6' },
+  // { type: 'image', imageUrl: 'images/project6/IMG_3408-768x1024.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/project6/IMG_4238-768x1024.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/project6/Lambert-1-1536x1024.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/project6/Lambert-11-1536x1024.jpg', category: 'Project 6' },
 
   // Project 1
   { type: 'image', imageUrl: 'images/project1/Aerial-View.jpg', category: 'Project 1' },
-  { type: 'image', imageUrl: 'images/project1/Cinema-Room-1-1536x1024.jpg', category: 'Project 1' },
+  // { type: 'image', imag1eUrl: 'images/project1/Cinema-Room-1-1536x1024.jpg', category: 'Project 1' },
   { type: 'image', imageUrl: 'images/project1/Cinema-Room-2-1536x1081.jpg', category: 'Project 1' },
-  { type: 'image', imageUrl: 'images/project1/Cinema-Room-3-1536x1025.jpg', category: 'Project 1' },
+  // { type: 'image', imageUrl: 'images/project1/Cinema-Room-3-1536x1025.jpg', category: 'Project 1' },
   { type: 'image', imageUrl: 'images/project1/Courtyard-1536x1021.jpg', category: 'Project 1' },
   { type: 'image', imageUrl: 'images/project1/Cupboard-Doors-made-from-old-Cheese-Boards-768x1278.jpg', category: 'Project 1' },
   { type: 'image', imageUrl: 'images/project1/Entrance-Gates-1536x1069.jpg', category: 'Project 1' },
@@ -73,7 +73,7 @@ export const hardcodedItems: GalleryItem[] = [
   { type: 'image', imageUrl: 'images/project1/Garage-and-Gym-2-1536x884.jpg', category: 'Project 1' },
   { type: 'image', imageUrl: 'images/project1/Garden-1536x1024.jpg', category: 'Project 1' },
   { type: 'image', imageUrl: 'images/project1/Gym-1536x1025.jpg', category: 'Project 1' },
-  { type: 'image', imageUrl: 'images/project1/Inglenook-1-1536x1091.jpg', category: 'Project 1' },
+  // { type: 'image', imageUrl: 'images/project1/Inglenook-1-1536x1091.jpg', category: 'Project 1' },
   { type: 'image', imageUrl: 'images/project1/Inglenook-2-1536x1038.jpg', category: 'Project 1' },
   { type: 'image', imageUrl: 'images/project1/Inglenook-3-1536x1024.jpg', category: 'Project 1' },
   { type: 'image', imageUrl: 'images/project1/Kitchen-1-1024x682.jpg', category: 'Project 1' },
@@ -105,7 +105,7 @@ export default function Gallery() {
       <section className="bg-white dark:bg-dark-gray py-8">
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:px-6">
           <div className="max-w-screen-lg mx-auto text-gray-800 sm:text-lg dark:text-white text-center">
-            <h2 className="mb-2 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">Gallery</h2>
+            <h2 className="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">Gallery</h2>
             {/* <p className="mb-16 text-lg text-gray-600 dark:text-gray-300">
               Explore some of the amazing projects we've worked on.
             </p> */}
@@ -113,7 +113,7 @@ export default function Gallery() {
           
           <div className="max-w-screen-lg mx-auto text-gray-800 sm:text-lg dark:text-white text-center mb-8">
             {/* <h3 className="mb-2 text-2xl tracking-tight font-semibold text-gray-900 dark:text-white">Filter Projects</h3> */}
-            <p className="mb-4 text-md text-gray-600 dark:text-gray-300">
+            <p className="mb-4  text-gray-600 dark:text-gray-300">
               Use the buttons below to filter the projects by category. Click "Clear Filters" to view all projects.
             </p>
           </div>

@@ -31,13 +31,13 @@ export default function ServicesHead() {
       >
         <div className="grid grid-cols-2 gap-4 mt-8">
           <img
-            className="w-full"
-            src="/images/services/image 12.png"
+            className="w-full h-60 object-cover"
+            src='images/project1/Side-Elevation-1024x683.jpg'
             alt="office content 1"
           />
           <img
-            className="mt-4 w-full lg:mt-10"
-            src="/images/services/image 11.png"
+            className="w-full h-60 object-cover"
+            src='images/project1/Rear-Elevation-1024x704.jpg'
             alt="office content 2"
           />
         </div>
@@ -47,8 +47,7 @@ export default function ServicesHead() {
           </h2>
           <p className="mb-4 text-base text-fontColour">
             We are strategists, designers, and developers. Innovators and problem solvers. Small enough to be simple and
-            quick, but big enough to deliver the scope you want at the pace you need. Small enough to be simple and quick,
-            but big enough to deliver the scope you want at the pace you need.
+            quick, but big enough to deliver the scope you want at the pace you need. 
           </p>
           {/* <p className='text-fontColour text-base'>
             We are strategists, designers, and developers. Innovators and problem solvers. Small enough to be simple and quick.
