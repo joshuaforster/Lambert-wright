@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import ImageGallery, { GalleryItem } from '../PageComponents/imagegallery';
+import ImageGallery from '../PageComponents/imagegallery';
 import { hardcodedItems } from '../MainPages/gallery';
 import Button from '../CustomComponents/buttons';
 
