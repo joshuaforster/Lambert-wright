@@ -20,7 +20,7 @@ const SingleImage: React.FC<SingleImageProps> = ({ imageUrl, onPrevious, onNext,
       <img
         src={imageUrl}
         alt=""
-        className="max-h-[90vh] w-auto object-contain cursor-pointer"
+        className="h-[90vh] w-auto object-fill cursor-pointer" // Ensure the image height is 90% of the viewport height and width adjusts accordingly
         onClick={(e) => e.stopPropagation()}
       />
       <button
@@ -52,3 +52,4 @@ const SingleImage: React.FC<SingleImageProps> = ({ imageUrl, onPrevious, onNext,
 };
 
 export default SingleImage;
+

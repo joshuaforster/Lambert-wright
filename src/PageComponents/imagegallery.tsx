@@ -41,14 +41,15 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ items }) => {
           {items.map((item, index) => (
             <div
               key={index}
-              className="relative w-full h-100 overflow-hidden border border-black dark:border-white cursor-pointer"
+              className="relative w-full overflow-hidden border border-black dark:border-white cursor-pointer"
               onClick={() => setCurrentIndex(index)}
+              style={{ height: '500px' }} // Set a fixed height for all images
             >
-              <div className="w-full h-full">
+              <div className="w-full h-full group">
                 <img
                   src={item.imageUrl}
                   alt={item.altText}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:brightness-75"
                 />
                 <h3 className="mt-2 text-xl font-semibold text-gray-800 dark:text-white">{item.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400">{item.category}</p>

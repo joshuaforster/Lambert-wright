@@ -45,8 +45,6 @@ export const hardcodedItems: GalleryItem[] = [
   { type: 'image', imageUrl: 'images/project6/IMG_1768-768x1024.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/project6/IMG_1956-768x1024.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/project6/IMG_1996-768x1024.jpg', category: 'Project 6' },
-  // { type: 'image', imageUrl: 'images/project6/IMG_2037-1024x768.jpg', category: 'Project 6' },
-  // { type: 'image', imageUrl: 'images/project6/IMG_2082-1024x768.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/project6/IMG_2095-768x1024.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/project6/IMG_2213-768x1024.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/project6/IMG_2228-768x1024.jpg', category: 'Project 6' },
@@ -56,16 +54,13 @@ export const hardcodedItems: GalleryItem[] = [
   { type: 'image', imageUrl: 'images/project6/IMG_2251-768x1024.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/project6/IMG_2278-768x1024.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/project6/IMG_2281-768x1024.jpg', category: 'Project 6' },
-  // { type: 'image', imageUrl: 'images/project6/IMG_3408-768x1024.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/project6/IMG_4238-768x1024.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/project6/Lambert-1-1536x1024.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/project6/Lambert-11-1536x1024.jpg', category: 'Project 6' },
 
   // Project 1
   { type: 'image', imageUrl: 'images/project1/Aerial-View.jpg', category: 'Project 1' },
-  // { type: 'image', imag1eUrl: 'images/project1/Cinema-Room-1-1536x1024.jpg', category: 'Project 1' },
   { type: 'image', imageUrl: 'images/project1/Cinema-Room-2-1536x1081.jpg', category: 'Project 1' },
-  // { type: 'image', imageUrl: 'images/project1/Cinema-Room-3-1536x1025.jpg', category: 'Project 1' },
   { type: 'image', imageUrl: 'images/project1/Courtyard-1536x1021.jpg', category: 'Project 1' },
   { type: 'image', imageUrl: 'images/project1/Cupboard-Doors-made-from-old-Cheese-Boards-768x1278.jpg', category: 'Project 1' },
   { type: 'image', imageUrl: 'images/project1/Entrance-Gates-1536x1069.jpg', category: 'Project 1' },
@@ -73,7 +68,6 @@ export const hardcodedItems: GalleryItem[] = [
   { type: 'image', imageUrl: 'images/project1/Garage-and-Gym-2-1536x884.jpg', category: 'Project 1' },
   { type: 'image', imageUrl: 'images/project1/Garden-1536x1024.jpg', category: 'Project 1' },
   { type: 'image', imageUrl: 'images/project1/Gym-1536x1025.jpg', category: 'Project 1' },
-  // { type: 'image', imageUrl: 'images/project1/Inglenook-1-1536x1091.jpg', category: 'Project 1' },
   { type: 'image', imageUrl: 'images/project1/Inglenook-2-1536x1038.jpg', category: 'Project 1' },
   { type: 'image', imageUrl: 'images/project1/Inglenook-3-1536x1024.jpg', category: 'Project 1' },
   { type: 'image', imageUrl: 'images/project1/Kitchen-1-1024x682.jpg', category: 'Project 1' },
@@ -85,10 +79,39 @@ export const hardcodedItems: GalleryItem[] = [
   { type: 'image', imageUrl: 'images/project1/Rear-Elevation-1024x704.jpg', category: 'Project 1' },
   { type: 'image', imageUrl: 'images/project1/Side-Elevation-1024x683.jpg', category: 'Project 1' },
   { type: 'image', imageUrl: 'images/project1/Sitting-Room-1536x1025.jpg', category: 'Project 1' },
+
+  // Project 7
+  { type: 'image', imageUrl: 'images/project7/1.jpeg', category: 'Project 7' },
+  { type: 'image', imageUrl: 'images/project7/WhatsApp Image 2024-07-17 at 15.14.32 (2).jpeg', category: 'Project 7' },
+  { type: 'image', imageUrl: 'images/project7/WhatsApp Image 2024-07-17 at 15.14.32 (3).jpeg', category: 'Project 7' },
+  { type: 'image', imageUrl: 'images/project7/WhatsApp Image 2024-07-17 at 15.14.32 (4).jpeg', category: 'Project 7' },
+  { type: 'image', imageUrl: 'images/project7/WhatsApp Image 2024-07-17 at 15.14.32 (5).jpeg', category: 'Project 7' },
+  { type: 'image', imageUrl: 'images/project7/WhatsApp Image 2024-07-17 at 15.14.32 (6).jpeg', category: 'Project 7' },
+  { type: 'image', imageUrl: 'images/project7/WhatsApp Image 2024-07-17 at 15.14.32 (7).jpeg', category: 'Project 7' },
+  { type: 'image', imageUrl: 'images/project7/WhatsApp Image 2024-07-17 at 15.14.32 (8).jpeg', category: 'Project 7' },
+  { type: 'image', imageUrl: 'images/project7/WhatsApp Image 2024-07-17 at 15.14.32 (9).jpeg', category: 'Project 7' },
+  { type: 'image', imageUrl: 'images/project7/WhatsApp Image 2024-07-17 at 15.14.32.jpeg', category: 'Project 7' },
+  
+  // Project 8
+  { type: 'image', imageUrl: 'images/project8/0f1ca0ab-04c5-4a1b-9af7-496d6ad92715.jpeg.webp', category: 'Project 8' },
+  { type: 'image', imageUrl: 'images/project8/3e4eb8b9-0f3b-4413-ad8c-172c3d552ccc.jpeg.webp', category: 'Project 8' },
+  { type: 'image', imageUrl: 'images/project8/6c26863a-afcf-4afe-a3a0-210ac8c1486e.jpeg.webp', category: 'Project 8' },
+  { type: 'image', imageUrl: 'images/project8/7d32a26f-3f69-4702-8c8d-a6c9515e8317.jpeg.webp', category: 'Project 8' },
+  { type: 'image', imageUrl: 'images/project8/7e1a74e8-0fa9-4f78-9545-7801fb1ba428.jpeg.webp', category: 'Project 8' },
+  { type: 'image', imageUrl: 'images/project8/9c89872a-62d6-4c65-b8cc-fef2941a920f.jpeg.webp', category: 'Project 8' },
+  { type: 'image', imageUrl: 'images/project8/35cc5448-341c-4932-8ecb-6c57c4524a31.jpeg.webp', category: 'Project 8' },
+  { type: 'image', imageUrl: 'images/project8/553d17c1-e89d-4024-9a8a-ee64084ac08c.jpeg.webp', category: 'Project 8' },
+  { type: 'image', imageUrl: 'images/project8/676cbbd8-f638-4b6f-811e-c9ad0d74c37d.jpeg.webp', category: 'Project 8' },
+  { type: 'image', imageUrl: 'images/project8/c9d820fb-b3c5-4f68-a459-791e43242c6d.jpeg.webp', category: 'Project 8' },
+  { type: 'image', imageUrl: 'images/project8/d3d67df8-6bdf-45f8-991b-a4a0fa7c08c5.jpeg.webp', category: 'Project 8' },
+  { type: 'image', imageUrl: 'images/project8/d88585d1-272a-4dff-9488-ca8018bd1925.jpeg.webp', category: 'Project 8' },
+  { type: 'image', imageUrl: 'images/project8/eb7d91e0-b5af-43fd-98ca-f54b848148eb.jpeg.webp', category: 'Project 8' },
+  { type: 'image', imageUrl: 'images/project8/ebfe5759-3a9f-4e96-8dba-9473e64267c5.jpeg.webp', category: 'Project 8' },
 ];
 
 
-const categories = ['Project 1', 'Project 4', 'Project 6', 'Clear'];
+
+const categories = ['Project 1', 'Project 4', 'Project 6', 'Project 7', 'Project 8','Clear'];
 
 export default function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
