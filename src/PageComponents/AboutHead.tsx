@@ -1,41 +1,11 @@
-import React, { useEffect, useState, useRef } from 'react';
-
-// const stats = [
-//   { label: 'Founded', value: '2017' },
-//   { label: 'Employees', value: '37' },
-//   { label: 'Countries', value: '12' },
-//   { label: 'Raised', value: '$25M' },
-// ];
+import React, { useRef } from 'react';
 
 export default function AboutHead() {
-  const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (sectionRef.current) {
-        const { top } = sectionRef.current.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        if (top < windowHeight * 0.75) {
-          setIsVisible(true);
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Check visibility on initial render
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <div className="bg-customBlue py-12">
-      <div
-        ref={sectionRef}
-        className={`mx-auto max-w-7xl px-6 lg:px-8 transition-all duration-1000 transform ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-        }`}
-      >
+      <div ref={sectionRef} className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:pr-4 lg:sticky lg:top-24 lg:flex lg:items-stretch">
             <div className="relative overflow-hidden flex-grow">
@@ -60,7 +30,7 @@ export default function AboutHead() {
                   Lambert & Wright was founded by Larry Lambert and Jason Wright who between them, have a wealth of knowledge and experience in property builds and renovation spanning over 70 years! As Local Authority Building Control (LABC) winners, they are the perfect project managers for large-scale renovations.
                 </p>
                 <p className="mt-4">
-                Lambert & Wright renovations help homeowners create the dream home they have always wanted without having to move from an area that they love.
+                  Lambert & Wright renovations help homeowners create the dream home they have always wanted without having to move from an area that they love.
                 </p>
               </div>
             </div>

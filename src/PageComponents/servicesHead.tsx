@@ -1,35 +1,12 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useRef } from 'react';
 
 export default function ServicesHead() {
-  const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (sectionRef.current) {
-        const { top } = sectionRef.current.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        if (top < windowHeight * 0.75) {
-          setIsVisible(true);
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Check visibility on initial render
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <section className="bg-customGray py-16 lg:py-24">
-      <div
-        ref={sectionRef}
-        className={`gap-16 items-center px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:px-6 transition-all duration-1000 transform ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-        }`}
-      >
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+      <div ref={sectionRef} className="gap-16 items-center px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:px-6">
+        <div className="grid grid-cols-2 gap-4 mt-8">
           <img
             className="w-full h-80 object-cover"
             src='images/project1/Side-Elevation-1024x683.jpg'
@@ -49,9 +26,6 @@ export default function ServicesHead() {
             We are strategists, designers, and developers. Innovators and problem solvers. Small enough to be simple and
             quick, but big enough to deliver the scope you want at the pace you need. 
           </p>
-          {/* <p className='text-fontColour text-base'>
-            We are strategists, designers, and developers. Innovators and problem solvers. Small enough to be simple and quick.
-          </p> */}
         </div>
       </div>
     </section>

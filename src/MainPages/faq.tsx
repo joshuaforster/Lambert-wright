@@ -1,10 +1,11 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { FaPlus, FaMinus } from 'react-icons/fa';
+import HeaderSection from '../CustomComponents/headerSection';
 
 const faqs = [
   {
     title: 'Who are Lambert and Wright?',
-    answer: 'Lambert and Wright are an experienced and trusted Project Management and Construction team based in Leicestershire. Lambert and Wright haVE over 70 years’ experience in the area of property renovations and project management.',
+    answer: 'Lambert and Wright are an experienced and trusted Project Management and Construction team based in Leicestershire. Lambert and Wright have over 70 years’ experience in the area of property renovations and project management.',
   },
   {
     title: 'What services do you offer?',
@@ -78,13 +79,10 @@ const FAQ: React.FC = () => {
 
   return (
     <section className="relative bg-customGray dark:bg-gray-900">
-      <div className="relative w-full h-96 mb-8">
-        <img src='images/project4/w2.jpg' alt="FAQ's" className="absolute inset-0 w-full h-96 object-cover" />
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-4xl font-bold text-white shadow-lg">FAQ's</h1>
-        </div>
-      </div>
+      <HeaderSection
+        image="images/project4/w2.jpg"
+        title="FAQ's"
+      />
       <div
         ref={sectionRef}
         className={`transition-all duration-1000 transform ${
