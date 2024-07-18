@@ -39,7 +39,7 @@ export default function Example() {
           <div className="space-y-8">
             <img
               className="h-16"
-              src="images/logo.png"
+              src="/images/logo.png"
               alt="Company name"
             />
             {/* <p className="text-sm leading-6 text-gray-300">

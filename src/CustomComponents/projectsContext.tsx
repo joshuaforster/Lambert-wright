@@ -25,6 +25,35 @@ export const ProjectsProvider: React.FC<ProjectsProviderProps> = ({ children }) 
   const projects: Project[] = [
     {
       id: '1',
+      title: 'Project 1',
+      description: 'Description of Project 1.',
+      location: 'Location of Project 1',
+      customerName: 'Customer of Project 1',
+      projectType: 'renovation',
+      images: [
+        '/images/project8/0f1ca0ab-04c5-4a1b-9af7-496d6ad92715.jpeg.webp',
+        '/images/project8/3e4eb8b9-0f3b-4413-ad8c-172c3d552ccc.jpeg.webp',
+        '/images/project8/6c26863a-afcf-4afe-a3a0-210ac8c1486e.jpeg.webp',
+        '/images/project8/7d32a26f-3f69-4702-8c8d-a6c9515e8317.jpeg.webp',
+        '/images/project8/7e1a74e8-0fa9-4f78-9545-7801fb1ba428.jpeg.webp',
+        '/images/project8/9c89872a-62d6-4c65-b8cc-fef2941a920f.jpeg.webp',
+        '/images/project8/35cc5448-341c-4932-8ecb-6c57c4524a31.jpeg.webp',
+        '/images/project8/553d17c1-e89d-4024-9a8a-ee64084ac08c.jpeg.webp',
+        '/images/project8/676cbbd8-f638-4b6f-811e-c9ad0d74c37d.jpeg.webp',
+        '/images/project8/c9d820fb-b3c5-4f68-a459-791e43242c6d.jpeg.webp',
+        '/images/project8/d3d67df8-6bdf-45f8-991b-a4a0fa7c08c5.jpeg.webp',
+        '/images/project8/d88585d1-272a-4dff-9488-ca8018bd1925.jpeg.webp',
+        '/images/project8/eb7d91e0-b5af-43fd-98ca-f54b848148eb.jpeg.webp',
+        '/images/project8/ebfe5759-3a9f-4e96-8dba-9473e64267c5.jpeg.webp',
+      ],
+      keyFeatures: [
+        'Feature 1',
+        'Feature 2',
+        'Feature 3',
+      ],
+    },
+    {
+      id: '2',
       title: 'Burton Overy Bathroom Renovation',
       description: 'This project involved the complete renovation of a luxurious bathroom in a charming residence in Burton Overy. The transformation included the installation of modern fixtures, elegant tiling, and bespoke cabinetry, enhancing both functionality and aesthetic appeal. The serene ambiance and meticulous craftsmanship reflect our commitment to excellence in bathroom renovations.',
       location: 'Burton Overy, UK',
@@ -45,7 +74,7 @@ export const ProjectsProvider: React.FC<ProjectsProviderProps> = ({ children }) 
         '/images/Renovations/Full House Renovation Burton Overy/BurtonOvery3_14.jpg',
         '/images/Renovations/Full House Renovation Burton Overy/BurtonOvery3_15.jpg',
         '/images/Renovations/Full House Renovation Burton Overy/BurtonOvery3_16.jpg',
-        '/images/Renovations/Full House Renovation Burton Overy/BurtonOvery3_17.jpg'
+        '/images/Renovations/Full House Renovation Burton Overy/BurtonOvery3_17.jpg',
       ],
       keyFeatures: [
         'Modern Fixtures and Fittings',
@@ -55,7 +84,7 @@ export const ProjectsProvider: React.FC<ProjectsProviderProps> = ({ children }) 
       ],
     },
     {
-      id: '2',
+      id: '3',
       title: 'Great Glen Bathroom',
       description: 'A stunning bathroom renovation project in Great Glen...',
       location: 'Great Glen, UK',
@@ -75,7 +104,7 @@ export const ProjectsProvider: React.FC<ProjectsProviderProps> = ({ children }) 
       ],
     },
     {
-      id: '3',
+      id: '4',
       title: 'Bathroom Burton Overy',
       description: 'A beautiful bathroom renovation project in Burton Overy...',
       location: 'Burton Overy, Leicester, UK',
@@ -99,7 +128,7 @@ export const ProjectsProvider: React.FC<ProjectsProviderProps> = ({ children }) 
       ],
     },
     {
-      id: '4',
+      id: '5',
       title: 'Kitchen Extension Leicester',
       description: 'Extension and modernization of a kitchen space in Leicester...',
       location: 'Leicester, UK',
@@ -122,46 +151,6 @@ export const ProjectsProvider: React.FC<ProjectsProviderProps> = ({ children }) 
         'Modern Appliances',
       ],
     },
-    // {
-    //   id: '5',
-    //   title: 'Garage Conversion Leicestershire',
-    //   description: 'This project involved transforming an underutilized garage into a modern, functional living space in Leicestershire. Our team worked meticulously to ensure that every detail met the highest standards of quality and design. The conversion included the installation of new flooring, insulation, and drywall to create a comfortable and energy-efficient environment. We also added large windows to enhance natural light, making the space feel open and inviting. Modern fixtures and finishes were selected to complement the existing home decor, resulting in a seamless integration of the new space. This garage conversion not only provides additional living space but also significantly enhances the overall property value.',
-    //   location: 'Leicestershire, UK',
-    //   customerName: 'John Doe',
-    //   projectType: 'conversion',
-    //   images: [
-    //     '/images/Renovations/Garage conversion Leicestershire/garageconversion1.jpg',
-    //     '/images/Renovations/Garage conversion Leicestershire/garageconversion2.jpg',
-    //     '/images/Renovations/Garage conversion Leicestershire/garageconversion3.jpg',
-    //     '/images/Renovations/Garage conversion Leicestershire/IMG_2744-1-rotated.jpg',
-    //     '/images/Renovations/Garage conversion Leicestershire/IMG_2746-1-rotated.jpg',
-    //     '/images/Renovations/Garage conversion Leicestershire/IMG_2747-1-rotated.jpg',
-    //     '/images/Renovations/Garage conversion Leicestershire/IMG_2749-1-rotated.jpg',
-    //     '/images/Renovations/Garage conversion Leicestershire/IMG_2750-1-rotated.jpg',
-    //     '/images/Renovations/Garage conversion Leicestershire/PHOTO-2020-09-18-13-06-52.jpg',
-    //     '/images/Renovations/Garage conversion Leicestershire/PHOTO-2020-10-20-18-12-31-2.jpg',
-    //     '/images/Renovations/Garage conversion Leicestershire/PHOTO-2020-10-20-18-12-31-3.jpg',
-    //     '/images/Renovations/Garage conversion Leicestershire/PHOTO-2020-10-20-18-12-31-8.jpg',
-    //     '/images/Renovations/Garage conversion Leicestershire/WhatsApp-Image-2020-09-16-at-14.25.56-1.jpeg',
-    //     '/images/Renovations/Garage conversion Leicestershire/WhatsApp-Image-2020-09-16-at-14.25.56-2.jpeg',
-    //     '/images/Renovations/Garage conversion Leicestershire/WhatsApp-Image-2020-09-16-at-14.25.56.jpeg',
-    //     '/images/Renovations/Garage conversion Leicestershire/WhatsApp-Image-2020-09-16-at-14.25.57-1.jpeg',
-    //     '/images/Renovations/Garage conversion Leicestershire/WhatsApp-Image-2020-09-16-at-14.25.57-4.jpeg',
-    //     '/images/Renovations/Garage conversion Leicestershire/WhatsApp-Image-2020-09-16-at-14.25.57-5.jpeg',
-    //     '/images/Renovations/Garage conversion Leicestershire/WhatsApp-Image-2020-09-16-at-14.25.57.jpeg',
-    //     '/images/Renovations/Garage conversion Leicestershire/WhatsApp-Image-2020-09-18-at-13.06.53.jpeg',
-    //     '/images/Renovations/Garage conversion Leicestershire/WhatsApp-Image-2020-09-30-at-14.43.24-1.jpeg',
-    //     '/images/Renovations/Garage conversion Leicestershire/WhatsApp-Image-2020-09-30-at-14.43.24-2.jpeg',
-    //     '/images/Renovations/Garage conversion Leicestershire/WhatsApp-Image-2020-09-30-at-14.43.24.jpeg',
-    //     '/images/Renovations/Garage conversion Leicestershire/WhatsApp-Image-2020-09-30-at-14.43.25-1.jpeg',
-    //     '/images/Renovations/Garage conversion Leicestershire/WhatsApp-Image-2020-09-30-at-14.43.25-2.jpeg'
-    //   ],
-    //   keyFeatures: [
-    //     'Functional Living Space',
-    //     'Enhanced Property Value',
-    //     'Modern Design'
-    //   ]
-    // },
     {
       id: '6',
       title: 'Ensuite Bathroom Renovation Crick',
@@ -177,12 +166,12 @@ export const ProjectsProvider: React.FC<ProjectsProviderProps> = ({ children }) 
         '/images/Renovations/Ensuite Bathroom 1 Crick/IMG_1786-1536x2048.jpg',
         '/images/Renovations/Ensuite Bathroom 1 Crick/IMG_1787-1536x2048.jpg',
         '/images/Renovations/Ensuite Bathroom 1 Crick/IMG_1789-1536x2048.jpg',
-        '/images/Renovations/Ensuite Bathroom 1 Crick/IMG_1790-scaled-e1582373110154-1536x1134.jpg'
+        '/images/Renovations/Ensuite Bathroom 1 Crick/IMG_1790-scaled-e1582373110154-1536x1134.jpg',
       ],
       keyFeatures: [
         'High-Quality Materials',
         'Walk-In Shower',
-        'Modern Vanity Units'
+        'Modern Vanity Units',
       ],
     },
     {
@@ -200,12 +189,12 @@ export const ProjectsProvider: React.FC<ProjectsProviderProps> = ({ children }) 
         '/images/Renovations/Ensuite bathroom 2 crick/IMG_1826-scaled.jpg',
         '/images/Renovations/Ensuite bathroom 2 crick/IMG_1827-scaled.jpg',
         '/images/Renovations/Ensuite bathroom 2 crick/IMG_1828-scaled.jpg',
-        '/images/Renovations/Ensuite bathroom 2 crick/IMG_1829-scaled.jpg'
+        '/images/Renovations/Ensuite bathroom 2 crick/IMG_1829-scaled.jpg',
       ],
       keyFeatures: [
         'Modern Shower Installation',
         'Custom Cabinetry',
-        'Strategic Lighting'
+        'Strategic Lighting',
       ],
     },
     {
@@ -220,12 +209,12 @@ export const ProjectsProvider: React.FC<ProjectsProviderProps> = ({ children }) 
         '/images/Renovations/Ensuite bathroom 3 crick/IMG_1837-scaled.jpg',
         '/images/Renovations/Ensuite bathroom 3 crick/IMG_1838-scaled.jpg',
         '/images/Renovations/Ensuite bathroom 3 crick/IMG_1839-scaled.jpg',
-        '/images/Renovations/Ensuite bathroom 3 crick/IMG_1841-scaled.jpg'
+        '/images/Renovations/Ensuite bathroom 3 crick/IMG_1841-scaled.jpg',
       ],
       keyFeatures: [
         'Upgraded Shower Installation',
         'Bespoke Cabinetry',
-        'Enhanced Lighting'
+        'Enhanced Lighting',
       ],
     },
     {
@@ -252,12 +241,12 @@ export const ProjectsProvider: React.FC<ProjectsProviderProps> = ({ children }) 
         '/images/Renovations/Kitchen Diner Elmcroft Road/20190614_171451000_iOS.jpg',
         '/images/Renovations/Kitchen Diner Elmcroft Road/20190614_171507000_iOS.jpg',
         '/images/Renovations/Kitchen Diner Elmcroft Road/a9071091-bcd4-4533-99ad-b837722c65fc.jpg',
-        '/images/Renovations/Kitchen Diner Elmcroft Road/IMG_1802-1536x2048.jpg'
+        '/images/Renovations/Kitchen Diner Elmcroft Road/IMG_1802-1536x2048.jpg',
       ],
       keyFeatures: [
         'Open-Plan Layout',
         'Modern Appliances',
-        'Elegant Lighting'
+        'Elegant Lighting',
       ],
     },
     {
@@ -291,12 +280,12 @@ export const ProjectsProvider: React.FC<ProjectsProviderProps> = ({ children }) 
         '/images/Renovations/Renovation Contract Leicester/IMG_1086-1536x2048.jpg',
         '/images/Renovations/Renovation Contract Leicester/IMG_1088-1536x2048.jpg',
         '/images/Renovations/Renovation Contract Leicester/IMG_1089-1536x2048.jpg',
-        '/images/Renovations/Renovation Contract Leicester/IMG_1090-1536x2048.jpg'
+        '/images/Renovations/Renovation Contract Leicester/IMG_1090-1536x2048.jpg',
       ],
       keyFeatures: [
         'Modern Design',
         'Enhanced Functionality',
-        'High-Quality Finishes'
+        'High-Quality Finishes',
       ],
     },
     {
@@ -309,12 +298,12 @@ export const ProjectsProvider: React.FC<ProjectsProviderProps> = ({ children }) 
       images: [
         '/images/Renovations/Bathroom Billesdon/IMG_0446-1-2048x1536.jpg',
         '/images/Renovations/Bathroom Billesdon/IMG_0448-2048x1536.jpg',
-        '/images/Renovations/Bathroom Billesdon/IMG_0450-2048x1536.jpg'
+        '/images/Renovations/Bathroom Billesdon/IMG_0450-2048x1536.jpg',
       ],
       keyFeatures: [
         'Optimized Layout',
         'High-Quality Materials',
-        'Modern Fixtures and Fittings'
+        'Modern Fixtures and Fittings',
       ],
     },
     {
@@ -331,16 +320,16 @@ export const ProjectsProvider: React.FC<ProjectsProviderProps> = ({ children }) 
         '/images/Renovations/Kitchen Refurb Wigston Leicester/IMG_4034-1.jpg',
         '/images/Renovations/Kitchen Refurb Wigston Leicester/IMG_4035-1.jpg',
         '/images/Renovations/Kitchen Refurb Wigston Leicester/IMG_4036-1.jpg',
-        '/images/Renovations/Kitchen Refurb Wigston Leicester/IMG_4037-1.jpg'
+        '/images/Renovations/Kitchen Refurb Wigston Leicester/IMG_4037-1.jpg',
       ],
       keyFeatures: [
         'Efficient Layout',
         'Modern Appliances',
-        'High-Quality Materials'
+        'High-Quality Materials',
       ],
-    }
-    // Add more projects as needed
+    },
   ];
+  
 
   return (
     <ProjectsContext.Provider value={{ projects }}>

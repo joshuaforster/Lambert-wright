@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { useProjects } from '../CustomComponents/projectsContext';
 import FullscreenImage from '../CustomComponents/FullScreenImage';
 
+
 const ProjectDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const { projects } = useProjects();
@@ -66,13 +67,16 @@ const ProjectDetail: React.FC = () => {
       }`}
     >
       <div className="container mx-auto px-6 lg:px-8 max-w-screen-lg">
-        <Link to="/projects" className="text-lightBlue hover:underline mb-4 inline-block">
+        <Link
+          to="/projects"
+          className="text-customBlue hover:text-customGold mt-4 mb-4 inline-block"
+        >
           &larr; Back to All Projects
         </Link>
         <div className="w-full mb-16">
-          <h1 className="text-4xl font-bold mb-8">{project.title}</h1>
+          <h1 className="text-4xl font-thin mb-8">{project.title}</h1>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-8">
-            <div className="relative overflow-hidden cursor-pointer lg:col-span-1 lg:row-span-2 h-full">
+            <div className="relative overflow-hidden cursor-pointer lg:col-span-1 lg:row-span-2 h-full rounded-tl-lg rounded-bl-lg">
               <img
                 src={project.images[0]}
                 alt={`${project.title} main`}
@@ -85,7 +89,7 @@ const ProjectDetail: React.FC = () => {
               {project.images.slice(1, 5).map((image, index) => (
                 <div
                   key={index}
-                  className="relative w-full overflow-hidden cursor-pointer"
+                  className={`relative w-full overflow-hidden cursor-pointer ${index === 0 ? 'rounded-tr-lg' : ''} ${index === 3 ? 'rounded-br-lg' : ''}`}
                   onClick={() => openGallery(image)}
                   style={{ paddingBottom: '50%' }} // Keep the aspect ratio of the images
                 >
@@ -107,18 +111,23 @@ const ProjectDetail: React.FC = () => {
               </div>
             </div>
           </div>
-          <h2 className="text-2xl font-semibold mb-4">Description</h2>
-          <p className="text-gray-700 mb-8">{project.description}</p>
-          <h2 className="text-2xl font-semibold mb-4">Location</h2>
-          <p className="text-gray-700 mb-8">{project.location}</p>
-          <h2 className="text-2xl font-semibold mb-4">Customer</h2>
-          <p className="text-gray-700 mb-8">{project.customerName}</p>
-          <h2 className="text-2xl font-semibold mb-4">Key Features</h2>
-          <ul className="list-disc pl-6 text-gray-700 mb-8">
-            {project.keyFeatures.map((feature, index) => (
-              <li key={index}>{feature}</li>
-            ))}
-          </ul>
+          <div className="lg:flex lg:space-x-4">
+            <div className="lg:w-2/3">
+              <hr className="border-gray-300 my-8" />
+              <p className="text-gray-700 font-medium mb-8">{project.description}</p>
+              <hr className="border-gray-300 my-8" />
+              {/* <h2 className="text-2xl font-semibold mb-4">Key Features</h2> */}
+              <ul className="list-none flex flex-wrap text-gray-700 mb-8">
+                {project.keyFeatures.map((feature, index) => (
+                  <li key={index} className="mr-4 mb-2 bg-gray-200 px-3 py-1 rounded">
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <hr className="border-gray-300 my-8" />
+            </div>
+
+          </div>
         </div>
         <div className="w-full mt-16">
           <h2 className="text-3xl font-bold mb-8">Similar Projects</h2>
@@ -139,22 +148,19 @@ const ProjectDetail: React.FC = () => {
                   </Link>
                 </h3>
                 <p className="mt-2 text-sm leading-6 text-gray-300">{proj.description.substring(0, 100)}...</p>
-                <Link to={`/projects/${proj.id}`} className="mt-4 text-blue-600 hover:underline">
-                  View Project
-                </Link>
               </article>
             ))}
           </div>
         </div>
+        {isOpen && currentImage && (
+          <FullscreenImage
+            imageUrl={currentImage}
+            onPrevious={prevImage}
+            onNext={nextImage}
+            onClose={closeGallery}
+          />
+        )}
       </div>
-      {isOpen && currentImage && (
-        <FullscreenImage
-          imageUrl={currentImage}
-          onPrevious={prevImage}
-          onNext={nextImage}
-          onClose={closeGallery}
-        />
-      )}
     </div>
   );
 };

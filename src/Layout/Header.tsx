@@ -30,7 +30,7 @@ export default function Header() {
         <div className="flex items-center justify-between mx-auto max-w-screen-xl">
           <Link to="/" className="flex items-center" onClick={handleLinkClick}>
             <img
-              src={'images/logo.png'}
+              src={'/images/logo.png'}
               className="h-14 sm:h-14"
               alt="Company Logo"
             />
