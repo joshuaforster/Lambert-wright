@@ -29,14 +29,14 @@ export default function ServicesHead() {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
-        <div className="grid grid-cols-2 gap-4 mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
           <img
-            className="w-full h-60 object-cover"
+            className="w-full h-80 object-cover"
             src='images/project1/Side-Elevation-1024x683.jpg'
             alt="office content 1"
           />
           <img
-            className="w-full h-60 object-cover"
+            className="w-full h-80 object-cover"
             src='images/project1/Rear-Elevation-1024x704.jpg'
             alt="office content 2"
           />
