@@ -18,4 +18,18 @@
     z-index: 10000; /* Ensure this is high enough to be above all other components */
   }
 
-  
+  /* src/App.css */
+.app-container.fullscreen {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.app-container.fullscreen > * {
+  display: none;
+}
+
+.app-container.fullscreen .fullscreen-content {
+  display: block;
+  height: 100%;
+  width: 100%;
+}

@@ -1,14 +1,15 @@
+// src/CustomComponents/FullscreenImage.tsx
 import React from 'react';
 import { FaArrowLeft, FaArrowRight, FaTimes } from 'react-icons/fa';
 
-interface SingleImageProps {
+interface FullscreenImageProps {
   imageUrl: string;
   onPrevious: () => void;
   onNext: () => void;
   onClose: () => void;
 }
 
-const SingleImage: React.FC<SingleImageProps> = ({ imageUrl, onPrevious, onNext, onClose }) => {
+const FullscreenImage: React.FC<FullscreenImageProps> = ({ imageUrl, onPrevious, onNext, onClose }) => {
   const handleClickOutside = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
       onClose();
@@ -51,4 +52,4 @@ const SingleImage: React.FC<SingleImageProps> = ({ imageUrl, onPrevious, onNext,
   );
 };
 
-export default SingleImage;
+export default FullscreenImage;

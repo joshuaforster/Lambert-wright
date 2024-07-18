@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SingleImage from '../CustomComponents/singleImage';
+import FullscreenImage from '../CustomComponents/FullScreenImage';
 
 export interface ImageItem {
   type: 'image';
@@ -59,7 +59,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ items }) => {
         </div>
       </div>
       {currentIndex !== null && (
-        <SingleImage
+        <FullscreenImage
           imageUrl={items[currentIndex].imageUrl}
           onPrevious={handlePrevious}
           onNext={handleNext}

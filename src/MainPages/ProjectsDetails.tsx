@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useProjects } from '../CustomComponents/projectsContext';
-import { FaTimes, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import FullscreenImage from '../CustomComponents/FullScreenImage';
 
 const ProjectDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -65,18 +65,48 @@ const ProjectDetail: React.FC = () => {
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
-      <div className="relative w-full h-96 mb-8">
-        <img src={project.images[0]} alt={project.title} className="w-full h-96 object-cover" />
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-4xl font-bold text-white mb-8 shadow-lg">{project.title}</h1>
-        </div>
-      </div>
-      <div className="container mx-auto px-6 lg:px-8">
+      <div className="container mx-auto px-6 lg:px-8 max-w-screen-lg">
         <Link to="/projects" className="text-lightBlue hover:underline mb-4 inline-block">
           &larr; Back to All Projects
         </Link>
         <div className="w-full mb-16">
+          <h1 className="text-4xl font-bold mb-8">{project.title}</h1>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-8">
+            <div className="relative overflow-hidden cursor-pointer lg:col-span-1 lg:row-span-2 h-full">
+              <img
+                src={project.images[0]}
+                alt={`${project.title} main`}
+                className="w-full h-full object-cover"
+                onClick={() => openGallery(project.images[0])}
+              />
+              <div className="absolute inset-0 bg-gray-700 opacity-0 hover:opacity-50 transition-opacity duration-200"></div>
+            </div>
+            <div className="grid grid-cols-2 grid-rows-2 gap-2 lg:col-span-1 lg:row-span-2">
+              {project.images.slice(1, 5).map((image, index) => (
+                <div
+                  key={index}
+                  className="relative w-full overflow-hidden cursor-pointer"
+                  onClick={() => openGallery(image)}
+                  style={{ paddingBottom: '50%' }} // Keep the aspect ratio of the images
+                >
+                  <img
+                    src={image}
+                    alt={`${project.title} ${index + 1}`}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gray-700 opacity-0 hover:opacity-50 transition-opacity duration-200"></div>
+                </div>
+              ))}
+              <div className="relative w-full overflow-hidden cursor-pointer">
+                <button
+                  className="absolute inset-0 bg-white text-gray-700 px-4 py-2 rounded shadow hover:bg-gray-200 transition"
+                  onClick={() => openGallery(project.images[0])}
+                >
+                  Show all photos
+                </button>
+              </div>
+            </div>
+          </div>
           <h2 className="text-2xl font-semibold mb-4">Description</h2>
           <p className="text-gray-700 mb-8">{project.description}</p>
           <h2 className="text-2xl font-semibold mb-4">Location</h2>
@@ -89,27 +119,6 @@ const ProjectDetail: React.FC = () => {
               <li key={index}>{feature}</li>
             ))}
           </ul>
-        </div>
-        <div className="w-full">
-          <h2 className="text-2xl font-semibold mb-4">Gallery</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {project.images.map((image, index) => (
-              <div
-                key={index}
-                className={`relative w-full overflow-hidden cursor-pointer ${
-                  index % 3 === 0 ? 'lg:col-span-2' : ''
-                }`}
-                onClick={() => openGallery(image)}
-              >
-                <img
-                  src={image}
-                  alt={`${project.title} ${index + 1}`}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gray-700 opacity-0 hover:opacity-50 transition-opacity duration-200"></div>
-              </div>
-            ))}
-          </div>
         </div>
         <div className="w-full mt-16">
           <h2 className="text-3xl font-bold mb-8">Similar Projects</h2>
@@ -138,37 +147,16 @@ const ProjectDetail: React.FC = () => {
           </div>
         </div>
       </div>
-      {isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
-          <button
-            className="absolute top-4 right-4 text-white text-3xl"
-            onClick={closeGallery}
-          >
-            <FaTimes />
-          </button>
-          <button
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl"
-            onClick={prevImage}
-          >
-            <FaArrowLeft />
-          </button>
-          <button
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl"
-            onClick={nextImage}
-          >
-            <FaArrowRight />
-          </button>
-          <img
-            src={currentImage!}
-            alt="Full screen"
-            className="max-h-full object-contain"
-          />
-        </div>
+      {isOpen && currentImage && (
+        <FullscreenImage
+          imageUrl={currentImage}
+          onPrevious={prevImage}
+          onNext={nextImage}
+          onClose={closeGallery}
+        />
       )}
     </div>
   );
 };
 
 export default ProjectDetail;
-
-
