@@ -4,16 +4,16 @@ export default function ServicesHead() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section className="bg-customGray py-16 lg:py-24">
+    <section className="bg-customGray py-1 lg:py-1">
       <div ref={sectionRef} className="gap-16 items-center px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:px-6">
         <div className="grid grid-cols-2 gap-4 mt-8">
           <img
-            className="w-full h-80 object-cover"
+            className="w-full h-80 object-cover hidden lg:block"
             src='images/project1/Side-Elevation-1024x683.jpg'
             alt="office content 1"
           />
           <img
-            className="w-full h-80 object-cover"
+            className="w-full h-80 object-cover hidden lg:block"
             src='images/project1/Rear-Elevation-1024x704.jpg'
             alt="office content 2"
           />

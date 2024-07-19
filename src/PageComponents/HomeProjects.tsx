@@ -39,7 +39,7 @@ const HomeProjects: React.FC = () => {
         </p> */}
         <Projects limit={3} />
         <div className="text-center mt-12">
-          <Button variant='primary' to="/projects" className="px-6 py-3" aria-label="Projects Page">
+          <Button variant='secondary' to="/projects" aria-label="Projects Page">
             View All Projects
           </Button>
         </div>

@@ -27,10 +27,12 @@ const images = [
 
 export default function HeroTwo() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [initialLoad, setInitialLoad] = useState(true);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setInitialLoad(false); // Disable the initial load flag after the first interval
     }, 4000); // Change every 4 seconds
 
     return () => clearInterval(intervalId);
@@ -51,7 +53,7 @@ export default function HeroTwo() {
               backgroundPosition: 'center',
               opacity: index === currentImageIndex ? 1 : 0,
               transition: 'opacity 2s ease-in-out, transform 4s ease-in-out',
-              transform: index === currentImageIndex ? 'scale(1.1)' : 'scale(1)',
+              transform: index === currentImageIndex || (index === 0 && initialLoad) ? 'scale(1.1)' : 'scale(1)',
             }}
             className="absolute inset-0 w-full h-full"
           />

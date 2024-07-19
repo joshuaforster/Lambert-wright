@@ -107,11 +107,84 @@ export const hardcodedItems: GalleryItem[] = [
   { type: 'image', imageUrl: 'images/project8/d88585d1-272a-4dff-9488-ca8018bd1925.jpeg.webp', category: 'Project 8' },
   { type: 'image', imageUrl: 'images/project8/eb7d91e0-b5af-43fd-98ca-f54b848148eb.jpeg.webp', category: 'Project 8' },
   { type: 'image', imageUrl: 'images/project8/ebfe5759-3a9f-4e96-8dba-9473e64267c5.jpeg.webp', category: 'Project 8' },
+
+  // ProjectIV
+  { type: 'image', imageUrl: 'images/projectIV/Project iv 1.jpg', category: 'Project IV' },
+  { type: 'image', imageUrl: 'images/projectIV/Project iv 2.jpg', category: 'Project IV' },
+  { type: 'image', imageUrl: 'images/projectIV/Project iv 3.jpg', category: 'Project IV' },
+  { type: 'image', imageUrl: 'images/projectIV/Project iv 4.jpg', category: 'Project IV' },
+  { type: 'image', imageUrl: 'images/projectIV/Project iv 5.jpg', category: 'Project IV' },
+  { type: 'image', imageUrl: 'images/projectIV/Project iv 6.jpg', category: 'Project IV' },
+  { type: 'image', imageUrl: 'images/projectIV/Project iv 7.jpg', category: 'Project IV' },
+  { type: 'image', imageUrl: 'images/projectIV/Project iv 8.jpg', category: 'Project IV' },
+  { type: 'image', imageUrl: 'images/projectIV/Project iv 9.jpg', category: 'Project IV' },
+  { type: 'image', imageUrl: 'images/projectIV/Project iv 10.jpg', category: 'Project IV' },
+  { type: 'image', imageUrl: 'images/projectIV/Project iv 11.jpg', category: 'Project IV' },
+  { type: 'image', imageUrl: 'images/projectIV/Project iv 12.jpg', category: 'Project IV' },
+  { type: 'image', imageUrl: 'images/projectIV/Project iv 13.jpg', category: 'Project IV' },
+  { type: 'image', imageUrl: 'images/projectIV/Project iv 14.jpg', category: 'Project IV' },
+
+  // ProjectIII
+  { type: 'image', imageUrl: 'images/projectIII/Rectory Cottage 2.jpg', category: 'Project III' },
+  { type: 'image', imageUrl: 'images/projectIII/Rectory Cottage 3.jpg', category: 'Project III' },
+  { type: 'image', imageUrl: 'images/projectIII/Rectory Cottage 4.jpg', category: 'Project III' },
+  { type: 'image', imageUrl: 'images/projectIII/Rectory Cottage 5.jpg', category: 'Project III' },
+  { type: 'image', imageUrl: 'images/projectIII/Rectory Cottage 6.jpg', category: 'Project III' },
+  { type: 'image', imageUrl: 'images/projectIII/Rectory Cottage 7.jpg', category: 'Project III' },
+  { type: 'image', imageUrl: 'images/projectIII/Rectory Cottage 8.jpg', category: 'Project III' },
+  { type: 'image', imageUrl: 'images/projectIII/Rectory Cottage 9.jpg', category: 'Project III' },
+  { type: 'image', imageUrl: 'images/projectIII/Rectory Cottage 10.jpg', category: 'Project III' },
+  { type: 'image', imageUrl: 'images/projectIII/Rectory Cottage 11.jpg', category: 'Project III' },
+
+  // ProjectVI
+  { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-1.jpg', category: 'Project VI' },
+  { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-2.jpg', category: 'Project VI' },
+  { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-3.jpg', category: 'Project VI' },
+  { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-4.jpg', category: 'Project VI' },
+  { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-5.jpg', category: 'Project VI' },
+  { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-6.jpg', category: 'Project VI' },
+  { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-7.jpg', category: 'Project VI' },
+  { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-8.jpg', category: 'Project VI' },
+  { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-23.jpg', category: 'Project VI' },
+  { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-24.jpg', category: 'Project VI' },
+  { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-25.jpg', category: 'Project VI' },
+  { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-26.jpg', category: 'Project VI' },
+  { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-27.jpg', category: 'Project VI' },
+  { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-28.jpg', category: 'Project VI' },
+  { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-33.jpg', category: 'Project VI' },
+  { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-34.jpg', category: 'Project VI' },
+  { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-35.jpg', category: 'Project VI' },
+  { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-36.jpg', category: 'Project VI' },
+  { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-37.jpg', category: 'Project VI' },
+  { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-38.jpg', category: 'Project VI' },
+  { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-39.jpg', category: 'Project VI' },
+  { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-40.jpg', category: 'Project VI' },
+  { type: 'image', imageUrl: 'images/projectVI/Project vi 2.jpg', category: 'Project VI' },
+  { type: 'image', imageUrl: 'images/projectVI/Project vi 3.jpg', category: 'Project VI' },
+  { type: 'image', imageUrl: 'images/projectVI/Project vi 4.jpg', category: 'Project VI' },
+  { type: 'image', imageUrl: 'images/projectVI/Project vi 5.jpg', category: 'Project VI' },
+  { type: 'image', imageUrl: 'images/projectVI/Project vi 6.jpg', category: 'Project VI' },
+  { type: 'image', imageUrl: 'images/projectVI/Project vi 7.jpg', category: 'Project VI' },
+
+  // Bathrooms
+  { type: 'image', imageUrl: 'images/Bathrooms/Bath 1.jpg', category: 'Bathrooms' },
+  { type: 'image', imageUrl: 'images/Bathrooms/Bath 2.jpg', category: 'Bathrooms' },
+  { type: 'image', imageUrl: 'images/Bathrooms/Bath 6.jpg', category: 'Bathrooms' },
+  { type: 'image', imageUrl: 'images/Bathrooms/Bath3.jpg', category: 'Bathrooms' },
+  { type: 'image', imageUrl: 'images/Bathrooms/Bath4.JPG', category: 'Bathrooms' },
+  { type: 'image', imageUrl: 'images/Bathrooms/Bath5.JPG', category: 'Bathrooms' },
+  { type: 'image', imageUrl: 'images/Bathrooms/Bumblebee Cottage, Main Street, Burton Overy-26.jpg', category: 'Bathrooms' },
+  { type: 'image', imageUrl: 'images/Bathrooms/Bumblebee Cottage, Main Street, Burton Overy-36.jpg', category: 'Bathrooms' },
+  { type: 'image', imageUrl: 'images/Bathrooms/Bumblebee Cottage, Main Street, Burton Overy-37.jpg', category: 'Bathrooms' },
+  { type: 'image', imageUrl: 'images/Bathrooms/Bumblebee Cottage, Main Street, Burton Overy-38.jpg', category: 'Bathrooms' },
+  { type: 'image', imageUrl: 'images/Bathrooms/Bumblebee Cottage, Main Street, Burton Overy-39.jpg', category: 'Bathrooms' },
+  { type: 'image', imageUrl: 'images/Bathrooms/Bumblebee Cottage, Main Street, Burton Overy-40.jpg', category: 'Bathrooms' }
+
 ];
 
 
 
-const categories = ['Project 1', 'Project 4', 'Project 6', 'Project 7', 'Project 8','Clear'];
+const categories = ['Project 1', 'Project III', 'Project VI', 'Project 4', 'Project IV', 'Project 6', 'Project 7', 'Project 8', 'Bathrooms','Clear'];
 
 export default function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);

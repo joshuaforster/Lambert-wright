@@ -85,7 +85,7 @@ export default function Assurance() {
             </p>
             <div className="mt-6 max-w-xl text-base leading-7 lg:max-w-none">
               <h2>We offer:</h2>
-              <ul className="space-y-4 list-disc pl-5 mb-4">
+              <ul className="space-y-4 list-disc pl-5 mb-8">
                 {services.map((service, index) => (
                   <li key={index}>
                     <strong className="font-normal">{service}</strong>
@@ -95,7 +95,7 @@ export default function Assurance() {
               {/* <p className="my-6">
                 We are dedicated to enhancing your home or business with top-quality services.
               </p> */}
-              <Button variant='primary' className="px-6 py-3 mt-4" to="/contact" aria-label="Contact us">Contact</Button>
+              <Button variant='primary' to="/contact" aria-label="Contact us">Contact</Button>
             </div>
           </div>
         </div>

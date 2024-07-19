@@ -3,6 +3,7 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 export default function Contact() {
   const [isVisible, setIsVisible] = useState(false);
+  const [isChecked, setIsChecked] = useState(false); // State for checkbox
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -138,11 +139,32 @@ export default function Contact() {
                       />
                     </div>
                   </div>
+                  <div className="sm:col-span-2">
+                    <div className="flex items-start">
+                      <div className="flex h-6 items-center">
+                        <input
+                          id="consent"
+                          name="consent"
+                          type="checkbox"
+                          className="h-4 w-4 rounded border-gray-300 text-customRed focus:ring-customRed"
+                          checked={isChecked}
+                          onChange={() => setIsChecked(!isChecked)}
+                          required
+                        />
+                      </div>
+                      <div className="ml-3 text-sm leading-6">
+                        <label htmlFor="consent" className="font-medium text-gray-900">
+                          I agree that my data is collected and stored.
+                        </label>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div className="mt-10 flex justify-start border-t border-gray-900/10 pt-8">
                   <button
                     type="submit"
                     className=" px-3.5 py-2.5 bg-customBlue text-center text-sm font-semibold text-white shadow-sm hover:bg-customRed focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-customRed"
+                    disabled={!isChecked} // Disable button if checkbox is not checked
                   >
                     Send message
                   </button>

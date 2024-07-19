@@ -31,8 +31,8 @@ export default function HomeGallery() {
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}
     >
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-fontColour">Our Projects</h2>
+      <div className="text-center">
+        <h2 className="text-3xl font-bold text-fontColour">Gallery</h2>
         <p className="mt-4 text-lg text-fontColour">
           Take a look at some of the projects we've completed. Click the button below to see our full gallery.
         </p>
@@ -40,7 +40,7 @@ export default function HomeGallery() {
       <div>
         <ImageGallery items={hardcodedItems.slice(0, 3)} />
       </div>
-      <div className="flex justify-center mt-8">
+      <div className="flex justify-center">
         <Button
           to="/gallery"
           variant="primary"
