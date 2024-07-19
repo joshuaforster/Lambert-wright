@@ -3,26 +3,12 @@ import { useInView } from 'react-intersection-observer';
 import Button from '../CustomComponents/buttons';
 
 const images = [
-  'images/project4/97195000951550_MAH190125_IMG_03-Copy-1024x684.jpg',
-  'images/project4/w-6.jpg',
-  'images/project4/w1.jpg',
-  'images/project4/w2.jpg',
-  'images/project4/w3.jpg',
-  'images/project4/w4.jpg',
-  'images/project4/w5.jpg',
-  'images/project4/w7.jpg',
-  'images/project4/w8.jpg',
-  'images/project4/w9.jpg',
-  'images/project4/w10.jpg',
-  'images/project4/w11.jpg',
-  'images/project4/w12.jpg',
-  'images/project4/w13.jpg',
-  'images/project4/w14.jpg',
-  'images/project4/w15.jpg',
-  'images/project4/w16.jpg',
-  'images/project4/w18.jpg',
-  'images/project4/w19.jpg',
-  'images/project4/w20.jpg'
+  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-6.jpg',
+  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-5.jpg',
+  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-2.jpg',
+  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-7.jpg',
+  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-1.jpg',
+  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-7.jpg',
 ];
 
 export default function HeroTwo() {
