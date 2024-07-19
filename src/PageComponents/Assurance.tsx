@@ -2,12 +2,22 @@ import React, { useState, useEffect, useRef } from 'react';
 import Button from '../CustomComponents/buttons';
 
 const images = [
-  'images/project4/w1.jpg',
-  'images/project4/w2.jpg',
-  'images/project4/w3.jpg',
-  'images/project4/w4.jpg',
-  // Add more images as needed
+  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-1.jpg',
+  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-2.jpg',
+  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-3.jpg',
+  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-4.jpg',
+  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-5.jpg',
+  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-6.jpg',
+  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-7.jpg',
+  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-8.jpg',
+  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-23.jpg',
+  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-24.jpg',
+  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-25.jpg',
+  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-26.jpg',
+  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-27.jpg',
+  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-28.jpg',
 ];
+
 
 const services = [
   "Architectural and Planning services.",

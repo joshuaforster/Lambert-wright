@@ -4,7 +4,7 @@ const reviews = [
   {
     id: 1,
     text: "We employed JLR Bespoke Properties to project manage our kitchen redesign and build. We were instantly impressed with the professional nature in which they approached our requests and linked us in with an excellent kitchen designer. Once the build was under way we were very happy with the quality of workmen he employed along with the nature in which he tackled and solved our changes and the unforeseen problems which surfaced. The final result is a high quality kitchen finished to the best standards.",
-    name: "Ed & LiZ Barnett",
+    name: "Ed & Liz Barnett",
     image: "/images/reviews/review1.png",
   },
   {
@@ -68,7 +68,7 @@ export default function Reviews() {
                 />
                 <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x={86} />
               </svg>
-              <blockquote className="text-l font-semibold leading-8 text-fontColour sm:leading-9 h-60 overflow-hidden">
+              <blockquote className="text-l font-semibold leading-8 text-fontColour sm:leading-9 h-80 overflow-hidden">
                 <p>{reviews[currentReviewIndex].text}</p>
               </blockquote>
             </div>
