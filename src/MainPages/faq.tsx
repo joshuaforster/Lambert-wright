@@ -80,7 +80,7 @@ const FAQ: React.FC = () => {
   return (
     <section className="relative bg-customGray dark:bg-gray-900">
       <HeaderSection
-        image="images/project4/w2.jpg"
+        image= 'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-1.jpg'
         title="FAQ's"
       />
       <div
