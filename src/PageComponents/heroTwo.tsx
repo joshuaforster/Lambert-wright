@@ -50,7 +50,8 @@ export default function HeroTwo() {
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               opacity: index === currentImageIndex ? 1 : 0,
-              transition: 'opacity 2s ease-in-out',
+              transition: 'opacity 2s ease-in-out, transform 4s ease-in-out',
+              transform: index === currentImageIndex ? 'scale(1.1)' : 'scale(1)',
             }}
             className="absolute inset-0 w-full h-full"
           />
@@ -60,7 +61,7 @@ export default function HeroTwo() {
 
       <div className="w-full px-4 lg:px-6 max-w-screen-xl mx-auto flex items-center">
         <div className="max-w-2xl lg:max-w-xl lg:pt-8 text-left">
-                   <p
+          <p
             ref={paragraphRef}
             className={`mt-6 text-lg leading-8 text-white ${
               paragraphInView ? 'animate-slideInLeft' : 'opacity-0'

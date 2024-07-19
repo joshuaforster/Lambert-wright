@@ -25,12 +25,12 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 bg-customBlue shadow-lg z-50">
-      <nav className="bg-customBlue border-gray-200 px-4 lg:px-6 py-4">
+    <header className="sticky top-0 bg-customGray shadow-lg z-50">
+      <nav className="bg-customGray border-gray-200 px-4 lg:px-6 py-4">
         <div className="flex items-center justify-between mx-auto max-w-screen-xl">
           <Link to="/" className="flex items-center" onClick={handleLinkClick}>
             <img
-              src={'/images/logo.png'}
+              src={'/images/logoGrey.png'}
               className="h-14 sm:h-14"
               alt="Company Logo"
             />
@@ -42,7 +42,7 @@ export default function Header() {
                   {link.isExternal ? (
                     <a
                       href={link.path}
-                      className="block text-sm font-light uppercase py-2 px-1 text-white transition duration-300 hover:text-customGold"
+                      className="block text-sm font-light uppercase py-2 px-1 text-customBlue transition duration-300 hover:text-customGold"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -53,7 +53,7 @@ export default function Header() {
                       to={link.path}
                       className={({ isActive }) =>
                         `block text-sm font-light uppercase py-2 px-1 ${
-                          isActive ? 'text-customGold underline' : 'text-white'
+                          isActive ? 'text-customGold underline' : 'text-customBlue'
                         } transition duration-300 hover:text-customGold`
                       }
                       aria-current={link.path === pathname ? 'page' : undefined}
@@ -69,7 +69,7 @@ export default function Header() {
           <div className="flex lg:hidden items-center">
             <button
               type="button"
-              className="inline-flex items-center p-2 text-sm text-white rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+              className="inline-flex items-center p-2 text-sm text-customBlue rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
               aria-controls="mobile-menu-2"
               aria-expanded={isMobileMenuOpen}
               onClick={toggleMobileMenu}
