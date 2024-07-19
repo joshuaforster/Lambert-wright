@@ -28,7 +28,7 @@ export default function Contact() {
       <div className="lg:absolute lg:inset-0 lg:left-1/2">
         <img
           className="h-64 w-full bg-gray-50 object-cover sm:h-80 lg:absolute lg:h-full lg:top-0"
-          src="images/w13.jpg"
+          src='images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-5.jpg'
           alt="Placeholder"
         />
       </div>
