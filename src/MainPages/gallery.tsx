@@ -173,6 +173,16 @@ export const hardcodedItems: GalleryItem[] = [
   { type: 'image', imageUrl: 'images/Bathrooms/Bumblebee Cottage, Main Street, Burton Overy-38.jpg', category: 'Bathrooms' },
   { type: 'image', imageUrl: 'images/Bathrooms/Bumblebee Cottage, Main Street, Burton Overy-39.jpg', category: 'Bathrooms' },
   { type: 'image', imageUrl: 'images/Bathrooms/Bumblebee Cottage, Main Street, Burton Overy-40.jpg', category: 'Bathrooms' },
+  { type: 'image', imageUrl: 'images/Bathrooms/WhatsApp Image 2024-07-20 at 11.18.20 (3).jpeg', category: 'Bathrooms' },
+  { type: 'image', imageUrl: 'images/Bathrooms/WhatsApp Image 2024-07-20 at 11.18.20 (2).jpeg', category: 'Bathrooms' },
+  { type: 'image', imageUrl: 'images/Bathrooms/WhatsApp Image 2024-07-20 at 11.18.20 (1).jpeg', category: 'Bathrooms' },
+  { type: 'image', imageUrl: 'images/Bathrooms/WhatsApp Image 2024-07-20 at 11.18.20.jpeg', category: 'Bathrooms' },
+  { type: 'image', imageUrl: 'images/Bathrooms/WhatsApp Image 2024-07-20 at 11.17.07 (4).jpeg', category: 'Bathrooms' },
+  { type: 'image', imageUrl: 'images/Bathrooms/WhatsApp Image 2024-07-20 at 11.17.07 (3).jpeg', category: 'Bathrooms' },
+  { type: 'image', imageUrl: 'images/Bathrooms/WhatsApp Image 2024-07-20 at 11.17.07 (2).jpeg', category: 'Bathrooms' },
+  { type: 'image', imageUrl: 'images/Bathrooms/WhatsApp Image 2024-07-20 at 11.17.07 (1).jpeg', category: 'Bathrooms' },
+  { type: 'image', imageUrl: 'images/Bathrooms/WhatsApp Image 2024-07-20 at 11.17.07.jpeg', category: 'Bathrooms' },
+
 
   // General
   { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 09.05.21.jpeg', category: 'General' },
@@ -229,6 +239,16 @@ export const hardcodedItems: GalleryItem[] = [
   { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 08.17.38 (2).jpeg', category: 'General' },
   { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 08.17.38 (1).jpeg', category: 'General' },
   { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 08.17.38.jpeg', category: 'General' },
+  { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 11.16.16 (2).jpeg', category: 'General' },
+  { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 11.16.15.jpeg', category: 'General' },
+  { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 11.16.16.jpeg', category: 'General' },
+  { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 11.16.16 (1).jpeg', category: 'General' },
+  { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 11.16.16 (8).jpeg', category: 'General' },
+  { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 11.16.16 (7).jpeg', category: 'General' },
+  { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 11.16.16 (6).jpeg', category: 'General' },
+  { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 11.16.16 (5).jpeg', category: 'General' },
+  { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 11.16.16 (4).jpeg', category: 'General' },
+  { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 11.16.16 (3).jpeg', category: 'General' },
 ];
 
 const categories = ['Project 1', 'Project 3', 'Project 4', 'Project 6', 'Project 7', 'Bathrooms', 'General', 'Clear'];
@@ -248,11 +268,11 @@ export default function Gallery() {
     <section className="bg-white dark:bg-dark-gray py-8">
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:px-6">
         <div className="max-w-screen-lg mx-auto text-gray-800 sm:text-lg dark:text-white text-center">
-          <h2 className="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">Gallery</h2>
+          <h2 className="mb-4 text-4xl tracking-tight font-semibold text-gray-900 dark:text-white">Gallery</h2>
         </div>
 
         <div className="max-w-screen-lg mx-auto text-gray-800 sm:text-lg dark:text-white text-center mb-8">
-          <p className="mb-4 text-gray-600 dark:text-gray-300">
+          <p className="mb-4 text-gray-600 text-sm dark:text-gray-300">
             Use the buttons below to filter the projects by category. Click "Clear Filters" to view all projects.
           </p>
         </div>

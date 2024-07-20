@@ -96,7 +96,7 @@ export default function Header() {
                   {link.isExternal ? (
                     <a
                       href={link.path}
-                      className="block text-sm py-2 pr-4 pl-3 text-fontColour font-light uppercase border-b border-gray-100 hover:text-customGold transition duration-300 rounded-lg"
+                      className="block text-sm py-2 pr-4 pl-3 text-fontColour font-light uppercase border-b border-gray-700 hover:text-customGold transition duration-300 rounded-lg"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -106,7 +106,7 @@ export default function Header() {
                     <NavLink
                       to={link.path}
                       className={({ isActive }) =>
-                        `block text-sm py-2 pr-4 pl-3 text-fontColour font-light uppercase border-b border-gray-100 ${
+                        `block text-sm py-2 pr-4 pl-3 text-fontColour font-light uppercase border-b border-gray-700 ${
                           isActive ? 'text-customGold underline' : ''
                         } hover:text-customGold transition duration-300 rounded-lg`
                       }

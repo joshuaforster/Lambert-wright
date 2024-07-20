@@ -1,3 +1,4 @@
+// tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -7,7 +8,16 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        roboto: ['Roboto', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
+        minionPro: ['MinionPro', 'serif'],
+        myriadPro: ['MyriadPro', 'sans-serif'],
+        myriadProBold: ['MyriadProBold', 'sans-serif'],
+        myriadProBoldIt: ['MyriadProBoldIt', 'sans-serif'],
+        myriadProLight: ['MyriadProLight', 'sans-serif'],
+        neutra2TextBold: ['Neutra2TextBold', 'sans-serif'],
+        neutra2TextBook: ['Neutra2TextBook', 'sans-serif'],
+        neutra2TextDemi: ['Neutra2TextDemi', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'], // keep the existing font
       },
       colors: {
         customBlue: '#323D40',
