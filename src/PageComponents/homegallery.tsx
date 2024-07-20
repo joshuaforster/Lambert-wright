@@ -51,7 +51,7 @@ export default function HomeGallery() {
               <div className="w-full h-full group">
                 <img
                   src={image}
-                  alt={`Gallery Image ${index + 1}`}
+                  alt={`Gallery ${index + 1}`}
                   className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:brightness-75"
                 />
               </div>
