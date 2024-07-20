@@ -80,31 +80,30 @@ const FAQ: React.FC = () => {
   return (
     <section className="relative bg-customGray dark:bg-gray-900">
       <HeaderSection
-        image= 'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-1.jpg'
+        image='images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-1.jpg'
         title="FAQ's"
       />
       <div
         ref={sectionRef}
-        className={`transition-all duration-1000 transform ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-        }`}
+        className={`transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
       >
         <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
           <h2 className="mb-8 text-4xl tracking-tight font-extrabold text-gray-800 capitalize dark:text-white">Frequently asked questions</h2>
           <div className="grid pt-8 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
             {faqs.map((faq, index) => (
               <div key={index} className="mb-10">
-                <h3
-                  className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white cursor-pointer"
+                <div
+                  className={`group flex items-center mb-4 text-lg font-medium cursor-pointer ${activeIndices.includes(index) ? 'text-customGold' : 'text-gray-900 dark:text-white'} hover:text-customGold`}
                   onClick={() => toggleFAQ(index)}
                 >
                   {activeIndices.includes(index) ? (
-                    <FaMinus className="mr-2 w-5 h-5 text-fontColour dark:text-white" />
+                    <FaMinus className="mr-2 w-5 h-5 group-hover:text-customGold" />
                   ) : (
-                    <FaPlus className="mr-2 w-5 h-5 text-fontColour dark:text-white" />
+                    <FaPlus className="mr-2 w-5 h-5 text-fontColour dark:text-white group-hover:text-customGold" />
                   )}
-                  {faq.title}
-                </h3>
+                  <h3 className="flex items-center group-hover:text-customGold">{faq.title}</h3>
+                </div>
                 {activeIndices.includes(index) && <div className="text-fontColour dark:text-white">{faq.answer}</div>}
               </div>
             ))}
@@ -116,3 +115,5 @@ const FAQ: React.FC = () => {
 };
 
 export default FAQ;
+
+
