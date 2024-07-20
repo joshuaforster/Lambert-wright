@@ -6,7 +6,7 @@ const navigation = {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
-    { name: 'Projects', href: '/projects' },
+    // { name: 'Projects', href: '/projects' },
     { name: 'Gallery', href: '/gallery' },
     { name: "FAQ's", href: '/faq' },
     { name: 'Brochure', href: 'Brochure/Brochure_JLR2021-2.pdf', isExternal: true },

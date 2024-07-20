@@ -6,7 +6,7 @@ export default function Header() {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
-    { name: 'Projects', path: '/projects' },
+    // { name: 'Projects', path: '/projects' },
     { name: 'Gallery', path: '/gallery' },
     { name: "FAQ's", path: '/faq' },
     { name: 'Brochure', path: 'Brochure/Brochure_JLR2021-2.pdf', isExternal: true },

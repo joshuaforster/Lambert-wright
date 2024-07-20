@@ -1,7 +1,11 @@
 import React, { useEffect, useState, useRef } from 'react';
-import ImageGallery from '../PageComponents/imagegallery';
-import { hardcodedItems } from '../MainPages/gallery';
 import Button from '../CustomComponents/buttons';
+
+const selectedImages = [
+  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-6.jpg',
+  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-5.jpg',
+  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-2.jpg',
+];
 
 export default function HomeGallery() {
   const [isVisible, setIsVisible] = useState(false);
@@ -37,10 +41,17 @@ export default function HomeGallery() {
           Take a look at some of the projects we've completed. Click the button below to see our full gallery.
         </p>
       </div>
-      <div>
-        <ImageGallery items={hardcodedItems.slice(0, 3)} />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-4 mt-8">
+        {selectedImages.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            alt={`Gallery Image ${index + 1}`}
+            className="w-full h-64 object-cover rounded-lg shadow-md"
+          />
+        ))}
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center mt-8">
         <Button
           to="/gallery"
           variant="primary"

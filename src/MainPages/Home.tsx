@@ -17,7 +17,7 @@ export default function Home() {
       {/* <Services /> */}
       <HomeGallery />
       <Assurance />
-      <HomeProjects />
+      {/* <HomeProjects /> */}
       <TestimonialSlider />
     </>
   );
