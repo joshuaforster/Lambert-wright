@@ -6,11 +6,10 @@ export default function Header() {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
-    // { name: 'Projects', path: '/projects' },
     { name: 'Gallery', path: '/gallery' },
     { name: "FAQ's", path: '/faq' },
     { name: 'Brochure', path: '/Brochure/Lambert & Wright Brochure.pdf', isExternal: true },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Contact', path: '/contact', isPrimary: true }
   ];
 
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -42,7 +41,9 @@ export default function Header() {
                   {link.isExternal ? (
                     <a
                       href={link.path}
-                      className="block text-sm font-light uppercase py-2 px-1 text-customBlue transition duration-300 hover:text-customGold"
+                      className={`block text-sm font-light uppercase py-2 px-1 ${
+                        link.isPrimary ? 'text-white bg-customBlue px-4 py-2 rounded hover:bg-darkBlue' : 'text-customBlue'
+                      } transition duration-300`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -53,8 +54,12 @@ export default function Header() {
                       to={link.path}
                       className={({ isActive }) =>
                         `block text-sm font-light uppercase py-2 px-1 ${
-                          isActive ? 'text-customGold underline' : 'text-customBlue'
-                        } transition duration-300 hover:text-customGold`
+                          link.isPrimary
+                            ? 'hidden lg:block text-white bg-customBlue px-4 py-2 rounded hover:bg-darkBlue'
+                            : isActive
+                            ? 'text-customGold underline'
+                            : 'text-customBlue'
+                        } transition duration-300`
                       }
                       aria-current={link.path === pathname ? 'page' : undefined}
                       onClick={handleLinkClick}
@@ -96,7 +101,9 @@ export default function Header() {
                   {link.isExternal ? (
                     <a
                       href={link.path}
-                      className="block text-sm py-2 pr-4 pl-3 text-fontColour font-light uppercase border-b border-gray-700 hover:text-customGold transition duration-300 rounded-lg"
+                      className={`block text-sm py-2 pr-4 pl-3 ${
+                        link.isPrimary ? 'text-fontColour' : 'text-fontColour'
+                      } font-light uppercase border-b border-gray-700 transition duration-300 rounded-lg`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -106,9 +113,13 @@ export default function Header() {
                     <NavLink
                       to={link.path}
                       className={({ isActive }) =>
-                        `block text-sm py-2 pr-4 pl-3 text-fontColour font-light uppercase border-b border-gray-700 ${
-                          isActive ? 'text-customGold underline' : ''
-                        } hover:text-customGold transition duration-300 rounded-lg`
+                        `block text-sm py-2 pr-4 pl-3 ${
+                          link.isPrimary
+                            ? 'text-fontColour'
+                            : isActive
+                            ? 'text-customGold underline'
+                            : 'text-fontColour'
+                        } font-light uppercase border-b border-gray-700 transition duration-300 rounded-lg`
                       }
                       aria-current={link.path === pathname ? 'page' : undefined}
                       onClick={handleLinkClick}
