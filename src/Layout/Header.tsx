@@ -9,7 +9,7 @@ export default function Header() {
     // { name: 'Projects', path: '/projects' },
     { name: 'Gallery', path: '/gallery' },
     { name: "FAQ's", path: '/faq' },
-    { name: 'Brochure', path: 'Brochure/Brochure_JLR2021-2.pdf', isExternal: true },
+    { name: 'Brochure', path: '/Brochure/Lambert & Wright Brochure.pdf', isExternal: true },
     { name: 'Contact', path: '/contact' }
   ];
 
