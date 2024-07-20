@@ -183,6 +183,7 @@ export const hardcodedItems: GalleryItem[] = [
   { type: 'image', imageUrl: 'images/Bathrooms/WhatsApp Image 2024-07-20 at 11.17.07 (1).jpeg', category: 'Bathrooms' },
   { type: 'image', imageUrl: 'images/Bathrooms/WhatsApp Image 2024-07-20 at 11.17.07.jpeg', category: 'Bathrooms' },
 
+  
 
   // General
   { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 09.05.21.jpeg', category: 'General' },

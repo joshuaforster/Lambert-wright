@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import CookieConsent from 'react-cookie-consent';
 import Home from './MainPages/Home';
 import About from './MainPages/About';
 import Gallery from './MainPages/gallery';
@@ -45,6 +46,20 @@ function App() {
                 <Route path="*" element={<Unfound />} />
               </Route>
             </Routes>
+            <CookieConsent
+              location="bottom"
+              buttonText="I understand"
+              cookieName="myAwesomeCookieName"
+              style={{ background: "#323D40" }}
+              buttonStyle={{ color: "#fff", backgroundColor: "#C58C49", fontSize: "13px", transition: "background-color 0.3s" }}
+              buttonClasses="cookie-consent-button"
+              expires={150}
+            >
+              This website uses cookies to enhance the user experience.{" "}
+              <a href="/privacy-policy" style={{ color: "#C58C49", transition: "color 0.3s" }} className="hover:text-customBlue">
+                Learn more
+              </a>
+            </CookieConsent>
           </BrowserRouter>
         </ProjectsProvider>
       </ServicesProvider>
@@ -53,3 +68,4 @@ function App() {
 }
 
 export default App;
+
