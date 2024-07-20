@@ -55,7 +55,7 @@ export default function Example() {
           <ul className="mt-10 mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none md:gap-x-40">
             {people.map((person) => (
               <li key={person.name}>
-                <img className="aspect-[4/3] w-full rounded-2xl object-cover object-top" src={person.imageUrl} alt={person.name} />
+                <img className=" w-full rounded-2xl object-cover object-top" src={person.imageUrl} alt={person.name} />
                 <h3 className="mt-6 text-lg font-semibold leading-8 text-white">{person.name}</h3>
                 <p className="text-base leading-7 text-white">{person.role}</p>
                 <p className="mt-4 text-base leading-7 text-white">{person.bio}</p>
