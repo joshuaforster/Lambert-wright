@@ -6,7 +6,7 @@ import Logo from "../PageComponents/logo";
 import HeroTwo from "../PageComponents/heroTwo";
 import HomeGallery from "../PageComponents/homegallery";
 import Assurance from "../PageComponents/Assurance";
-import HomeProjects from "../PageComponents/HomeProjects";
+// import HomeProjects from "../PageComponents/HomeProjects";
 
 export default function Home() {
   return (
