@@ -7,19 +7,19 @@ import Gallery from './MainPages/gallery';
 import FAQ from './MainPages/faq';
 import Contact from './MainPages/contact';
 import Layout from './Layout/layout';
-import ServiceDetail from './PageComponents/serviceDetail';
+import ServiceDetail from './CustomComponents/serviceDetail';
 import { ThemeProvider } from './CustomComponents/darkmode';
 import ScrollToTop from './CustomComponents/ScrollToTop';
-import TermsConditions from './MainPages/TermsConditions';
+import TermsConditions from './MainPages/Legal/TermsConditions';
 import ServicesHome from './MainPages/servicesHome';
-import ProjectHolder from './MainPages/prohectHolder';
-import ProjectDetail from './MainPages/ProjectsDetails';
+// import ProjectHolder from './MainPages/prohectHolder';
+// import ProjectDetail from './MainPages/ProjectsDetails';
 import './App.css';
 import { ServicesProvider } from './CustomComponents/ServicesContext';
 import { ProjectsProvider } from './CustomComponents/projectsContext';
-import TermsAndConditions from './MainPages/T&C';
-import PrivacyPolicy from './MainPages/privacypolicy';
-import Unfound from './MainPages/unfound';
+import TermsAndConditions from './MainPages/Legal/T&C';
+import PrivacyPolicy from './MainPages/Legal/privacypolicy';
+import Unfound from './MainPages/404';
 
 function App() {
   return (
@@ -39,8 +39,8 @@ function App() {
                 <Route path='/contact' element={<Contact />} />
                 <Route path='/privacy-policy' element={<PrivacyPolicy />} />
                 <Route path='/terms-conditions' element={<TermsConditions />} />
-                <Route path='/projects' element={<ProjectHolder />} />
-                <Route path='/projects/:id' element={<ProjectDetail />} />
+                {/* <Route path='/projects' element={<ProjectHolder />} />
+                <Route path='/projects/:id' element={<ProjectDetail />} /> */}
                 <Route path='/termsandconditions' element={<TermsAndConditions />} />
                 <Route path='/privacypolicy' element={<PrivacyPolicy />} />
                 <Route path="*" element={<Unfound />} />

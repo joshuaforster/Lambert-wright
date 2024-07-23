@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ImageGallery, { GalleryItem } from '../PageComponents/imagegallery';
+import ImageGallery, {GalleryItem} from '../PageComponents/GalleryComponent/imagegallery'; 
 
 export const hardcodedItems: GalleryItem[] = [
   // Project 4 (combined Project 4 and Project IV)
@@ -88,13 +88,13 @@ export const hardcodedItems: GalleryItem[] = [
   { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-23.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-24.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-25.jpg', category: 'Project 6' },
-  { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-26.jpg', category: 'Project 6' },
+  // { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-26.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-27.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-28.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-33.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-34.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-35.jpg', category: 'Project 6' },
-  { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-36.jpg', category: 'Project 6' },
+  // { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-36.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-37.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-38.jpg', category: 'Project 6' },
   { type: 'image', imageUrl: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-39.jpg', category: 'Project 6' },
@@ -128,7 +128,7 @@ export const hardcodedItems: GalleryItem[] = [
 
   // Project 1
   { type: 'image', imageUrl: 'images/project1/Aerial-View.jpg', category: 'Project 1' },
-  { type: 'image', imageUrl: 'images/project1/Cinema-Room-2-1536x1081.jpg', category: 'Project 1' },
+  // { type: 'image', imageUrl: 'images/project1/Cinema-Room-2-1536x1081.jpg', category: 'Project 1' },
   { type: 'image', imageUrl: 'images/project1/Courtyard-1536x1021.jpg', category: 'Project 1' },
   { type: 'image', imageUrl: 'images/project1/Cupboard-Doors-made-from-old-Cheese-Boards-768x1278.jpg', category: 'Project 1' },
   { type: 'image', imageUrl: 'images/project1/Entrance-Gates-1536x1069.jpg', category: 'Project 1' },
@@ -183,8 +183,6 @@ export const hardcodedItems: GalleryItem[] = [
   { type: 'image', imageUrl: 'images/Bathrooms/WhatsApp Image 2024-07-20 at 11.17.07 (1).jpeg', category: 'Bathrooms' },
   { type: 'image', imageUrl: 'images/Bathrooms/WhatsApp Image 2024-07-20 at 11.17.07.jpeg', category: 'Bathrooms' },
 
-  
-
   // General
   { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 09.05.21.jpeg', category: 'General' },
   { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 08.48.07 (12).jpeg', category: 'General' },
@@ -218,7 +216,7 @@ export const hardcodedItems: GalleryItem[] = [
   { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 08.34.07 (12).jpeg', category: 'General' },
   { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 08.34.07 (11).jpeg', category: 'General' },
   { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 08.34.07 (10).jpeg', category: 'General' },
-  { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 08.34.07 (9).jpeg', category: 'General' },
+  // { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 08.34.07 (9).jpeg', category: 'General' },
   { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 08.34.07 (8).jpeg', category: 'General' },
   { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 08.34.07 (7).jpeg', category: 'General' },
   { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 08.34.07 (6).jpeg', category: 'General' },
@@ -249,7 +247,7 @@ export const hardcodedItems: GalleryItem[] = [
   { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 11.16.16 (6).jpeg', category: 'General' },
   { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 11.16.16 (5).jpeg', category: 'General' },
   { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 11.16.16 (4).jpeg', category: 'General' },
-  { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 11.16.16 (3).jpeg', category: 'General' },
+  // { type: 'image', imageUrl: 'images/General/WhatsApp Image 2024-07-20 at 11.16.16 (3).jpeg', category: 'General' },
 ];
 
 const categories = ['Project 1', 'Project 3', 'Project 4', 'Project 6', 'Project 7', 'Bathrooms', 'General', 'Clear'];

@@ -8,7 +8,7 @@ export default function Header() {
     { name: 'Services', path: '/services' },
     { name: 'Gallery', path: '/gallery' },
     { name: "FAQ's", path: '/faq' },
-    { name: 'Brochure', path: '/Brochure/Lambert & Wright Brochure.pdf', isExternal: true },
+    { name: 'Brochure', path: '/Brochure/Lambert&Wright.pdf', isExternal: true },
     { name: 'Contact', path: '/contact', isPrimary: true }
   ];
 

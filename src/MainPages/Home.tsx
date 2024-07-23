@@ -1,11 +1,11 @@
 import React from "react";
-import Steps from "../PageComponents/steps";
+import Steps from "../PageComponents/HomeComponents/steps";
 // import Services from "../PageComponents/services";
-import TestimonialSlider from "../PageComponents/Reviews";
-import Logo from "../PageComponents/logo";
-import HeroTwo from "../PageComponents/heroTwo";
-import HomeGallery from "../PageComponents/homegallery";
-import Assurance from "../PageComponents/Assurance";
+import TestimonialSlider from "../PageComponents/HomeComponents/Reviews";
+import Logo from "../PageComponents/HomeComponents/logo";
+import HeroTwo from "../PageComponents/HomeComponents/heroTwo";
+import HomeGallery from "../PageComponents/HomeComponents/homegallery";
+import Assurance from "../PageComponents/HomeComponents/services";
 // import HomeProjects from "../PageComponents/HomeProjects";
 
 export default function Home() {

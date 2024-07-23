@@ -1,7 +1,7 @@
 import React from 'react';
-import AboutHead from '../PageComponents/AboutHead';
-import WhyJLR from '../PageComponents/whyJLR';
-import MeetTeam from '../PageComponents/MeetTeam';
+import AboutHead from '../PageComponents/AboutComponents/AboutHead';
+import WhyJLR from '../PageComponents/AboutComponents/whyJLR';
+import MeetTeam from '../PageComponents/AboutComponents/MeetTeam';
 import HeaderSection from '../CustomComponents/headerSection';
 
 const About = () => {

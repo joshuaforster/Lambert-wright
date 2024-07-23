@@ -1,6 +1,6 @@
 import React from 'react'
-import ServicesHead from '../PageComponents/servicesHead'
-import ServicesSection from '../PageComponents/servicesSection'
+import ServicesHead from '../PageComponents/Services/servicesHead'
+import ServicesSection from '../PageComponents/Services/servicesSection'
 import HeaderSection from '../CustomComponents/headerSection'
 
 export default function ServicesHome(){
