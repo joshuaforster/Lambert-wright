@@ -173,11 +173,11 @@ export default function Contact() {
               <div className="mt-16 flex flex-col items-start space-y-4 text-gray-900">
                 <div className="flex items-center space-x-2">
                   <FaPhone className="text-xl" />
-                  <span>+44 1234 567890</span>
+                  <span>01858 881171</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <FaEnvelope className="text-xl" />
-                  <span>info@example.com</span>
+                  <span>info@lambertandwright.co.uk</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <FaMapMarkerAlt className="text-xl" />
