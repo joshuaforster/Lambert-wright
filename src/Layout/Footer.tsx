@@ -13,9 +13,9 @@ const navigation = {
     { name: 'Contact', href: '/contact' }
   ],
   contact: [
-    { name: 'Phone: 1234567890', href: 'tel:+1234567890' },
-    { name: 'WhatsApp: 1234567890', href: 'https://wa.me/1234567890' },
-    { name: 'Email: info@example.com', href: 'mailto:info@example.com' },
+    { name: 'Phone: 01858 881171', href: '01858 881171' },
+    { name: 'WhatsApp: 07710 311165', href: '07710 311165' },
+    { name: 'Email: info@lambertandwright.co.uk', href: 'mailto:lambertandwright.co.uk' },
   ],
   services: services.map(service => ({
     name: service.title.charAt(0).toUpperCase() + service.title.slice(1).toLowerCase(),
