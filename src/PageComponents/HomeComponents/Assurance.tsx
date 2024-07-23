@@ -20,8 +20,8 @@ const images = [
 
 
 const services = [
-  "Architectural and Planning services.",
-  "Design consultation and advice.",
+  "Architectural and Planning services",
+  "Design consultation and advice",
   "Full Project Management",
   "Detailed quotations - From bathroom and kitchen refurbishment, stunning garden landscaping to a complete new build",
 ];
@@ -105,7 +105,7 @@ export default function Assurance() {
               {/* <p className="my-6">
                 We are dedicated to enhancing your home or business with top-quality services.
               </p> */}
-              <Button variant='primary' to="/contact" aria-label="Contact us">Contact</Button>
+              <Button className='mt-4' variant='primary' to="/contact" aria-label="Contact us">Contact</Button>
             </div>
           </div>
         </div>
