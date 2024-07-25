@@ -13,9 +13,9 @@ const navigation = {
     { name: 'Contact', href: '/contact' }
   ],
   contact: [
-    { name: 'Phone: 01858 881171', href: '01858 881171' },
-    { name: 'WhatsApp: 07710 311165', href: '07710 311165' },
-    { name: 'Email: info@lambertandwright.co.uk', href: 'mailto:lambertandwright.co.uk' },
+    { name: 'Larry Lambert: 07710311165', href: 'tel:07710311165' },
+    { name: 'Jason Wright: 07866741261', href: 'tel:07866741261' },
+    { name: 'Email: info@lambertandwright.co.uk', href: 'mailto:info@lambertandwright.co.uk' },
   ],
   services: services.map(service => ({
     name: service.title.charAt(0).toUpperCase() + service.title.slice(1).toLowerCase(),
@@ -96,13 +96,26 @@ export default function Example() {
                       </a>
                     </li>
                   ))}
+                  <li>
+                    <a href="mailto:info@lambertandwright.co.uk" className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300">
+                      Email: info@lambertandwright.co.uk
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
         <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
-          <p className="text-xs leading-5 text-gray-400">&copy; {currentYear} Lambert & Wright - Lambert & Wright is a trading name of JLR Bespoke Property Renovations LTD</p>
+          <p className="text-xs leading-5 text-gray-400">
+            &copy; {currentYear} Lambert & Wright - Lambert & Wright is a trading name of JLR Bespoke Property Renovations LTD
+          </p>
+          <p className="text-xs leading-5 text-gray-400 mt-2">
+            Registered Office: 19 Warren Park Way, Leicester LE19 4SA
+          </p>
+          <p className="text-xs leading-5 text-gray-400 mt-2">
+            Company Registration Number: 10701923 | Registered in England
+          </p>
         </div>
       </div>
     </footer>

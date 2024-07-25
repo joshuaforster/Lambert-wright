@@ -11,14 +11,14 @@ export const services = [
     title: 'BUILDING & CONSTRUCTION', 
     description: 'Our building and construction services encompass project management, building and carpentry work, roofing, and plastering, ensuring your renovation is completed to the highest standards.', 
     content: `Our building and construction services encompass project management and all aspects of whatever your project entails. A complete and comprehensive service that ensures that all your wishes are completed to a standard of excellence on time and within budget.`,
-    image: '/images/ServicesData/Building&Construction.png',
+    image: '/images/ServicesData/Building and Construction.jpg',
   },
   { 
     id: 3, 
     title: 'PLUMBING & ELECTRICAL', 
     description: 'Our plumbing and electrical services include electrical design and installation, kitchen and bathroom installations, hot and cold pipework alterations, above ground drainage systems, hot water system upgrades, heating system upgrades, and boiler installations.', 
     content: `Our plumbing and electrical services include electrical design and installation, kitchen and bathroom installations, hot and cold pipework alterations, above ground drainage systems, hot water system upgrades, heating system upgrades, and boiler installations.\n\nWe specialise in:\n- Electrical Design & Installation\n- Kitchen & Bathroom Installations\n- Hot/Cold Pipework Alterations/Upgrades\n- Above Ground Drainage Systems\n- Hot Water System Upgrades\n- Heating System Upgrades\n- Boiler Installations\n\nOur team of certified plumbers and electricians are experienced in handling all types of plumbing and electrical work, ensuring your home systems are safe, efficient, and up-to-date.`,
-    image: '/images/ServicesData/Plumbing&Electrical.png',
+    image: '/images/ServicesData/Heating and Plumbing.jpg',
   },
   { 
     id: 4, 
@@ -48,7 +48,7 @@ export const services = [
     id: 7, 
     title: 'BATHROOM & KITCHEN UPGRADES', 
     description: 'Transform your property into a space you can enjoy. With over 45 years of experience in home renovations, refurbishments, and kitchen and bathroom fittings, we are Leicestershire’s top choice for kitchen and bathroom renovations. We create bespoke designs tailored to your needs, making your kitchen or bathroom a space you’ll love.', 
-    content: `The kitchen is often called the ‘heart’ of the home, which is why we give so much care and attention towards your projects.\n\nWith over 30 years of experience in home renovations, refurbishments, and kitchen and bathroom fittings, we are the perfect choice in Leicestershire for your kitchen and bathroom renovation needs. No matter the size of your kitchen or bathroom, you should be able to relax and enjoy them. If this isn’t how you feel in these areas, then allow us to take the stress away by creating a bespoke kitchen or bathroom design for you that gives you everything that you need.\n\nYou might have some ideas of what you want but aren’t sure how to piece it all together or what direction to go in – that is where L&W Bespoke Property Renovations come in. With our extensive knowledge and experience in the industry, we are the first choice for many homeowners across Leicestershire when it comes to kitchen and bathroom design and renovations.`,
+    content: `The kitchen is often called the ‘heart’ of the home, which is why we give so much care and attention towards your projects.\n\nWith over 30 years of experience in home renovations, refurbishments, and kitchen and bathroom fittings, we are the perfect choice in Leicestershire for your kitchen and bathroom renovation needs. No matter the size of your kitchen or bathroom, you should be able to relax and enjoy them. If this isn’t how you feel in these areas, then allow us to take the stress away by creating a bespoke kitchen or bathroom design for you that gives you everything that you need.\n\nYou might have some ideas of what you want but aren’t sure how to piece it all together or what direction to go in – that is where Lambert & Wright come in. With our extensive knowledge and experience in the industry, we are the first choice for many homeowners across Leicestershire when it comes to kitchen and bathroom design and renovations.`,
     images: [
       '/images/Bathrooms/Bath%201.jpg',
       '/images/Bathrooms/Bath%202.jpg',
@@ -67,8 +67,8 @@ export const services = [
   { 
     id: 8, 
     title: 'HEATING INSTALL & UPGRADES', 
-    description: 'Efficient heating systems not only provide comfort but also enhance energy efficiency. Whether you’re looking for underfloor heating, a new boiler system, or improvements to your existing system, L&W will help you achieve the best results for your home.', 
-    content: `Efficient heating systems in your home not only provide the comfort that you desire but, when selected correctly, can create a more energy-efficient home. Whether you are looking for underfloor heating, a new boiler system, or just making improvements to your existing system, you can work with L&W to get the best result for your home.\n\nOur heating services include:\n\n- Underfloor Heating Installation\n- Boiler System Installation & Upgrades\n- Radiator Installation & Upgrades\n- Thermostat Installation\n- Heating System Maintenance & Repair\n\nLet us help you create a warm and comfortable home with our expert heating installation and upgrade services.`,
+    description: 'Efficient heating systems not only provide comfort but also enhance energy efficiency. Whether you’re looking for underfloor heating, a new boiler system, or improvements to your existing system, Lambert & Wright will help you achieve the best results for your home.', 
+    content: `Efficient heating systems in your home not only provide the comfort that you desire but, when selected correctly, can create a more energy-efficient home. Whether you are looking for underfloor heating, a new boiler system, or just making improvements to your existing system, you can work with Lambert & Wright to get the best result for your home.\n\nOur heating services include:\n\n- Underfloor Heating Installation\n- Boiler System Installation & Upgrades\n- Radiator Installation & Upgrades\n- Thermostat Installation\n- Heating System Maintenance & Repair\n\nLet us help you create a warm and comfortable home with our expert heating installation and upgrade services.`,
     image: '/images/ServicesData/heating.png',
   },
 ];

@@ -2,8 +2,8 @@ import React, { useEffect, useState, useRef } from 'react';
 
 const logos = [
   // { src: "images/logos/logo.png", alt: "Transistor" },
-  // { src: "images/logos/llpm-logo.png", alt: "Reform" },
-  { src: "images/logos/labc-logo.png", alt: "Tuple" }
+  { src: "images/logos/labc-logo.png", alt: "Tuple" },
+  { src: "images/logos/LABC+2023.png", alt: "Reform" },
 ];
 
 export default function Logo() {

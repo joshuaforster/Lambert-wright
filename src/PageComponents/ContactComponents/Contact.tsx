@@ -173,15 +173,19 @@ export default function Contact() {
               <div className="mt-16 flex flex-col items-start space-y-4 text-gray-900">
                 <div className="flex items-center space-x-2">
                   <FaPhone className="text-xl" />
-                  <span>01858 881171</span>
+                  <a href="tel:07710311165" className="hover:text-customRed">Larry Lambert: 07710 311165</a>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <FaPhone className="text-xl" />
+                  <a href="tel:07866741261" className="hover:text-customRed">Jason Wright: 07866 741261</a>
                 </div>
                 <div className="flex items-center space-x-2">
                   <FaEnvelope className="text-xl" />
-                  <span>info@lambertandwright.co.uk</span>
+                  <a href="mailto:info@lambertandwright.co.uk" className="hover:text-customRed">info@lambertandwright.co.uk</a>
                 </div>
                 <div className="flex items-center space-x-2">
                   <FaMapMarkerAlt className="text-xl" />
-                  <span>123 Main Street, Leicester, UK</span>
+                  <span>19 Warren Park Way, Leicester LE19 4SA</span>
                 </div>
               </div>
             </div>
