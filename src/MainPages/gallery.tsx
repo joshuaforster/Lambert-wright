@@ -50,6 +50,7 @@ export const hardcodedItems: GalleryItem[] = [
   { type: 'image', imageUrl: 'images/project8/ebfe5759-3a9f-4e96-8dba-9473e64267c5.jpeg.webp', category: 'Project 2' },
 
   // Project 3 (previously Project 4 and Project IV)
+  { type: 'image', imageUrl:  "images/logos/labc-logo.png", category: 'Project 3' },
   { type: 'image', imageUrl: 'images/project4/97195000951550_MAH190125_IMG_03-Copy-1024x684.jpg', category: 'Project 3' },
   { type: 'image', imageUrl: 'images/project4/w-6.jpg', category: 'Project 3' },
   { type: 'image', imageUrl: 'images/project4/w1.jpg', category: 'Project 3' },
