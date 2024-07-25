@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ImageGallery, {GalleryItem} from '../PageComponents/GalleryComponent/imagegallery'; 
+import ImageGallery, { GalleryItem } from '../PageComponents/GalleryComponent/imagegallery';
 
 export const hardcodedItems: GalleryItem[] = [
   // Project 1
@@ -50,7 +50,6 @@ export const hardcodedItems: GalleryItem[] = [
   { type: 'image', imageUrl: 'images/project8/ebfe5759-3a9f-4e96-8dba-9473e64267c5.jpeg.webp', category: 'Project 2' },
 
   // Project 3 (previously Project 4 and Project IV)
-  { type: 'image', imageUrl:  "images/logos/labc-logo.png", category: 'Project 3' },
   { type: 'image', imageUrl: 'images/project4/97195000951550_MAH190125_IMG_03-Copy-1024x684.jpg', category: 'Project 3' },
   { type: 'image', imageUrl: 'images/project4/w-6.jpg', category: 'Project 3' },
   { type: 'image', imageUrl: 'images/project4/w1.jpg', category: 'Project 3' },
@@ -241,7 +240,7 @@ export const hardcodedItems: GalleryItem[] = [
   { type: 'image', imageUrl: 'images/project7/WhatsApp Image 2024-07-17 at 15.14.32 (7).jpeg', category: 'General' },
   { type: 'image', imageUrl: 'images/project7/WhatsApp Image 2024-07-17 at 15.14.32 (8).jpeg', category: 'General' },
   { type: 'image', imageUrl: 'images/project7/WhatsApp Image 2024-07-17 at 15.14.32 (9).jpeg', category: 'General' },
-  { type: 'image', imageUrl: 'images/project7/WhatsApp Image 2024-07-17 at 15.14.32.jpeg', category: 'General'},
+  { type: 'image', imageUrl: 'images/project7/WhatsApp Image 2024-07-17 at 15.14.32.jpeg', category: 'General' },
   { type: 'image', imageUrl: 'images/General/Doorway-and-cupboards-1024x768.jpg', category: 'General' },
   { type: 'image', imageUrl: 'images/General/Entrance-to-Spa-1024x768.jpg', category: 'General' },
   { type: 'image', imageUrl: 'images/General/feature 4.jpg', category: 'General' },
@@ -260,7 +259,6 @@ export const hardcodedItems: GalleryItem[] = [
 ];
 
 const categories = ['Project 1', 'Project 2', 'Project 3', 'Project 4', 'Kitchens & Bathrooms', 'General', 'Clear'];
-
 
 export default function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -303,13 +301,23 @@ export default function Gallery() {
         {selectedCategory === null ? (
           categories.filter(category => category !== 'Clear').map(category => (
             <div key={category} className="mb-12">
-              <h3 className="text-3xl font-semibold my-4 text-center">{category}</h3>
+              <h3 className="text-3xl font-semibold my-4 text-center flex items-center justify-center">
+                {category}
+                {category === 'Project 3' && (
+                  <img src="images/logos/labc-logo.png" alt="LABC Logo" className="ml-4 h-16 w-auto inline-block" />
+                )}
+              </h3>
               <ImageGallery items={hardcodedItems.filter(item => item.category === category)} />
             </div>
           ))
         ) : (
           <div>
-            <h3 className="text-3xl font-semibold my-4 text-center">{selectedCategory}</h3>
+            <h3 className="text-3xl font-semibold my-4 text-center flex items-center justify-center">
+              {selectedCategory}
+              {selectedCategory === 'Project 3' && (
+                <img src="images/logos/labc-logo.png" alt="LABC Logo" className="ml-4 h-16 w-auto inline-block" />
+              )}
+            </h3>
             <ImageGallery items={filteredItems} />
           </div>
         )}

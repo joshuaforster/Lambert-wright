@@ -96,17 +96,29 @@ export default function Example() {
                       </a>
                     </li>
                   ))}
-                  <li>
+                  {/* <li>
                     <a href="mailto:info@lambertandwright.co.uk" className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300">
                       Email: info@lambertandwright.co.uk
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
           </div>
         </div>
-        <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
+
+        {/* Logo with link above the divide line */}
+        <div className=" flex justify-star">
+          <a target='blank' href="https://flex-stone.co.uk/">
+            <img
+              className="h-12"
+              src="/images/logos/flextone.png"
+              alt="Flextone"
+            />
+          </a>
+        </div>
+
+        <div className="mt-4 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
           <p className="text-xs leading-5 text-gray-400">
             &copy; {currentYear} Lambert & Wright - Lambert & Wright is a trading name of JLR Bespoke Property Renovations LTD
           </p>
