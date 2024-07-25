@@ -66,7 +66,7 @@ export const services = [
   },
   { 
     id: 8, 
-    title: 'HEATING INSTALL & UPGRADES', 
+    title: 'HEATING INSTALLATIONS & UPGRADES', 
     description: 'Efficient heating systems not only provide comfort but also enhance energy efficiency. Whether you’re looking for underfloor heating, a new boiler system, or improvements to your existing system, Lambert & Wright will help you achieve the best results for your home.', 
     content: `Efficient heating systems in your home not only provide the comfort that you desire but, when selected correctly, can create a more energy-efficient home. Whether you are looking for underfloor heating, a new boiler system, or just making improvements to your existing system, you can work with Lambert & Wright to get the best result for your home.\n\nOur heating services include:\n\n- Underfloor Heating Installation\n- Boiler System Installation & Upgrades\n- Radiator Installation & Upgrades\n- Thermostat Installation\n- Heating System Maintenance & Repair\n\nLet us help you create a warm and comfortable home with our expert heating installation and upgrade services.`,
     image: '/images/ServicesData/heating.png',
