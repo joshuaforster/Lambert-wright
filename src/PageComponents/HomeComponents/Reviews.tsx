@@ -107,17 +107,21 @@ export default function Reviews() {
 
   return (
     <section ref={sectionRef} className="isolate overflow-hidden bg-white">
-      <div {...swipeHandlers} className="relative mx-auto max-w-screen-xl px-4 lg:px-6 py-24 sm:py-32">
+      <div
+        {...swipeHandlers}
+        className="relative mx-auto max-w-screen-xl px-4 lg:px-6 py-24 sm:py-32"
+      >
         <div className="absolute left-1/2 top-0 -z-10 h-[50rem] w-[90rem] -translate-x-1/2 bg-[radial-gradient(50%_100%_at_top,theme(colors.indigo.100),white)] opacity-20 lg:left-36" />
         <div className="absolute inset-y-0 right-1/2 -z-10 mr-12 w-[150vw] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-20 md:mr-0 lg:right-full lg:-mr-36 lg:origin-center" />
         <div className={`transition-opacity duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl text-fontColour font-bold text-center mb-12">WHAT OUR CUSTOMERS SAY</h2>
           <div className="flex overflow-hidden relative">
             <div
-              className="flex w-full"
+              className="flex w-full cursor-grab"
               style={{
                 transform: `translateX(calc(${offsetX}px - ${currentReviewIndex * 100}%))`,
                 transition: dragging ? 'none' : 'transform 0.3s ease',
+                cursor: dragging ? 'grabbing' : 'grab'
               }}
             >
               {reviews.map((review, index) => (
@@ -156,5 +160,5 @@ export default function Reviews() {
       </div>
     </section>
   );
+  
 }
-
