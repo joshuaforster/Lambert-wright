@@ -13,12 +13,22 @@ const reviews = [
     name: "J.Rollin",
     image: "/images/reviews/review2.png",
   },
+  {
+    id: 3,
+    text: "I would highly recommend JLR. All aspects of their work from initial consultation through to the aftercare provided are really of the highest level. We have recently had a new heating system and boiler installed by Jason and his team and we were very pleased with the initial advice on both the correct remedial work for our old system and the best products to use. We are extremely happy with the installation and quality of workmanship. Jason took the time to explain in detail the new system and how it works and the aftercare service has been fantastic.",
+    name: "Amy Baxter",
+  },
+  {
+    id: 4,
+    text: "We have recently engaged Jason to install a new family bathroom into our house. From our first meeting, Jason’s extensive knowledge of bathrooms, kitchens and central heating systems impressed us. Jason introduced us to Joanne from Bathrooms by Regency in Wigston, who patiently assisted us in making choices with regard to all the necessary sanitary ware and fittings. Jason also coordinated all the necessary associated trade’s people, which helped enormously to expedite the process. The final result has been a completely modernised, functional and aesthetically pleasing bathroom with a superb quality of finishing. We would have no hesitation in recommending Jason and look forward to him returning shortly to overhaul our Central Heating Systems and re-fit our ensuite bathroom.",
+    name: "Neil & Sharon Burke",
+  },
 ];
 
 export default function Reviews() {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement | null>(null);
 
   const nextReview = () => {
     setCurrentReviewIndex((prevIndex) => (prevIndex + 1) % reviews.length);
@@ -72,12 +82,19 @@ export default function Reviews() {
                 <p>{reviews[currentReviewIndex].text}</p>
               </blockquote>
             </div>
-            <div className="hidden lg:flex col-end-1 w-16 lg:row-span-4 lg:w-96 lg:h-80">
-              <img
-                className="bg-indigo-50 h-full"
-                src={reviews[currentReviewIndex].image}
-                alt={reviews[currentReviewIndex].name}
-              />
+            <div className={`hidden lg:flex col-end-1 w-16 lg:row-span-4 lg:w-96 lg:h-80 ${!reviews[currentReviewIndex].image ? 'col-span-2' : ''}`}>
+              {reviews[currentReviewIndex].image ? (
+                <img
+                  className="bg-indigo-50 h-full"
+                  src={reviews[currentReviewIndex].image}
+                  alt={reviews[currentReviewIndex].name}
+                />
+              ) : (
+                ''
+                // <div className="h-full bg-indigo-50 flex items-center justify-center text-lg text-gray-500">
+                //   No Image Available
+                // </div>
+              )}
             </div>
             <figcaption className="text-base lg:col-start-1 lg:row-start-3">
               <div className="font-semibold text-fontColour">{reviews[currentReviewIndex].name}</div>

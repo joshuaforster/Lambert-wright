@@ -23,6 +23,19 @@ export default function ServiceDetail() {
     return <div>Service not found</div>;
   }
 
+  const renderContent = (content: string) => {
+    const lines = content.split('\n\n').map((line, index) => {
+      if (line.startsWith('- ')) {
+        const items = line.split('\n').filter(item => item.startsWith('- ')).map((item, i) => (
+          <li key={i}>{item.substring(2)}</li>
+        ));
+        return <ul key={index} className="list-disc list-inside">{items}</ul>;
+      }
+      return <p key={index} className="mb-4">{line}</p>;
+    });
+    return lines;
+  };
+
   return (
     <div className="relative bg-white">
       <div className="mx-auto max-w-7xl lg:flex lg:justify-between lg:px-8 xl:justify-end">
@@ -61,9 +74,7 @@ export default function ServiceDetail() {
             </Link>
             <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{service.title}</h1>
             <div className="mt-10 max-w-xl text-base leading-8 text-gray-700 lg:max-w-none">
-              <p>
-                {service.content}
-              </p>
+              {renderContent(service.content)}
             </div>
           </div>
         </div>
