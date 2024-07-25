@@ -2,6 +2,8 @@ import React, { useEffect, useState, useRef } from 'react';
 import { FaPlus, FaMinus } from 'react-icons/fa';
 import HeaderSection from '../CustomComponents/headerSection';
 
+console.log('hello')
+
 const faqs = [
   {
     title: 'Who are Lambert and Wright?',

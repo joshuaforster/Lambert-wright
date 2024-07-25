@@ -60,9 +60,6 @@ export default function ServiceDetail() {
               &larr; Back to All Services
             </Link>
             <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{service.title}</h1>
-            <p className="mt-10 max-w-xl text-base leading-8 text-gray-700 lg:max-w-none">
-              {service.description}
-            </p>
             <div className="mt-10 max-w-xl text-base leading-8 text-gray-700 lg:max-w-none">
               <p>
                 {service.content}
