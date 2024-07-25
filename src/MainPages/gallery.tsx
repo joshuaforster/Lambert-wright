@@ -1,6 +1,17 @@
 import React, { useState } from 'react';
 import ImageGallery, {GalleryItem} from '../PageComponents/GalleryComponent/imagegallery'; 
 
+const removeDuplicates = (items: GalleryItem[]): GalleryItem[] => {
+  const uniqueItems = items.reduce((acc, item) => {
+    if (!acc.some(accItem => accItem.imageUrl === item.imageUrl)) {
+      acc.push(item);
+    }
+    return acc;
+  }, [] as GalleryItem[]);
+  return uniqueItems;
+};
+
+
 export const hardcodedItems: GalleryItem[] = [
   // Project 1
   { type: 'image', imageUrl: 'images/project1/Aerial-View.jpg', category: 'Project 1' },
