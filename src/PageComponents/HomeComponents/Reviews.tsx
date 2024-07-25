@@ -3,19 +3,19 @@ import React, { useEffect, useState, useRef } from 'react';
 const reviews = [
   {
     id: 1,
-    text: "We employed JLR Bespoke Properties to project manage our kitchen redesign and build. We were instantly impressed with the professional nature in which they approached our requests and linked us in with an excellent kitchen designer. Once the build was under way we were very happy with the quality of workmen he employed along with the nature in which he tackled and solved our changes and the unforeseen problems which surfaced. The final result is a high quality kitchen finished to the best standards.",
+    text: "We employed Lambert & Wright to project manage our kitchen redesign and build. We were instantly impressed with the professional nature in which they approached our requests and linked us in with an excellent kitchen designer. Once the build was under way we were very happy with the quality of workmen he employed along with the nature in which he tackled and solved our changes and the unforeseen problems which surfaced. The final result is a high quality kitchen finished to the best standards.",
     name: "Ed & Liz Barnett",
     image: "/images/reviews/review1.png",
   },
   {
     id: 2,
-    text: "We engaged JLR Bespoke Property Renovations Ltd to undertake the conversion of our garage into a studio/multipurpose room with an adjacent Jack and Jill bathroom, remodelling of a utility room, and total heating and plumbing upgrade. We have been very happy with the quality of work. We had a clear schedule of works and despite the challenges of Covid this was adhered to. All the tradespeople were of a high quality, a pleasure to work with, and were always responsive to our input. Jason managed the project closely and is focused on ensuring work is undertaken to a high standard with a clear attention to detail. From start to finish the build went smoothly. We would happily recommend JLR Bespoke Property Renovations Ltd.",
+    text: "We engaged Lambert & Wright to undertake the conversion of our garage into a studio/multipurpose room with an adjacent Jack and Jill bathroom, remodelling of a utility room, and total heating and plumbing upgrade. We have been very happy with the quality of work. We had a clear schedule of works and despite the challenges of Covid this was adhered to. All the tradespeople were of a high quality, a pleasure to work with, and were always responsive to our input. Jason managed the project closely and is focused on ensuring work is undertaken to a high standard with a clear attention to detail. From start to finish the build went smoothly. We would happily recommend Lambert & Wright.",
     name: "J.Rollin",
     image: "/images/reviews/review2.png",
   },
   {
     id: 3,
-    text: "I would highly recommend JLR. All aspects of their work from initial consultation through to the aftercare provided are really of the highest level. We have recently had a new heating system and boiler installed by Jason and his team and we were very pleased with the initial advice on both the correct remedial work for our old system and the best products to use. We are extremely happy with the installation and quality of workmanship. Jason took the time to explain in detail the new system and how it works and the aftercare service has been fantastic.",
+    text: "I would highly recommend Lambert & Wright. All aspects of their work from initial consultation through to the aftercare provided are really of the highest level. We have recently had a new heating system and boiler installed by Jason and his team and we were very pleased with the initial advice on both the correct remedial work for our old system and the best products to use. We are extremely happy with the installation and quality of workmanship. Jason took the time to explain in detail the new system and how it works and the aftercare service has been fantastic.",
     name: "Amy Baxter",
   },
   {
