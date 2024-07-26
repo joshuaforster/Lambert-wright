@@ -42,6 +42,9 @@ export default function HeroTwo() {
     return () => clearInterval(intervalId);
   }, []);
 
+  const { ref: headerRef, inView: headerInView } = useInView({ triggerOnce: true });
+  const { ref: paragraphRef, inView: paragraphInView } = useInView({ triggerOnce: true });
+
   useEffect(() => {
     // Preload the LCP image
     const linkWebP = document.createElement('link');
@@ -64,9 +67,6 @@ export default function HeroTwo() {
     };
   }, []);
 
-  const { ref: headerRef, inView: headerInView } = useInView({ triggerOnce: true });
-  const { ref: paragraphRef, inView: paragraphInView } = useInView({ triggerOnce: true });
-
   return (
     <div className="relative isolate overflow-hidden h-[80vh] flex pt-14">
       <div className="absolute inset-0 -z-10 w-full h-full">
@@ -81,13 +81,12 @@ export default function HeroTwo() {
                 width: '100%',
                 height: '100%',
                 objectFit: 'cover',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
                 opacity: index === currentImageIndex ? 1 : 0,
                 transition: 'opacity 2s ease-in-out, transform 4s ease-in-out',
                 transform: index === currentImageIndex || (index === 0 && initialLoad) ? 'scale(1.1)' : 'scale(1)',
               }}
               className="absolute inset-0 w-full h-full"
+              loading="lazy"
             />
           </picture>
         ))}

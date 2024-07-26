@@ -49,14 +49,14 @@ export default function Logo() {
           {logos.map((logo, index) => (
             <div key={index} className="flex justify-center items-center">
               <picture>
-                <source srcSet={logo.webp} type="webp" />
-                <source srcSet={logo.png} type="png" />
+                <source srcSet={logo.webp} type="image/webp" />
+                <source srcSet={logo.png} type="image/png" />
                 <img
                   className="h-24 w-full max-w-xs object-contain"
                   src={logo.png}
                   alt={logo.alt}
                   aria-label={logo.alt}
-                  loading="lazy" // Lazy loading attribute
+                  loading="lazy"
                 />
               </picture>
             </div>

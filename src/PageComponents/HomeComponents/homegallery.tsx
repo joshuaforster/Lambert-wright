@@ -60,8 +60,8 @@ export default function HomeGallery() {
             >
               <div className="w-full h-full group">
                 <picture>
-                  <source srcSet={image.webp} type="image/webp" />
-                  <source srcSet={image.jpg} type="image/jpeg" />
+                  <source srcSet={image.webp} type="webp" />
+                  <source srcSet={image.jpg} type="jpeg" />
                   <img
                     src={image.jpg}
                     alt={`Gallery ${index + 1}`}
