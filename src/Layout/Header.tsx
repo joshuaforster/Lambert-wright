@@ -28,11 +28,14 @@ export default function Header() {
       <nav className="bg-customGray border-gray-200 px-4 lg:px-6 py-4">
         <div className="flex items-center justify-between mx-auto max-w-screen-xl">
           <Link to="/" className="flex items-center" onClick={handleLinkClick}>
-            <img
-              src={'/images/logoGrey.png'}
-              className="h-14 sm:h-14"
-              alt="Company Logo"
-            />
+            <picture>
+              <source srcSet="/images/logos/logo-66a385c761f9d.webp" type="image/webp" />
+              <img
+                src="/images/logos/logo.png"
+                className="h-14 sm:h-14"
+                alt="Company Logo"
+              />
+            </picture>
           </Link>
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
             <ul className="flex items-center space-x-8">

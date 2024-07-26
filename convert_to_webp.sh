@@ -23,6 +23,8 @@ images=(
   "/Users/joshuaforster/Documents/Final-portfolio-projects/Lambert-wright/public/images/project4/w16.jpg"
   "/Users/joshuaforster/Documents/Final-portfolio-projects/Lambert-wright/public/images/project4/w18.jpg"
   "/Users/joshuaforster/Documents/Final-portfolio-projects/Lambert-wright/public/images/project4/w19.jpg"
+  "/Users/joshuaforster/Documents/Final-portfolio-projects/Lambert-wright/public/images/logo2.png"
+  "/Users/joshuaforster/Documents/Final-portfolio-projects/Lambert-wright/public/images/logoGrey.png"
 )
 
 # Loop through each image and convert to WebP
