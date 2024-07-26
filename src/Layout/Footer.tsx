@@ -3,13 +3,13 @@ import { services } from '../Data/serviceData';
 
 const navigation = {
   nav: [
-    { name: 'Home', href: '/', ariaLabel: 'Go to Home page' },
-    { name: 'About', href: '/about', ariaLabel: 'Learn more About us' },
-    { name: 'Services', href: '/services', ariaLabel: 'Explore our Services' },
+    { name: 'Home', href: '/', ariaLabel: 'Go to the Home page' },
+    { name: 'About', href: '/about', ariaLabel: 'Learn more about us on the About page' },
+    { name: 'Services', href: '/services', ariaLabel: 'Explore the Services we offer' },
     { name: 'Gallery', href: '/gallery', ariaLabel: 'View our Gallery' },
-    { name: "FAQ's", href: '/faq', ariaLabel: 'Frequently Asked Questions' },
+    { name: "FAQ's", href: '/faq', ariaLabel: 'Find answers to Frequently Asked Questions' },
     { name: 'Brochure', href: 'Brochure/Brochure_JLR2021-2.pdf', isExternal: true, ariaLabel: 'Download our Brochure' },
-    { name: 'Contact', href: '/contact', ariaLabel: 'Contact us' }
+    { name: 'Contact', href: '/contact', ariaLabel: 'Get in touch with us on the Contact page' }
   ],
   contact: [
     { name: 'Larry Lambert: 07710311165', href: 'tel:07710311165', ariaLabel: 'Call Larry Lambert' },
@@ -19,7 +19,7 @@ const navigation = {
   services: services.map(service => ({
     name: service.title.charAt(0).toUpperCase() + service.title.slice(1).toLowerCase(),
     href: `/services/${service.id}`,
-    ariaLabel: `Learn more about our ${service.title}`
+    ariaLabel: `Learn more about our ${service.title} service`
   })),
   legal: [
     { name: 'Privacy Policy', href: '/privacypolicy', ariaLabel: 'Read our Privacy Policy' },
