@@ -56,7 +56,7 @@ function App() {
               expires={150}
             >
               This website uses cookies to enhance the user experience.{" "}
-              <a href="/privacy-policy" style={{ color: "#C58C49", transition: "color 0.3s" }} className="hover:text-customBlue">
+              <a href="/privacy-policy" style={{ color: "white"}} className="hover:text-customBlue">
                 Learn more
               </a>
             </CookieConsent>
