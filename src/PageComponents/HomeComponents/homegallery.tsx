@@ -66,6 +66,7 @@ export default function HomeGallery() {
                     src={image.jpg}
                     alt={`Gallery ${index + 1}`}
                     className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:brightness-75"
+                    loading="lazy"
                   />
                 </picture>
               </div>

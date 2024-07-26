@@ -64,8 +64,10 @@ export default function HeroTwo() {
                 opacity: index === currentImageIndex ? 1 : 0,
                 transition: 'opacity 2s ease-in-out, transform 4s ease-in-out',
                 transform: index === currentImageIndex || (index === 0 && initialLoad) ? 'scale(1.1)' : 'scale(1)',
+    
               }}
               className="absolute inset-0 w-full h-full"
+              loading="lazy"
             />
           </picture>
         ))}

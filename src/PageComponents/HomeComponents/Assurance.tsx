@@ -116,12 +116,13 @@ export default function Assurance() {
                 backgroundPosition: 'center',
               }}
             >
-              <source srcSet={image.webp} type="image/webp" />
-              <source srcSet={image.jpg} type="image/jpeg" />
+              <source srcSet={image.webp} type="webp" />
+              <source srcSet={image.jpg} type="jpeg" />
               <img
                 src={image.jpg}
                 alt={`Photos ${index + 1}`}
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </picture>
           ))}
@@ -171,12 +172,13 @@ export default function Assurance() {
                   backgroundPosition: 'center',
                 }}
               >
-                <source srcSet={image.webp} type="Photos/webp" />
-                <source srcSet={image.jpg} type="Photos/jpeg" />
+                <source srcSet={image.webp} type="webp" />
+                <source srcSet={image.jpg} type="jpeg" />
                 <img
                   src={image.jpg}
                   alt={`Photos ${index + 1}`}
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </picture>
             ))}
