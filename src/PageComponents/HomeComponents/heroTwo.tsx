@@ -74,12 +74,13 @@ export default function HeroTwo() {
             Masters in Refurbishment Since 1990
           </h1>
           <div className="mt-10 flex items-center gap-x-6">
-            <Button variant='tertiary' to="/contact" aria-label="Contact us">
-              Get A Free Quote
-            </Button>
-            <Button variant='tertiary' to="/about" aria-label="Find Out More">
-              Find Out More <span aria-hidden="true">→</span>
-            </Button>
+          <Button variant='tertiary' to="/contact" aria-label="Contact us">
+            Get A Free Quote
+          </Button>
+          <Button variant='tertiary' to="/about" aria-label="Find Out More">
+            Find Out More <span aria-hidden="true">→</span>
+          </Button>
+
           </div>
         </div>
       </div>
