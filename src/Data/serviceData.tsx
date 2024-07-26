@@ -18,7 +18,7 @@ export const services = [
     title: 'PLUMBING & ELECTRICAL', 
     description: 'Our plumbing and electrical services include electrical design and installation, kitchen and bathroom installations, hot and cold pipework alterations, above ground drainage systems, hot water system upgrades, heating system upgrades, and boiler installations.', 
     content: `Our plumbing and electrical services include electrical design and installation, kitchen and bathroom installations, hot and cold pipework alterations, above ground drainage systems, hot water system upgrades, heating system upgrades, and boiler installations.\n\nWe specialise in:\n• Electrical Design & Installation\n\n• Kitchen & Bathroom Installations\n\n• Hot/Cold Pipework Alterations/Upgrades\n\n• Above Ground Drainage Systems\n\n• Hot Water System Upgrades\n\n• Heating System Upgrades\n\n• Boiler Installations\n\nOur team of certified plumbers and electricians are experienced in handling all types of plumbing and electrical work, ensuring your home systems are safe, efficient, and up-to-date.`,
-    image: '/images/ServicesData/Heating and Plumbing.webp',
+    image: '/images/ServicesData/Plumbing&Electrical.png'
   },
   { 
     id: 4, 
