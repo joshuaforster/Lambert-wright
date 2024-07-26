@@ -30,8 +30,9 @@ export default function AboutHead() {
             <div className="relative overflow-hidden flex-grow">
               <img
                 className="w-full h-full object-cover hidden lg:block lg:h-3/4"
-                src='images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-1.jpg'
+                src='images/projectVI/bumblebee-cottage-main-street-burton-overy-1-66a36f243e6b8.webp'
                 alt="About"
+                loading="lazy"
               />
             </div>
           </div>

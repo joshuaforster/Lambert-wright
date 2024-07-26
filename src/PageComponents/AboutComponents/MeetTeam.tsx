@@ -4,13 +4,13 @@ const people = [
   {
     name: 'Larry Lambert',
     role: 'Co-Founder & Project Manager',
-    imageUrl: 'images/about/larry.png',
+    imageUrl: 'images/about/larry.webp',
     bio: `Larry’s career began in exhibition construction and management before transitioning to property design and construction in the 70s. He managed an independent property company started by his Grandfather in 1927, gaining extensive experience in complex construction and historical restoration over 45 years.`,
   },
   {
     name: 'Jason Wright',
     role: 'Co-Founder & Property Developer',
-    imageUrl: 'images/about/wright.png',
+    imageUrl: 'images/about/wright.webp',
     bio: `Jason has over 38 years in the trade, starting with a City & Guilds in Plumbing and Heating. He founded successful plumbing companies and transitioned to property development, setting up JLR Bespoke Property Renovations Limited in 2017 with Larry Lambert, delivering top-quality renovations.`,
   },
 ];
@@ -55,7 +55,7 @@ export default function Example() {
           <ul className="mt-10 mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none md:gap-x-40">
             {people.map((person) => (
               <li key={person.name}>
-                <img className=" w-full rounded-2xl object-cover object-top" src={person.imageUrl} alt={person.name} />
+                <img className="w-full rounded-2xl object-cover object-top" src={person.imageUrl} alt={person.name} />
                 <h3 className="mt-6 text-lg font-semibold leading-8 text-white">{person.name}</h3>
                 <p className="text-base leading-7 text-white">{person.role}</p>
                 <p className="mt-4 text-base leading-7 text-white">{person.bio}</p>

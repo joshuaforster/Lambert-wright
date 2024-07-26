@@ -8,7 +8,7 @@ const About = () => {
   return (
     <div>
       <HeaderSection
-          image='images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-7.jpg'
+          image='images/projectVI/bumblebee-cottage-main-street-burton-overy-7-66a36f4a25cce.webp'
           title="About"
       />
       <AboutHead />
