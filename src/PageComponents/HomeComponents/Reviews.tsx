@@ -139,7 +139,7 @@ export default function Reviews() {
             </div>
           </div>
           <div className="flex justify-center items-center mt-8">
-            <button onClick={prevReview} className="mx-2 text-fontColour hover:text-gray-900 focus:outline-none">
+            <button onClick={prevReview} className="mx-2 text-fontColour hover:text-gray-900 focus:outline-none" aria-label="Previous review">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
@@ -147,7 +147,7 @@ export default function Reviews() {
             {reviews.map((_, index) => (
               <div key={index} className={`h-2 w-2 rounded-full mx-1 ${index === currentReviewIndex ? 'bg-gray-900' : 'bg-gray-300'}`} />
             ))}
-            <button onClick={nextReview} className="mx-2 text-fontColour hover:text-gray-900 focus:outline-none">
+            <button onClick={nextReview} className="mx-2 text-fontColour hover:text-gray-900 focus:outline-none" aria-label="Next review">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -160,5 +160,5 @@ export default function Reviews() {
       </div>
     </section>
   );
-  
 }
+
