@@ -16,11 +16,11 @@ const features = [
     description:
       'All our tradesmen are highly experienced, thoroughly vetted, and come highly recommended, ensuring top-notch craftsmanship in every project.',
   },
-  {
-    name: 'Comprehensive Financial Services',
-    description:
-      'We can introduce you to external financial advisors who provide expert mortgage advice and assistance, helping you navigate the financial aspects of your renovation.',
-  },
+  // {
+  //   name: 'Comprehensive Financial Services',
+  //   description:
+  //     'We can introduce you to external financial advisors who provide expert mortgage advice and assistance, helping you navigate the financial aspects of your renovation.',
+  // },
   {
     name: 'Award-Winning Expertise',
     description:
