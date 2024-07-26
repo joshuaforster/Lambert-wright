@@ -1,9 +1,16 @@
 import React, { useEffect, useState, useRef } from 'react';
 
 const logos = [
-  // { src: "images/logos/logo.png", alt: "Transistor" },
-  { src: "images/logos/labc-logo.png", alt: "Tuple" },
-  { src: "images/logos/LABC+2023.png", alt: "Reform" },
+  {
+    webp: "images/logos/labc-logo-66a385c679fe9.webp",
+    png: "images/logos/labc-logo.png",
+    alt: "LABC Logo"
+  },
+  {
+    webp: "images/logos/labc2023-66a385c5f1295.webp",
+    png: "images/logos/LABC+2023.png",
+    alt: "LABC 2023"
+  },
 ];
 
 export default function Logo() {
@@ -36,16 +43,21 @@ export default function Logo() {
         }`}
       >
         <h2 className="text-xl font-semibold leading-8 capitalize text-lightBlue">
-        Regional Winner of the LABC Award for Building Excellence and design 
+          Regional Winner of the LABC Award for Building Excellence and design
         </h2>
         <div className="grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-3 mt-8">
           {logos.map((logo, index) => (
             <div key={index} className="flex justify-center items-center">
-              <img
-                className="h-24 w-full max-w-xs object-contain"
-                src={logo.src}
-                alt={logo.alt}
-              />
+              <picture>
+                <source srcSet={logo.webp} type="Picture/webp" />
+                <source srcSet={logo.png} type="Picture/png" />
+                <img
+                  className="h-24 w-full max-w-xs object-contain"
+                  src={logo.png}
+                  alt={logo.alt}
+                  aria-label={logo.alt}
+                />
+              </picture>
             </div>
           ))}
         </div>
