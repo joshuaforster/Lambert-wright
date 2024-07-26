@@ -27,7 +27,7 @@ const navigation = {
   ],
 };
 
-export default function Example() {
+export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-customBlue border-t-2 border-white" aria-labelledby="footer-heading">
