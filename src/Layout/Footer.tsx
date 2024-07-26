@@ -43,6 +43,7 @@ export default function Footer() {
                 className="h-16"
                 src="/images/logos/logo.png"
                 alt="Lambert & Wright Company logo"
+                loading="lazy"
               />
             </picture>
           </div>

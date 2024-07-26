@@ -67,7 +67,6 @@ export default function HeroTwo() {
     
               }}
               className="absolute inset-0 w-full h-full"
-              loading="lazy"
             />
           </picture>
         ))}
