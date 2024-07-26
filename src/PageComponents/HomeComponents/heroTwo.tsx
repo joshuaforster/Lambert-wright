@@ -59,7 +59,7 @@ export default function HeroTwo() {
                 transform: index === currentImageIndex || (index === 0 && initialLoad) ? 'scale(1.1)' : 'scale(1)',
               }}
               className="absolute inset-0 w-full h-full"
-           
+              loading={index === 0 ? 'eager' : 'lazy'} // Load the first image eagerly
             />
           </picture>
         ))}
