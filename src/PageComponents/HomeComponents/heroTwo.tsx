@@ -42,6 +42,28 @@ export default function HeroTwo() {
     return () => clearInterval(intervalId);
   }, []);
 
+  useEffect(() => {
+    // Preload the LCP image
+    const linkWebP = document.createElement('link');
+    linkWebP.rel = 'preload';
+    linkWebP.href = images[0].webp;
+    linkWebP.as = 'image';
+    linkWebP.type = 'image/webp';
+    document.head.appendChild(linkWebP);
+
+    const linkJPG = document.createElement('link');
+    linkJPG.rel = 'preload';
+    linkJPG.href = images[0].jpg;
+    linkJPG.as = 'image';
+    linkJPG.type = 'image/jpeg';
+    document.head.appendChild(linkJPG);
+
+    return () => {
+      document.head.removeChild(linkWebP);
+      document.head.removeChild(linkJPG);
+    };
+  }, []);
+
   const { ref: headerRef, inView: headerInView } = useInView({ triggerOnce: true });
   const { ref: paragraphRef, inView: paragraphInView } = useInView({ triggerOnce: true });
 
@@ -64,7 +86,6 @@ export default function HeroTwo() {
                 opacity: index === currentImageIndex ? 1 : 0,
                 transition: 'opacity 2s ease-in-out, transform 4s ease-in-out',
                 transform: index === currentImageIndex || (index === 0 && initialLoad) ? 'scale(1.1)' : 'scale(1)',
-    
               }}
               className="absolute inset-0 w-full h-full"
             />
