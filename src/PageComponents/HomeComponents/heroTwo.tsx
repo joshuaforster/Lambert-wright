@@ -3,12 +3,30 @@ import { useInView } from 'react-intersection-observer';
 import Button from '../../CustomComponents/buttons';
 
 const images = [
-  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-6.jpg',
-  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-5.jpg',
-  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-2.jpg',
-  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-7.jpg',
-  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-1.jpg',
-  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-7.jpg',
+  {
+    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-6-66a36f3f24d12.webp',
+    jpg: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-6.jpg'
+  },
+  {
+    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-5-66a36f3dbfafa.webp',
+    jpg: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-5.jpg'
+  },
+  {
+    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-2-66a36f244d8b4.webp',
+    jpg: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-2.jpg'
+  },
+  {
+    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-7-66a36f4a25cce.webp',
+    jpg: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-7.jpg'
+  },
+  {
+    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-1-66a36f243e6b8.webp',
+    jpg: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-1.jpg'
+  },
+  {
+    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-7-66a36f4a25cce.webp',
+    jpg: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-7.jpg'
+  }
 ];
 
 export default function HeroTwo() {
@@ -31,18 +49,25 @@ export default function HeroTwo() {
     <div className="relative isolate overflow-hidden h-[80vh] flex pt-14">
       <div className="absolute inset-0 -z-10 w-full h-full">
         {images.map((image, index) => (
-          <div
-            key={image}
-            style={{
-              backgroundImage: `url(${image})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              opacity: index === currentImageIndex ? 1 : 0,
-              transition: 'opacity 2s ease-in-out, transform 4s ease-in-out',
-              transform: index === currentImageIndex || (index === 0 && initialLoad) ? 'scale(1.1)' : 'scale(1)',
-            }}
-            className="absolute inset-0 w-full h-full"
-          />
+          <picture key={index} className="absolute inset-0 w-full h-full">
+            <source srcSet={image.webp} type="image/webp" />
+            <source srcSet={image.jpg} type="image/jpeg" />
+            <img
+              src={image.jpg}
+              alt={`Hero Images ${index + 1}`}
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                opacity: index === currentImageIndex ? 1 : 0,
+                transition: 'opacity 2s ease-in-out, transform 4s ease-in-out',
+                transform: index === currentImageIndex || (index === 0 && initialLoad) ? 'scale(1.1)' : 'scale(1)',
+              }}
+              className="absolute inset-0 w-full h-full"
+            />
+          </picture>
         ))}
         <div className="absolute inset-0 bg-black opacity-30"></div>
       </div>
@@ -74,13 +99,12 @@ export default function HeroTwo() {
             Masters in Refurbishment Since 1990
           </h1>
           <div className="mt-10 flex items-center gap-x-6">
-          <Button variant='tertiary' to="/contact" aria-label="Contact us">
-            Get A Free Quote
-          </Button>
-          <Button variant='tertiary' to="/about" aria-label="Find Out More">
-            Find Out More <span aria-hidden="true">→</span>
-          </Button>
-
+            <Button variant='tertiary' to="/contact" aria-label="Contact us">
+              Get A Free Quote
+            </Button>
+            <Button variant='tertiary' to="/about" aria-label="Find Out More">
+              Find Out More <span aria-hidden="true">→</span>
+            </Button>
           </div>
         </div>
       </div>
