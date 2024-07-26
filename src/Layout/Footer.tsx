@@ -3,27 +3,27 @@ import { services } from '../Data/serviceData';
 
 const navigation = {
   nav: [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    // { name: 'Projects', href: '/projects' },
-    { name: 'Gallery', href: '/gallery' },
-    { name: "FAQ's", href: '/faq' },
-    { name: 'Brochure', href: 'Brochure/Brochure_JLR2021-2.pdf', isExternal: true },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Home', href: '/', ariaLabel: 'Go to Home page' },
+    { name: 'About', href: '/about', ariaLabel: 'Learn more About us' },
+    { name: 'Services', href: '/services', ariaLabel: 'Explore our Services' },
+    { name: 'Gallery', href: '/gallery', ariaLabel: 'View our Gallery' },
+    { name: "FAQ's", href: '/faq', ariaLabel: 'Frequently Asked Questions' },
+    { name: 'Brochure', href: 'Brochure/Brochure_JLR2021-2.pdf', isExternal: true, ariaLabel: 'Download our Brochure' },
+    { name: 'Contact', href: '/contact', ariaLabel: 'Contact us' }
   ],
   contact: [
-    { name: 'Larry Lambert: 07710311165', href: 'tel:07710311165' },
-    { name: 'Jason Wright: 07866741261', href: 'tel:07866741261' },
-    { name: 'Email: info@lambertandwright.co.uk', href: 'mailto:info@lambertandwright.co.uk' },
+    { name: 'Larry Lambert: 07710311165', href: 'tel:07710311165', ariaLabel: 'Call Larry Lambert' },
+    { name: 'Jason Wright: 07866741261', href: 'tel:07866741261', ariaLabel: 'Call Jason Wright' },
+    { name: 'Email: info@lambertandwright.co.uk', href: 'mailto:info@lambertandwright.co.uk', ariaLabel: 'Email us at info@lambertandwright.co.uk' },
   ],
   services: services.map(service => ({
     name: service.title.charAt(0).toUpperCase() + service.title.slice(1).toLowerCase(),
-    href: `/services/${service.id}`
+    href: `/services/${service.id}`,
+    ariaLabel: `Learn more about our ${service.title}`
   })),
   legal: [
-    { name: 'Privacy Policy', href: '/privacypolicy' },
-    { name: 'Terms & Conditions', href: '/termsandconditions' },
+    { name: 'Privacy Policy', href: '/privacypolicy', ariaLabel: 'Read our Privacy Policy' },
+    { name: 'Terms & Conditions', href: '/termsandconditions', ariaLabel: 'Read our Terms & Conditions' },
   ],
 };
 
@@ -40,11 +40,8 @@ export default function Example() {
             <img
               className="h-16"
               src="/images/logo.png"
-              alt="Company name"
+              alt="Lambert & Wright Company logo"
             />
-            {/* <p className="text-sm leading-6 text-gray-300">
-              Making the world a better place through constructing elegant hierarchies.
-            </p> */}
           </div>
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="md:grid md:grid-cols-2 md:gap-8">
@@ -53,7 +50,7 @@ export default function Example() {
                 <ul className="mt-6 space-y-4">
                   {navigation.nav.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300">
+                      <a href={item.href} aria-label={item.ariaLabel} className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300">
                         {item.name}
                       </a>
                     </li>
@@ -65,7 +62,7 @@ export default function Example() {
                 <ul className="mt-6 space-y-4">
                   {navigation.services.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300">
+                      <a href={item.href} aria-label={item.ariaLabel} className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300">
                         {item.name}
                       </a>
                     </li>
@@ -79,7 +76,7 @@ export default function Example() {
                 <ul className="mt-6 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300">
+                      <a href={item.href} aria-label={item.ariaLabel} className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300">
                         {item.name}
                       </a>
                     </li>
@@ -91,29 +88,23 @@ export default function Example() {
                 <ul className="mt-6 space-y-4">
                   {navigation.contact.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300">
+                      <a href={item.href} aria-label={item.ariaLabel} className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300">
                         {item.name}
                       </a>
                     </li>
                   ))}
-                  {/* <li>
-                    <a href="mailto:info@lambertandwright.co.uk" className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300">
-                      Email: info@lambertandwright.co.uk
-                    </a>
-                  </li> */}
                 </ul>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Logo with link above the divide line */}
-        <div className=" flex justify-star">
-          <a target='blank' href="https://flex-stone.co.uk/">
+        <div className="flex justify-start mt-10">
+          <a target="_blank" rel="noopener noreferrer" href="https://flex-stone.co.uk/" aria-label="Visit Flextone website">
             <img
               className="h-12"
               src="/images/logos/flextone.png"
-              alt="Flextone"
+              alt="Flextone logo"
             />
           </a>
         </div>
