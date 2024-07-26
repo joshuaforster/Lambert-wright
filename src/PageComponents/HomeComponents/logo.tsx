@@ -3,12 +3,10 @@ import React, { useEffect, useState, useRef } from 'react';
 const logos = [
   {
     webp: "images/logos/labc-logo-66a385c679fe9.webp",
-    png: "images/logos/labc-logo.png",
     alt: "LABC Logo"
   },
   {
     webp: "images/logos/labc2023-66a385c5f1295.webp",
-    png: "images/logos/LABC+2023.png",
     alt: "LABC 2023"
   },
 ];
@@ -50,10 +48,9 @@ export default function Logo() {
             <div key={index} className="flex justify-center items-center">
               <picture>
                 <source srcSet={logo.webp} type="image/webp" />
-                <source srcSet={logo.png} type="image/png" />
                 <img
                   className="h-24 w-full max-w-xs object-contain"
-                  src={logo.png}
+                  src={logo.webp}
                   alt={logo.alt}
                   aria-label={logo.alt}
                   loading="lazy"

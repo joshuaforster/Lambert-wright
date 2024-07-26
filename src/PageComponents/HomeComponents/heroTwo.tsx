@@ -3,30 +3,12 @@ import { useInView } from 'react-intersection-observer';
 import Button from '../../CustomComponents/buttons';
 
 const images = [
-  {
-    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-6-66a36f3f24d12.webp',
-    jpg: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-6.jpg'
-  },
-  {
-    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-5-66a36f3dbfafa.webp',
-    jpg: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-5.jpg'
-  },
-  {
-    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-2-66a36f244d8b4.webp',
-    jpg: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-2.jpg'
-  },
-  {
-    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-7-66a36f4a25cce.webp',
-    jpg: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-7.jpg'
-  },
-  {
-    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-1-66a36f243e6b8.webp',
-    jpg: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-1.jpg'
-  },
-  {
-    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-7-66a36f4a25cce.webp',
-    jpg: 'images/projectVI/Bumblebee Cottage, Main Street, Burton Overy-7.jpg'
-  }
+  'images/projectVI/bumblebee-cottage-main-street-burton-overy-6-66a36f3f24d12.webp',
+  'images/projectVI/bumblebee-cottage-main-street-burton-overy-5-66a36f3dbfafa.webp',
+  'images/projectVI/bumblebee-cottage-main-street-burton-overy-2-66a36f244d8b4.webp',
+  'images/projectVI/bumblebee-cottage-main-street-burton-overy-7-66a36f4a25cce.webp',
+  'images/projectVI/bumblebee-cottage-main-street-burton-overy-1-66a36f243e6b8.webp',
+  'images/projectVI/bumblebee-cottage-main-street-burton-overy-7-66a36f4a25cce.webp'
 ];
 
 export default function HeroTwo() {
@@ -49,21 +31,13 @@ export default function HeroTwo() {
     // Preload the LCP image
     const linkWebP = document.createElement('link');
     linkWebP.rel = 'preload';
-    linkWebP.href = images[0].webp;
+    linkWebP.href = images[0];
     linkWebP.as = 'image';
     linkWebP.type = 'image/webp';
     document.head.appendChild(linkWebP);
 
-    const linkJPG = document.createElement('link');
-    linkJPG.rel = 'preload';
-    linkJPG.href = images[0].jpg;
-    linkJPG.as = 'image';
-    linkJPG.type = 'image/jpeg';
-    document.head.appendChild(linkJPG);
-
     return () => {
       document.head.removeChild(linkWebP);
-      document.head.removeChild(linkJPG);
     };
   }, []);
 
@@ -72,11 +46,10 @@ export default function HeroTwo() {
       <div className="absolute inset-0 -z-10 w-full h-full">
         {images.map((image, index) => (
           <picture key={index} className="absolute inset-0 w-full h-full">
-            <source srcSet={image.webp} type="image/webp" />
-            <source srcSet={image.jpg} type="image/jpeg" />
+            <source srcSet={image} type="image/webp" />
             <img
-              src={image.jpg}
-              alt={`Hero Images ${index + 1}`}
+              src={image}
+              alt={`Slide ${index + 1}`}
               style={{
                 width: '100%',
                 height: '100%',

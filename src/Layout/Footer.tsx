@@ -41,7 +41,7 @@ export default function Footer() {
               <source srcSet="/images/logos/logo-66a385c761f9d.webp" type="image/webp" />
               <img
                 className="h-16"
-                src="/images/logos/logo.png"
+                src="/images/logos/logo-66a385c761f9d.webp"
                 alt="Lambert & Wright Company logo"
                 loading="lazy"
               />
@@ -109,7 +109,7 @@ export default function Footer() {
               <source srcSet="/images/logos/flextone-66a385c5a44f2.webp" type="image/webp" />
               <img
                 className="h-12"
-                src="/images/logos/flextone.png"
+                src="/images/logos/flextone-66a385c5a44f2.webp"
                 alt="Flextone logo"
               />
             </picture>

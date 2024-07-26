@@ -2,18 +2,9 @@ import React, { useEffect, useState, useRef } from 'react';
 import Button from '../../CustomComponents/buttons';
 
 const selectedImages = [
-  {
-    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-6-66a36f3f24d12.webp',
-    jpg: 'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-6.jpg',
-  },
-  {
-    webp: 'images/Project1/side-elevation-1024x683-66a38a096578b.webp',
-    jpg: 'images/project1/Side-Elevation-1024x683.jpg',
-  },
-  {
-    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-2-66a36f244d8b4.webp',
-    jpg: 'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-2.jpg',
-  },
+  'images/projectVI/bumblebee-cottage-main-street-burton-overy-6-66a36f3f24d12.webp',
+  'images/Project1/side-elevation-1024x683-66a38a096578b.webp',
+  'images/projectVI/bumblebee-cottage-main-street-burton-overy-2-66a36f244d8b4.webp',
 ];
 
 export default function HomeGallery() {
@@ -60,10 +51,9 @@ export default function HomeGallery() {
             >
               <div className="w-full h-full group">
                 <picture>
-                  <source srcSet={image.webp} type="webp" />
-                  <source srcSet={image.jpg} type="jpeg" />
+                  <source srcSet={image} type="webp" />
                   <img
-                    src={image.jpg}
+                    src={image}
                     alt={`Gallery ${index + 1}`}
                     className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:brightness-75"
                     loading="lazy"
@@ -86,3 +76,4 @@ export default function HomeGallery() {
     </div>
   );
 }
+

@@ -2,62 +2,20 @@ import React, { useState, useEffect, useRef } from 'react';
 import Button from '../../CustomComponents/buttons';
 
 const images = [
-  {
-    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-1-66a36f243e6b8.webp',
-    jpg: 'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-1.jpg',
-  },
-  {
-    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-2-66a36f244d8b4.webp',
-    jpg: 'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-2.jpg',
-  },
-  {
-    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-3-66a36f31b1271.webp',
-    jpg: 'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-3.jpg',
-  },
-  {
-    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-4-66a36f3254f54.webp',
-    jpg: 'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-4.jpg',
-  },
-  {
-    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-5-66a36f3dbfafa.webp',
-    jpg: 'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-5.jpg',
-  },
-  {
-    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-6-66a36f3f24d12.webp',
-    jpg: 'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-6.jpg',
-  },
-  {
-    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-7-66a36f4a25cce.webp',
-    jpg: 'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-7.jpg',
-  },
-  {
-    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-8-66a36f4b647bc.webp',
-    jpg: 'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-8.jpg',
-  },
-  {
-    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-23-66a36f563a91c.webp',
-    jpg: 'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-23.jpg',
-  },
-  {
-    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-24-66a36f5785006.webp',
-    jpg: 'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-24.jpg',
-  },
-  {
-    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-25-66a36f5fd06ec.webp',
-    jpg: 'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-25.jpg',
-  },
-  {
-    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-26-66a36f61b8ab6.webp',
-    jpg: 'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-26.jpg',
-  },
-  {
-    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-27-66a36f69251d4.webp',
-    jpg: 'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-27.jpg',
-  },
-  {
-    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-28-66a36f6b5dbaf.webp',
-    jpg: 'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-28.jpg',
-  },
+  'images/projectVI/bumblebee-cottage-main-street-burton-overy-1-66a36f243e6b8.webp',
+  'images/projectVI/bumblebee-cottage-main-street-burton-overy-2-66a36f244d8b4.webp',
+  'images/projectVI/bumblebee-cottage-main-street-burton-overy-3-66a36f31b1271.webp',
+  'images/projectVI/bumblebee-cottage-main-street-burton-overy-4-66a36f3254f54.webp',
+  'images/projectVI/bumblebee-cottage-main-street-burton-overy-5-66a36f3dbfafa.webp',
+  'images/projectVI/bumblebee-cottage-main-street-burton-overy-6-66a36f3f24d12.webp',
+  'images/projectVI/bumblebee-cottage-main-street-burton-overy-7-66a36f4a25cce.webp',
+  'images/projectVI/bumblebee-cottage-main-street-burton-overy-8-66a36f4b647bc.webp',
+  'images/projectVI/bumblebee-cottage-main-street-burton-overy-23-66a36f563a91c.webp',
+  'images/projectVI/bumblebee-cottage-main-street-burton-overy-24-66a36f5785006.webp',
+  'images/projectVI/bumblebee-cottage-main-street-burton-overy-25-66a36f5fd06ec.webp',
+  'images/projectVI/bumblebee-cottage-main-street-burton-overy-26-66a36f61b8ab6.webp',
+  'images/projectVI/bumblebee-cottage-main-street-burton-overy-27-66a36f69251d4.webp',
+  'images/projectVI/bumblebee-cottage-main-street-burton-overy-28-66a36f6b5dbaf.webp',
 ];
 
 const services = [
@@ -116,10 +74,9 @@ export default function Assurance() {
                 backgroundPosition: 'center',
               }}
             >
-              <source srcSet={image.webp} type="webp" />
-              <source srcSet={image.jpg} type="jpeg" />
+              <source srcSet={image} type="image/webp" />
               <img
-                src={image.jpg}
+                src={image}
                 alt={`Photos ${index + 1}`}
                 className="w-full h-full object-cover"
                 loading="lazy"
@@ -172,10 +129,9 @@ export default function Assurance() {
                   backgroundPosition: 'center',
                 }}
               >
-                <source srcSet={image.webp} type="webp" />
-                <source srcSet={image.jpg} type="jpeg" />
+                <source srcSet={image} type="image/webp" />
                 <img
-                  src={image.jpg}
+                  src={image}
                   alt={`Photos ${index + 1}`}
                   className="w-full h-full object-cover"
                   loading="lazy"

@@ -31,7 +31,7 @@ export default function Header() {
             <picture>
               <source srcSet='images/logos/logogrey-66a388691126f.webp' type="image/webp" />
               <img
-                src="/images/logos/logogrey.png"
+                src="images/logos/logogrey-66a388691126f.webp"
                 className="h-14 sm:h-14"
                 alt="Company Logo"
               />
