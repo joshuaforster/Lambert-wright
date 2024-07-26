@@ -1,8 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { FaPlus, FaMinus } from 'react-icons/fa';
+import { Helmet } from 'react-helmet';
 import HeaderSection from '../CustomComponents/headerSection';
-
-console.log('hello')
 
 const faqs = [
   {
@@ -80,42 +79,49 @@ const FAQ: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative bg-customGray dark:bg-gray-900">
-      <HeaderSection
-        image='images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-1.jpg'
-        title="FAQ's"
-      />
-      <div
-        ref={sectionRef}
-        className={`transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
-      >
-        <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-          <h2 className="mb-8 text-4xl tracking-tight font-extrabold text-gray-800 capitalize dark:text-white">Frequently asked questions</h2>
-          <div className="grid pt-8 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
-            {faqs.map((faq, index) => (
-              <div key={index} className="mb-10">
-                <div
-                  className={`group flex items-center mb-4 text-lg font-medium cursor-pointer ${activeIndices.includes(index) ? 'text-customGold' : 'text-gray-900 dark:text-white'} hover:text-customGold`}
-                  onClick={() => toggleFAQ(index)}
-                >
-                  {activeIndices.includes(index) ? (
-                    <FaMinus className="mr-2 w-5 h-5 group-hover:text-customGold" />
-                  ) : (
-                    <FaPlus className="mr-2 w-5 h-5 text-fontColour dark:text-white group-hover:text-customGold" />
-                  )}
-                  <h3 className="flex items-center group-hover:text-customGold">{faq.title}</h3>
+    <>
+      <Helmet>
+        <title>FAQs - Lambert & Wright</title>
+        <meta name="description" content="Find answers to frequently asked questions about Lambert & Wright, including services offered, areas of expertise, project timelines, and more." />
+      </Helmet>
+      <section className="relative bg-customGray dark:bg-gray-900">
+        <HeaderSection
+          image='/images/projectVI/bumblebee-cottage-main-street-burton-overy-1-66a36f243e6b8.webp'
+          title="FAQ's"
+        />
+        <div
+          ref={sectionRef}
+          className={`transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+        >
+          <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+            <h2 className="mb-8 text-4xl tracking-tight font-extrabold text-gray-800 capitalize dark:text-white">Frequently asked questions</h2>
+            <div className="grid pt-8 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
+              {faqs.map((faq, index) => (
+                <div key={index} className="mb-10">
+                  <div
+                    className={`group flex items-center mb-4 text-lg font-medium cursor-pointer ${activeIndices.includes(index) ? 'text-customGold' : 'text-gray-900 dark:text-white'} hover:text-customGold`}
+                    onClick={() => toggleFAQ(index)}
+                    role="button"
+                    tabIndex={0}
+                    onKeyPress={() => toggleFAQ(index)}
+                  >
+                    {activeIndices.includes(index) ? (
+                      <FaMinus className="mr-2 w-5 h-5 group-hover:text-customGold" />
+                    ) : (
+                      <FaPlus className="mr-2 w-5 h-5 text-fontColour dark:text-white group-hover:text-customGold" />
+                    )}
+                    <h3 className="flex items-center group-hover:text-customGold">{faq.title}</h3>
+                  </div>
+                  {activeIndices.includes(index) && <div className="text-fontColour dark:text-white">{faq.answer}</div>}
                 </div>
-                {activeIndices.includes(index) && <div className="text-fontColour dark:text-white">{faq.answer}</div>}
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
 export default FAQ;
-
-
