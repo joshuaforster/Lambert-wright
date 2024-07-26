@@ -1,17 +1,19 @@
 import React, { useEffect, useState, useRef } from 'react';
 
+// create toggle to change years on each year
+
 const people = [
   {
     name: 'Larry Lambert',
     role: 'Co-Founder & Project Manager',
     imageUrl: 'images/about/larry.webp',
-    bio: `Larry’s career began in exhibition construction and management before transitioning to property design and construction in the 70s. He managed an independent property company started by his Grandfather in 1927, gaining extensive experience in complex construction and historical restoration over 45 years.`,
+    bio: `Larry’s career began in exhibition construction and management before transitioning to property design and construction in the 70s. He managed an independent property company started by his Grandfather in 1927, gaining extensive experience in complex construction and historical restoration over 50 years.`,
   },
   {
     name: 'Jason Wright',
     role: 'Co-Founder & Project Manager',
     imageUrl: 'images/about/wright.webp',
-    bio: `Jason has over 38 years in the trade, starting with a City & Guilds in Plumbing and Heating. He founded successful plumbing companies and transitioned to property development, setting up JLR Bespoke Property Renovations Limited in 2017 with Larry Lambert, delivering top-quality renovations.`,
+    bio: `Jason has over 42 years in the trade, starting with a City & Guilds in Plumbing and Heating. He founded successful plumbing companies and transitioned to property development, setting up JLR Bespoke Property Renovations Limited in 2017 with Larry Lambert, delivering top-quality renovations.`,
   },
 ];
 
