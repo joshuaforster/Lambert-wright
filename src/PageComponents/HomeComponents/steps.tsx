@@ -62,9 +62,6 @@ const Steps: React.FC = () => {
             <h2 className="text-5xl font-bold leading-[1.5] capitalize text-white">
               Your <span className="text-lightBlue">project</span> your way...
             </h2>
-            {/* <div className="mt-8">
-              <p className="text-xl text-gray-300">Building Dreams</p>
-            </div> */}
           </div>
           <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:mt-0 lg:ml-16 lg:max-w-xl lg:grid-cols-2">
             {steps.map((step) => (
@@ -84,14 +81,14 @@ interface StepProps {
 
 const Step: React.FC<StepProps> = ({ step, isVisible }) => {
   return (
-    <div
+    <dl
       className={`flex flex-col gap-y-3 border-l border-white pl-6 text-white transform transition-transform duration-700 ease-in-out ${
         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
       }`}
     >
       <dt className="text-sm leading-6">{step.description}</dt>
       <dd className="order-first text-3xl text-lightBlue font-semibold tracking-tight">{step.name}</dd>
-    </div>
+    </dl>
   );
 };
 
