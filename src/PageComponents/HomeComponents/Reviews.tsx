@@ -45,7 +45,7 @@ const reviews = [
   {
     id: 9,
     text: "Larry and his team built a substantial two bedroom, sitting room and bathroom extension to my property. Despite the significant nature of the work, the disturbance was minimal, and the work carried out was superb. I would highly recommend the; diligence, quality of work, flexibility and good nature of Larry and his team to anyone considering altering their existing property or indeed building a new one!",
-    name: "Frank Williamson, MD Pannells Financial Planning Ltd.",
+    name: "Kirby Muxloe, MD Pannells Financial Planning Ltd.",
   },
 ];
 
