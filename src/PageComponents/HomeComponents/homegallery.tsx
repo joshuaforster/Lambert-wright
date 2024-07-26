@@ -2,9 +2,18 @@ import React, { useEffect, useState, useRef } from 'react';
 import Button from '../../CustomComponents/buttons';
 
 const selectedImages = [
-  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-6.jpg',
-  'images/project1/Side-Elevation-1024x683.jpg',
-  'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-2.jpg',
+  {
+    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-6-66a36f3f24d12.webp',
+    jpg: 'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-6.jpg',
+  },
+  {
+    webp: 'images/Project1/side-elevation-1024x683-66a38a096578b.webp',
+    jpg: 'images/project1/Side-Elevation-1024x683.jpg',
+  },
+  {
+    webp: 'images/projectVI/bumblebee-cottage-main-street-burton-overy-2-66a36f244d8b4.webp',
+    jpg: 'images/projectVI/Bumblebee%20Cottage,%20Main%20Street,%20Burton%20Overy-2.jpg',
+  },
 ];
 
 export default function HomeGallery() {
@@ -27,6 +36,7 @@ export default function HomeGallery() {
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   return (
     <div
       ref={sectionRef}
@@ -49,11 +59,15 @@ export default function HomeGallery() {
               style={{ height: '500px' }} // Set a fixed height for all images
             >
               <div className="w-full h-full group">
-                <img
-                  src={image}
-                  alt={`Gallery ${index + 1}`}
-                  className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:brightness-75"
-                />
+                <picture>
+                  <source srcSet={image.webp} type="image/webp" />
+                  <source srcSet={image.jpg} type="image/jpeg" />
+                  <img
+                    src={image.jpg}
+                    alt={`Gallery ${index + 1}`}
+                    className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:brightness-75"
+                  />
+                </picture>
               </div>
             </div>
           ))}
