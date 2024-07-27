@@ -16,7 +16,6 @@ const Contact = lazy(() => import('./MainPages/contact'));
 const ServiceDetail = lazy(() => import('./CustomComponents/serviceDetail'));
 const ServicesHome = lazy(() => import('./MainPages/servicesHome'));
 const TermsConditions = lazy(() => import('./MainPages/Legal/TermsConditions'));
-const TermsAndConditions = lazy(() => import('./MainPages/Legal/T&C'));
 const PrivacyPolicy = lazy(() => import('./MainPages/Legal/privacypolicy'));
 const Unfound = lazy(() => import('./MainPages/404'));
 
@@ -39,7 +38,7 @@ function App() {
                   <Route path='/contact' element={<Contact />} />
                   <Route path='/privacy-policy' element={<PrivacyPolicy />} />
                   <Route path='/terms-conditions' element={<TermsConditions />} />
-                  <Route path='/termsandconditions' element={<TermsAndConditions />} />
+                  <Route path='/termsandconditions' element={<TermsConditions />} />
                   <Route path='/privacypolicy' element={<PrivacyPolicy />} />
                   <Route path="*" element={<Unfound />} />
                 </Route>
