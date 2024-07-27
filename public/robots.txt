@@ -1,5 +1,10 @@
+User-agent: Googlebot
+Disallow: /private/
+
+User-agent: Bingbot
+Disallow: /private/
+
 User-agent: *
 Disallow: /private/
-Allow: /
 
 Sitemap: https://lambert-wright.com/sitemap.xml
