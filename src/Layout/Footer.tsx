@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { services } from '../Data/serviceData';
 
 const navigation = {
@@ -22,7 +23,7 @@ const navigation = {
     ariaLabel: `Learn more about our ${service.title} service`
   })),
   legal: [
-    { name: 'Read Our Privacy Policy', href: '/privacypolicy', ariaLabel: 'Read our Privacy Policy', alt:'Read our privacy policy' },
+    { name: 'Read Our Privacy Policy', href: '/privacypolicy', ariaLabel: 'Read our Privacy Policy', alt: 'Read our privacy policy' },
     { name: 'Terms & Conditions', href: '/termsandconditions', ariaLabel: 'Read our Terms & Conditions' },
   ],
 };
@@ -31,9 +32,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-customBlue border-t-2 border-white" aria-labelledby="footer-heading">
-      <h2 id="footer-heading" className="sr-only">
-        Footer
-      </h2>
+      <h2 id="footer-heading" className="sr-only">Footer</h2>
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8">
@@ -54,9 +53,15 @@ export default function Footer() {
                 <ul className="mt-6 space-y-4">
                   {navigation.nav.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} aria-label={item.ariaLabel} className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300">
-                        {item.name}
-                      </a>
+                      {item.isExternal ? (
+                        <a href={item.href} aria-label={item.ariaLabel} className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300" target="_blank" rel="noopener noreferrer">
+                          {item.name}
+                        </a>
+                      ) : (
+                        <Link to={item.href} aria-label={item.ariaLabel} className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300">
+                          {item.name}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -66,9 +71,9 @@ export default function Footer() {
                 <ul className="mt-6 space-y-4">
                   {navigation.services.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} aria-label={item.ariaLabel} className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300">
+                      <Link to={item.href} aria-label={item.ariaLabel} className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300">
                         {item.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -80,9 +85,9 @@ export default function Footer() {
                 <ul className="mt-6 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} aria-label={item.ariaLabel} className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300">
+                      <Link to={item.href} aria-label={item.ariaLabel} className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300">
                         {item.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -92,9 +97,9 @@ export default function Footer() {
                 <ul className="mt-6 space-y-4">
                   {navigation.contact.map((item) => (
                     <li key={item.name}>
-                      <a href={item.href} aria-label={item.ariaLabel} className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300">
+                      <Link to={item.href} aria-label={item.ariaLabel} className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300">
                         {item.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
