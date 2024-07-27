@@ -1,4 +1,5 @@
 import React, { Suspense, lazy } from 'react';
+import { Link } from 'react-router-dom';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CookieConsent from 'react-cookie-consent';
 import Layout from './Layout/layout';
@@ -39,7 +40,7 @@ function App() {
                   <Route path='/privacy-policy' element={<PrivacyPolicy />} />
                   <Route path='/terms-conditions' element={<TermsConditions />} />
                   <Route path='/termsandconditions' element={<TermsConditions />} />
-                  <Route path='/privacypolicy' element={<PrivacyPolicy />} />
+     
                   <Route path="*" element={<Unfound />} />
                 </Route>
               </Routes>
@@ -54,9 +55,14 @@ function App() {
               expires={150}
             >
               This website uses cookies to enhance the user experience.{" "}
-              <a href="/privacy-policy" style={{ color: "white" }} className="hover:text-customBlue">
+              <Link 
+                to="/privacy-policy" 
+                aria-label="Read our Privacy Policy, so you know how our cookies and tracking works" 
+                style={{ color: "white" }} 
+                className="hover:text-customBlue"
+              >
                 Learn more
-              </a>
+              </Link>
             </CookieConsent>
           </BrowserRouter>
         </ProjectsProvider>

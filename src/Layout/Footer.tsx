@@ -22,6 +22,10 @@ const navigation = {
     href: `/services/${service.id}`,
     ariaLabel: `Learn more about our ${service.title} service`
   })),
+  legal: [
+    { name: 'Privacy Policy', href: '/privacypolicy', ariaLabel: 'Read our Privacy Policy, so you know how our cookies and tracking works', alt: 'Read our privacy policy' },
+    { name: 'Terms & Conditions', href: '/termsandconditions', ariaLabel: 'Read our Terms & Conditions' },
+  ],
 };
 
 export default function Footer() {
@@ -79,16 +83,13 @@ export default function Footer() {
               <div className="mt-10 md:mt-0">
                 <h3 className="text-sm font-semibold leading-6 text-white">Legal</h3>
                 <ul className="mt-6 space-y-4">
-                  <li>
-                    <Link to="/privacypolicy" aria-label="Read our Privacy Policy, so you know how our cookies and tracking works" className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300">
-                      Read our Privacy Policy
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/termsandconditions" aria-label="Read our Terms & Conditions" className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300">
-                      Read our Terms & Conditions
-                    </Link>
-                  </li>
+                  {navigation.legal.map((item) => (
+                    <li key={item.name}>
+                      <Link to={item.href} aria-label={item.ariaLabel} className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300">
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
