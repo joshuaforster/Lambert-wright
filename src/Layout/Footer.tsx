@@ -121,14 +121,14 @@ export default function Footer() {
           </a>
         </div>
 
-        <div className="mt-4 text-white border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
-          <p className="text-xs  leading-5 text-gray-400">
+        <div className="mt-4  border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
+          <p className="text-xs text-white leading-5 ">
             &copy; {currentYear} Lambert & Wright - Lambert & Wright is a trading name of JLR Bespoke Property Renovations LTD
           </p>
-          <p className="text-xs leading-5 text-gray-400 mt-2">
+          <p className="text-xs text-white leading-5  mt-2">
             Registered Office: 19 Warren Park Way, Leicester LE19 4SA
           </p>
-          <p className="text-xs leading-5 text-gray-400 mt-2">
+          <p className="text-xs text-white leading-5  mt-2">
             Company Registration Number: 10701923 | Registered in England
           </p>
         </div>
