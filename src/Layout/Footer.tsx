@@ -18,9 +18,9 @@ const navigation = {
     { name: 'Email info@lambertandwright.co.uk', href: 'mailto:info@lambertandwright.co.uk', ariaLabel: 'Email us at info@lambertandwright.co.uk' },
   ],
   services: services.map(service => ({
-    name: `Learn more about our ${service.title} service`,
+    name: `${service.title}`,
     href: `/services/${service.id}`,
-    ariaLabel: `Learn more about our ${service.title} service`
+    ariaLabel: `${service.title}`
   })),
   legal: [
     { name: 'Privacy Policy', href: '/privacypolicy', ariaLabel: 'Read our Privacy Policy, so you know how our cookies and tracking works' },
