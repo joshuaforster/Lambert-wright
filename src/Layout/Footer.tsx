@@ -24,7 +24,7 @@ const navigation = {
   })),
   legal: [
     { name: 'Read our Privacy Policy', href: '/privacypolicy', ariaLabel: 'Read our Privacy Policy, so you know how our cookies and tracking works', alt: 'Read our privacy policy' },
-    { name: 'Read our Terms & Conditions', href: '/termsandconditions', ariaLabel: 'Read our Terms & Conditions' },
+    // { name: 'Read our Terms & Conditions', href: '/termsandconditions', ariaLabel: 'Read our Terms & Conditions' },
   ],
 };
 
