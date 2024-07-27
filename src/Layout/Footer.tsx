@@ -9,22 +9,22 @@ const navigation = {
     { name: 'Services', href: '/services', ariaLabel: 'Explore the Services we offer' },
     { name: 'Gallery', href: '/gallery', ariaLabel: 'View our Gallery' },
     { name: "FAQ's", href: '/faq', ariaLabel: 'Find answers to Frequently Asked Questions' },
-    { name: 'Brochure', href: 'Brochure/Brochure_JLR2021-2.pdf', isExternal: true, ariaLabel: 'Download our Brochure' },
+    { name: 'Brochure', href: '/Brochure/Brochure_JLR2021-2.pdf', ariaLabel: 'Download our Brochure' },
     { name: 'Contact', href: '/contact', ariaLabel: 'Get in touch with us on the Contact page' }
   ],
   contact: [
-    { name: 'Larry Lambert: 07710311165', href: 'tel:07710311165', ariaLabel: 'Call Larry Lambert' },
-    { name: 'Jason Wright: 07866741261', href: 'tel:07866741261', ariaLabel: 'Call Jason Wright' },
-    { name: 'Email: info@lambertandwright.co.uk', href: 'mailto:info@lambertandwright.co.uk', ariaLabel: 'Email us at info@lambertandwright.co.uk' },
+    { name: 'Call Larry Lambert at 07710311165', href: 'tel:07710311165', ariaLabel: 'Call Larry Lambert' },
+    { name: 'Call Jason Wright at 07866741261', href: 'tel:07866741261', ariaLabel: 'Call Jason Wright' },
+    { name: 'Email info@lambertandwright.co.uk', href: 'mailto:info@lambertandwright.co.uk', ariaLabel: 'Email us at info@lambertandwright.co.uk' },
   ],
   services: services.map(service => ({
-    name: service.title.charAt(0).toUpperCase() + service.title.slice(1).toLowerCase(),
+    name: `Learn more about our ${service.title} service`,
     href: `/services/${service.id}`,
     ariaLabel: `Learn more about our ${service.title} service`
   })),
   legal: [
-    { name: 'Read Our Privacy Policy', href: '/privacypolicy', ariaLabel: 'Read our Privacy Policy', alt: 'Read our privacy policy' },
-    { name: 'Terms & Conditions', href: '/termsandconditions', ariaLabel: 'Read our Terms & Conditions' },
+    { name: 'Read our Privacy Policy', href: '/privacypolicy', ariaLabel: 'Privacy Policy', alt: 'Read our privacy policy' },
+    { name: 'Read our Terms & Conditions', href: '/termsandconditions', ariaLabel: 'Read our Terms & Conditions' },
   ],
 };
 
@@ -53,7 +53,7 @@ export default function Footer() {
                 <ul className="mt-6 space-y-4">
                   {navigation.nav.map((item) => (
                     <li key={item.name}>
-                      {item.isExternal ? (
+                      {item.href.startsWith('http') ? (
                         <a href={item.href} aria-label={item.ariaLabel} className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300" target="_blank" rel="noopener noreferrer">
                           {item.name}
                         </a>
@@ -97,9 +97,9 @@ export default function Footer() {
                 <ul className="mt-6 space-y-4">
                   {navigation.contact.map((item) => (
                     <li key={item.name}>
-                      <Link to={item.href} aria-label={item.ariaLabel} className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300">
+                      <a href={item.href} aria-label={item.ariaLabel} className="text-sm leading-6 text-gray-300 hover:text-customGold transition duration-300">
                         {item.name}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
