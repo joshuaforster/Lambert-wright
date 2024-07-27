@@ -38,9 +38,7 @@ function App() {
                   <Route path='/services' element={<ServicesHome />} />
                   <Route path='/contact' element={<Contact />} />
                   <Route path='/privacy-policy' element={<PrivacyPolicy />} />
-                  <Route path='/terms-conditions' element={<TermsConditions />} />
                   <Route path='/termsandconditions' element={<TermsConditions />} />
-     
                   <Route path="*" element={<Unfound />} />
                 </Route>
               </Routes>
@@ -57,7 +55,7 @@ function App() {
               This website uses cookies to enhance the user experience.{" "}
               <Link 
                 to="/privacy-policy" 
-                aria-label="Read our Privacy Policy, so you know how our cookies and tracking works" 
+                aria-label="Read our Privacy Policy to understand how we use cookies and tracking" 
                 style={{ color: "white" }} 
                 className="hover:text-customBlue"
               >
