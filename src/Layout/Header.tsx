@@ -29,9 +29,9 @@ export default function Header() {
         <div className="flex items-center justify-between mx-auto max-w-screen-xl">
           <Link to="/" className="flex items-center" onClick={handleLinkClick}>
             <picture>
-              <source srcSet='images/logos/logogrey-66a388691126f.webp' type="image/webp" />
+              <source srcSet='/images/logos/logogrey-66a388691126f.webp' type="image/webp" />
               <img
-                src="images/logos/logogrey-66a388691126f.webp"
+                src="/images/logos/logogrey-66a388691126f.webp"
                 className="h-14 sm:h-14"
                 alt="Company Logo"
               />
