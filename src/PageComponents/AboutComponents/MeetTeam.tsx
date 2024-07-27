@@ -13,7 +13,7 @@ const people = [
     name: 'Jason Wright',
     role: 'Co-Founder & Project Manager',
     imageUrl: 'images/about/wright.webp',
-    bio: `Jason has over 42 years in the trade, starting with a City & Guilds in Plumbing and Heating. He founded successful plumbing companies and transitioned to property development, setting up JLR Bespoke Property Renovations Limited in 2017 with Larry Lambert, delivering top-quality renovations.`,
+    bio: `Jason has over 42 years in the trade, starting with a City & Guilds in Plumbing and Heating. He founded successful plumbing companies and transitioned to property development, setting up Lambert & Wright with Larry Lambert, delivering top-quality renovations.`,
   },
 ];
 
