@@ -1,10 +1,15 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const PrivacyPolicy: React.FC = () => {
   return (
     <div className="container mx-auto p-8">
+      <Helmet>
+        <title>Privacy Policy - Lambert and Wright</title>
+        <meta name="description" content="Read our Privacy Policy to learn how Lambert and Wright collects, uses, and protects your personal information." />
+      </Helmet>
       <h1 className="text-3xl font-bold mb-4">Privacy Policy</h1>
-      
+
       <section className="mb-6">
         <h2 className="text-2xl font-semibold mb-2">Lambert and Wright</h2>
         <p className="mb-2">
@@ -15,15 +20,15 @@ const PrivacyPolicy: React.FC = () => {
 
       <section className="mb-6">
         <h2 className="text-2xl font-semibold mb-2">1. Information We Collect</h2>
-        <p className="mb-2"><strong>1.1 Personal Information</strong></p>
+        <h3 className="text-xl font-semibold mb-2">1.1 Personal Information</h3>
         <p className="ml-4 mb-2">
           We may collect personally identifiable information, such as your name, email address, phone number, and other contact details when you fill out forms on our website or contact us directly.
         </p>
-        <p className="mb-2"><strong>1.2 Payment Information</strong></p>
+        <h3 className="text-xl font-semibold mb-2">1.2 Payment Information</h3>
         <p className="ml-4 mb-2">
           When you make a purchase or engage our services, we may collect payment information necessary to process your payment, such as your credit card number, billing address, and other related information.
         </p>
-        <p className="mb-2"><strong>1.3 Usage Data</strong></p>
+        <h3 className="text-xl font-semibold mb-2">1.3 Usage Data</h3>
         <p className="ml-4 mb-2">
           We may collect information about your use of our website, such as your IP address, browser type, operating system, referring URLs, and other technical information. This data helps us understand how our website is being used and to improve our services.
         </p>
@@ -31,19 +36,19 @@ const PrivacyPolicy: React.FC = () => {
 
       <section className="mb-6">
         <h2 className="text-2xl font-semibold mb-2">2. How We Use Your Information</h2>
-        <p className="mb-2"><strong>2.1 To Provide Services</strong></p>
+        <h3 className="text-xl font-semibold mb-2">2.1 To Provide Services</h3>
         <p className="ml-4 mb-2">
           We use the information we collect to provide, maintain, and improve our services, process transactions, and send you related information, including confirmations and invoices.
         </p>
-        <p className="mb-2"><strong>2.2 To Communicate</strong></p>
+        <h3 className="text-xl font-semibold mb-2">2.2 To Communicate</h3>
         <p className="ml-4 mb-2">
           We may use your information to communicate with you, including sending service-related announcements, updates, and administrative messages.
         </p>
-        <p className="mb-2"><strong>2.3 For Marketing</strong></p>
+        <h3 className="text-xl font-semibold mb-2">2.3 For Marketing</h3>
         <p className="ml-4 mb-2">
           With your consent, we may use your information to send you promotional materials and other communications about our products and services. You can opt out of receiving marketing communications at any time by following the unsubscribe instructions provided in those communications.
         </p>
-        <p className="mb-2"><strong>2.4 To Improve Our Services</strong></p>
+        <h3 className="text-xl font-semibold mb-2">2.4 To Improve Our Services</h3>
         <p className="ml-4 mb-2">
           We use the information we collect to analyze trends, track user activities, and improve our website and services.
         </p>
@@ -51,11 +56,11 @@ const PrivacyPolicy: React.FC = () => {
 
       <section className="mb-6">
         <h2 className="text-2xl font-semibold mb-2">3. Sharing Your Information</h2>
-        <p className="mb-2"><strong>3.1 With Service Providers</strong></p>
+        <h3 className="text-xl font-semibold mb-2">3.1 With Service Providers</h3>
         <p className="ml-4 mb-2">
           We may share your information with third-party service providers that perform services on our behalf, such as payment processing, data analysis, email delivery, hosting services, customer service, and marketing assistance.
         </p>
-        <p className="mb-2"><strong>3.2 For Legal Reasons</strong></p>
+        <h3 className="text-xl font-semibold mb-2">3.2 For Legal Reasons</h3>
         <p className="ml-4 mb-2">
           We may disclose your information if we believe it is necessary to comply with applicable laws, regulations, or legal processes, or to protect the rights, property, and safety of Lambert and Wright, our customers, or others.
         </p>
