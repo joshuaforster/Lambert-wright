@@ -22,7 +22,7 @@ const navigation = {
     ariaLabel: `Learn more about our ${service.title} service`
   })),
   legal: [
-    { name: 'Privacy Policy', href: '/privacypolicy', ariaLabel: 'Read our Privacy Policy' },
+    { name: 'Privacy Policy', href: '/privacypolicy', ariaLabel: 'Read our Privacy Policy', alt:'Read our privacy policy' },
     { name: 'Terms & Conditions', href: '/termsandconditions', ariaLabel: 'Read our Terms & Conditions' },
   ],
 };
