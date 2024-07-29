@@ -37,7 +37,7 @@ function App() {
                   <Route path='/services/:id' element={<ServiceDetail />} />
                   <Route path='/services' element={<ServicesHome />} />
                   <Route path='/contact' element={<Contact />} />
-                  <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+                  <Route path='/privacypolicy' element={<PrivacyPolicy />} />
                   <Route path='/termsandconditions' element={<TermsConditions />} />
                   <Route path="*" element={<Unfound />} />
                 </Route>
