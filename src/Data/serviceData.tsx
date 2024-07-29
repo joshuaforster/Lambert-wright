@@ -11,7 +11,7 @@ export const services = [
     title: 'BUILDING & CONSTRUCTION', 
     description: 'Our building and construction services encompass project management, building and carpentry work, roofing, and plastering, ensuring your renovation is completed to the highest standards.', 
     content: `Our building and construction services encompass project management and all aspects of whatever your project entails. A complete and comprehensive service that ensures that all your wishes are completed to a standard of excellence on time and within budget.`,
-    image: '/images/ServicesData/Building and Construction.webp',
+    image: '/images/ServicesData/Building&Construction.webp',
   },
   { 
     id: 3, 
@@ -24,7 +24,7 @@ export const services = [
     id: 4, 
     title: 'DESIGN', 
     description: 'We offer a complete design service if needed. After extensive and ongoing discussions with you, we take all the stress away! New kitchens and bathrooms to wooden flooring and carpets, decoration, window and door upgrades and exterior landscaping. We take care of it all so you don\'t have to!', 
-    content: `We offer a complete design service if needed. After extensive and ongoing discussions with you, we take all the stress away.\n\nOur design services cover:\n• Interior Decorating\n\n• Kitchen and Bathroom Designs\n\n• Tiling\n\n• Wooden Floors\n\n• Carpet Fitting\n\n• Door and Window Upgrades\n\n• Exterior Landscaping\n\nOur creative design team works closely with you to transform your home interiors into a stylish and comfortable living space that reflects your personal taste and lifestyle.`,
+    content: `We offer a complete design service if needed. After extensive and ongoing discussions with you, we take all the stress away.\n\nOur design services cover:\n\n• Interior Decorating\n\n• Kitchen and Bathroom Designs\n\n• Tiling\n\n• Wooden Floors\n\n• Carpet Fitting\n\n• Door and Window Upgrades\n\n• Exterior Landscaping\n\nOur creative design team works closely with you to transform your home interiors into a stylish and comfortable living space that reflects your personal taste and lifestyle.`,
     image: '/images/ServicesData/Design.webp',
   },
   { 

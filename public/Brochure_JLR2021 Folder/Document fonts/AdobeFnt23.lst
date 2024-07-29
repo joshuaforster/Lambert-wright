@@ -1,0 +1,246 @@
+%!Adobe-FontList 1.23
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:/Volumes/Work/Jobs/Previous Work/JBD1232_JLR/Print/Brochure/Brochure_JLR2021 Folder/Document fonts/AdobeFnt23.lst
+FileLength:5687
+FileModTime:741686795
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MinionPro-Regular
+FamilyName:Minion Pro
+StyleName:Regular
+MenuName:Minion Pro
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Minion Pro
+WritingScript:Roman
+OutlineFileName:/Volumes/Work/Jobs/Previous Work/JBD1232_JLR/Print/Brochure/Brochure_JLR2021 Folder/Document fonts/MinionPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:218640
+FileModTime:703408890
+DesignSize:110
+NameArray:0,Mac,4,Minion Pro
+NameArray:0,Win,1,Minion Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Montserrat-Regular
+FamilyName:Montserrat
+StyleName:Regular
+MenuName:Montserrat
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Montserrat Regular
+WritingScript:Roman
+OutlineFileName:/Volumes/Work/Jobs/Previous Work/JBD1232_JLR/Print/Brochure/Brochure_JLR2021 Folder/Document fonts/Montserrat-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:228620
+FileModTime:712720716
+NameArray:0,Mac,4,Montserrat Regular
+NameArray:0,Win,1,Montserrat
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-Bold
+FamilyName:Myriad Pro
+StyleName:Bold
+MenuName:Myriad Pro
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Myriad Pro Bold
+WritingScript:Roman
+OutlineFileName:/Volumes/Work/Jobs/Previous Work/JBD1232_JLR/Print/Brochure/Brochure_JLR2021 Folder/Document fonts/MyriadPro-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:97124
+FileModTime:703408890
+DesignSize:110
+NameArray:0,Mac,4,Myriad Pro Bold
+NameArray:0,Win,1,Myriad Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-BoldIt
+FamilyName:Myriad Pro
+StyleName:Bold Italic
+MenuName:Myriad Pro
+StyleBits:3
+WeightClass:700
+WidthClass:5
+AngleClass:1
+FullName:Myriad Pro Bold Italic
+WritingScript:Roman
+OutlineFileName:/Volumes/Work/Jobs/Previous Work/JBD1232_JLR/Print/Brochure/Brochure_JLR2021 Folder/Document fonts/MyriadPro-BoldIt.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:99304
+FileModTime:703408891
+DesignSize:110
+NameArray:0,Mac,18,Myriad Pro Bold It
+NameArray:0,Mac,4,Myriad Pro Bold Italic
+NameArray:0,Win,1,Myriad Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-Light
+FamilyName:Myriad Pro
+StyleName:Light
+MenuName:Myriad Pro Light
+StyleBits:0
+WeightClass:300
+WidthClass:5
+AngleClass:0
+FullName:Myriad Pro Light
+WritingScript:Roman
+OutlineFileName:/Volumes/Work/Jobs/Previous Work/JBD1232_JLR/Print/Brochure/Brochure_JLR2021 Folder/Document fonts/MyriadPro-Light.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:94260
+FileModTime:237133796
+DesignSize:110
+NameArray:0,Mac,4,Myriad Pro Light
+NameArray:0,Win,1,Myriad Pro Light
+NameArray:0,Win,16,Myriad Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-Regular
+FamilyName:Myriad Pro
+StyleName:Regular
+MenuName:Myriad Pro
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Myriad Pro
+WritingScript:Roman
+OutlineFileName:/Volumes/Work/Jobs/Previous Work/JBD1232_JLR/Print/Brochure/Brochure_JLR2021 Folder/Document fonts/MyriadPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:97072
+FileModTime:703408889
+DesignSize:110
+NameArray:0,Mac,4,Myriad Pro
+NameArray:0,Win,1,Myriad Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Neutraface2Text-Bold
+FamilyName:Neutraface 2 Text
+StyleName:Bold
+MenuName:Neutraface 2 Text Bold
+StyleBits:0
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Neutraface 2 Text Bold
+WritingScript:Roman
+OutlineFileName:/Volumes/Work/Jobs/Previous Work/JBD1232_JLR/Print/Brochure/Brochure_JLR2021 Folder/Document fonts/Neutra2Text-Bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:129596
+FileModTime:213734798
+NameArray:0,Mac,4,Neutraface 2 Text Bold
+NameArray:0,Win,1,Neutraface 2 Text Bold
+NameArray:0,Win,16,Neutraface 2 Text
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Neutraface2Text-Book
+FamilyName:Neutraface 2 Text
+StyleName:Book
+MenuName:Neutraface 2 Text Book
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Neutraface 2 Text Book
+WritingScript:Roman
+OutlineFileName:/Volumes/Work/Jobs/Previous Work/JBD1232_JLR/Print/Brochure/Brochure_JLR2021 Folder/Document fonts/Neutra2Text-Book.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:134132
+FileModTime:213734798
+NameArray:0,Mac,4,Neutraface 2 Text Book
+NameArray:0,Win,1,Neutraface 2 Text Book
+NameArray:0,Win,16,Neutraface 2 Text
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Neutraface2Text-Demi
+FamilyName:Neutraface 2 Text
+StyleName:Demi
+MenuName:Neutraface 2 Text Demi
+StyleBits:0
+WeightClass:600
+WidthClass:5
+AngleClass:0
+FullName:Neutraface 2 Text Demi
+WritingScript:Roman
+OutlineFileName:/Volumes/Work/Jobs/Previous Work/JBD1232_JLR/Print/Brochure/Brochure_JLR2021 Folder/Document fonts/Neutra2Text-Demi.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:135128
+FileModTime:213734798
+NameArray:0,Mac,4,Neutraface 2 Text Demi
+NameArray:0,Win,1,Neutraface 2 Text Demi
+NameArray:0,Win,16,Neutraface 2 Text
+%EndFont
+
