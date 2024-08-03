@@ -6,7 +6,7 @@ interface DelayedFallbackProps {
   minDuration?: number;
 }
 
-const DelayedFallback: React.FC<DelayedFallbackProps> = ({ children, delay = 1000, minDuration = 500 }) => {
+const DelayedFallback: React.FC<DelayedFallbackProps> = ({ children, delay = 500, minDuration = 500 }) => {
   const [showFallback, setShowFallback] = useState(false);
   const [minDurationElapsed, setMinDurationElapsed] = useState(false);
 
